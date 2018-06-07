@@ -1,0 +1,44 @@
+.notlabel {
+    font-family: Poppins;
+    font-size: 17.3px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    color: #533979;
+    margin: 30px 0px;
+}
+.pfcard {
+    background-color: #ffffff;
+    box-shadow: 0 0 8.5px 1.5px rgba(86, 79, 193, 0.1);
+    padding: 25px 50px;
+}
+.span_widthn {
+    width: 120px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12.6px;
+    font-weight: 300;
+}
+.bold_spann {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 600;
+    font-size: 12.6px;
+}
+.nopad {
+    padding: 0px !important;
+}
+.btnwdauto{
+    width: auto!important;
+}
+.successhedtxt{
+    font-size: 17.3px!important;
+    font-weight: 600!important;
+    color: #2c2e30;
+
+}
+.smrinstatustxt{
+    font-size: 13.9px;
+    font-weight: 300;
+    color: #3f4245;
+}

@@ -1,0 +1,191 @@
+.mainContainBox{
+    background: #ffffff;
+    box-shadow: 0px 0px 5px #ccc;
+    min-height:50px;
+}
+.mrg-none{
+    margin:0px;
+}
+    .mrg-t30{
+        margin-top:30px;
+    }
+    .mrg-b30{margin-bottom:30px;}
+    .pdg-none{padding:0px;}
+    .mrg0Auto{margin:0 auto;}
+    .Mheading{  font-size: 17.3px;
+      font-weight: 500;
+      color: #2c2e30;
+    padding: 0px 0px 10px 10px;
+    }
+    .mrg-b10{margin-bottom:10px;}
+    .ruleHead{
+      font-size: 18px;
+      font-weight: 500;
+      color: #575962;
+      padding: 8% 0px 0px 0px;
+    }
+    .contactTitle{
+      font-size: 29.2px;
+      font-weight: 500;
+      color: #6b3890;
+    }
+    .contactHelp{
+      float:right;
+      font-size: 13.2px;
+      font-weight: 500;
+      color: #533979;
+      padding-top: 10px
+    }
+    .phoneIcon {
+      width: 23px;
+      height: 23px;
+      background-color: #533979;
+      border-radius:50%;
+      padding: 5px 6px; color:#ffffff;
+    }
+    .profileBox{
+        padding-left: 0px;
+    }
+    .profileBox1 .mainContainBox{padding:15% 4% 5% 4%;}
+    
+    .profImg{
+        width: 83px;
+        height: 83px;
+        background-color: #ffce3d;
+        border-radius: 50%;
+        text-align: center;
+    }
+    .profImg i{
+        font-size: 45px;
+        line-height: 1.8;
+        color: #ffffff;
+    }
+    .profInner1{padding:20px 13px; text-align:center;}
+    .ProfTitle{
+      font-size: 17.3px;
+      font-weight: 600;
+      color: #2c2e30;margin-bottom: 0px;
+    }
+    .ProfSub1{
+      font-size: 15.8px;
+      font-weight: 300;
+      color: #2c2e30;
+    }
+    .ProfSub2{
+      font-size: 12.6px;
+      font-weight: 300;
+      line-height: 1.63;
+      color: #3f4245;text-align: left;
+    }
+    .ProfSub3{
+        padding:10% 0% 0% 0%;
+    }
+    .ProfSub3-1 {
+      float:left;
+      font-size: 14.2px;
+      font-weight: 300;
+      line-height: 1.22;
+      color: #533979;
+    }
+    .ProfSub3-2 {
+      float:right;
+      font-size: 12.6px;
+      font-weight: 300;
+      line-height: 1.22;
+      color: #533979;
+    }
+    .ProfSub3-1 i,.ProfSub3-2 i{
+        font-size: 16px;
+        padding: 0px 5px 0px 0px;
+    }
+    #profileBox2 .mainContainBox {
+        min-height: 300px;
+    }
+    #profileBox2 .Top5Heading111 {
+        padding: 3% 0% 3% 2%;
+    }
+    #profileBox2 .viewBtn{font-family: 'Poppins-Light';font-size: 12.6px; font-weight: 300;}
+    #profileBox2 .top-spac {margin-top: 16px;}
+    .prof2Inner {
+        padding:5%;
+    }
+    .prof2Inner p{
+      font-size: 12.6px;
+      font-weight: 300;
+      line-height: 1.88;
+      color: #3f4245;
+    }
+    .mainMapBox {
+        padding: 3% 5% 0% 5%;
+    }
+    .mainMapB1{
+      font-size: 13.9px;
+      font-weight: 600;
+      color: #2c2e30;
+    }
+    .mainMapB1 i{
+        font-size: 20px;
+        opacity: 0.4;
+        color: #040404;padding-right:5px;
+    }
+    .mainMapB2 {
+        padding-left: 5px;
+    }
+    .mainMapB2-1 {
+      font-size: 12.5px;
+      font-weight: 300;
+      line-height: 1.56;
+      color: #3f4245;
+    }
+    .mainMapB2-2{
+      font-size: 12.5px;
+      font-weight: 300;
+      line-height: 1.56;
+      color: #533979;text-align: right;
+    }
+    .mainMapB2-2 i{
+        font-size: 19px;
+        padding-right: 6px;
+        transform: rotate(15deg);
+        vertical-align: bottom;
+        font-weight: bold;
+    }
+    .mrg-t10{margin-top:23px;}
+    .mainMapBox .BorderBottom{
+        clear: both;
+        width: 96%;
+        margin: 0 auto;
+    }
+    #ContactFooter .mainContainBox{
+        padding: 2% 2%;
+    }
+    .FooCopy1{
+      font-size: 13px;
+      color: #533979;text-decoration:underline;vertical-align: middle; vertical-align: -webkit-baseline-middle;
+    }
+    .FooCopy1:hover{text-decoration:underline;}
+    .wrp {
+      text-align: center;
+      float: right;
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 16;
+      line-height: 30px;
+      height: 30px;
+      width: 30px;
+      margin-right: 20px;
+      color: #4099ff;
+      border-radius: 100%;
+      position: relative;border: solid 1px #533979;box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+    .icon i{color:#533979;}
+    #ContactFooter{padding-right:0px;}
+@media screen and (max-width:991px){
+.mapBox{margin-top:30px;}
+.profileBox, .profileBox .profileBox1, .profileBox .profileBox2{padding:0px;}
+.mainMapB2 {padding-left: 0px;}
+#ContactFooter{padding-left:0px;margin-top:30px;}
+.icon{margin-right: 15px;}
+}

@@ -1,0 +1,26 @@
+.btn-default.focus, .btn-default:focus {
+    color: #fff;
+    background-color: #533979;
+    border-color: #8c8c8c;
+}
+button.btn.btn-default.myfil {
+    padding: 3px 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 4px!important;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    margin-left: 4px
+}
+.blu-color:hover{background-color: #52178b;color: #ffffff;padding: 3px;border-radius: 3px}
+.texta {
+    margin-bottom: 20px;
+    font-weight: 600
+}
+.bluebg{
+    background-color: #52178b;
+    color: #ffffff;
+    padding: 3px;
+    border-radius: 3px;
+}

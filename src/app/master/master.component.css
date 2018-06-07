@@ -1,0 +1,38 @@
+
+
+.centra {
+    float:none!important;
+}
+.card-1 {
+    background-color: #ffffff;
+    box-shadow: 0 0 8.5px 1.5px rgba(86, 79, 193, 0.1);
+    padding: 40px 35px 20px 35px;
+    margin: 10px 0px; 
+}
+.card-2 {
+    background-color: #ffffff;
+    box-shadow: 0 0 8.5px 1.5px rgba(86, 79, 193, 0.1);
+    padding: 40px 35px 20px 35px;
+    margin: 10px 0px;
+}
+
+.fontsize h4 {
+    padding: 0px !important;
+    font-family: 'FuturaLightBT_1';
+}
+.card-3 {
+    background-color: #ffffff;
+    box-shadow: 0 0 8.5px 1.5px rgba(86, 79, 193, 0.1);
+    padding: 40px 35px 20px 35px;
+    margin: 10px 0px;
+}
+.width{
+    width: 19%;
+    display:inline-block;
+    vertical-align: top;
+    margin:2px;
+}
+.maindiv{
+    text-align: center;
+}
+

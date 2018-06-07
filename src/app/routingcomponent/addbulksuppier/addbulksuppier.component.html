@@ -1,0 +1,95 @@
+<app-makernavigation></app-makernavigation>
+<div class="container ">
+    <section class="content ">
+        <!--<div class="col-md-2 col-sm-2 top_back no-show2">
+            <h5 class="blu-color"> <a class="backBtn"><img src="assets/images/left-arrow.png"> Back </a></h5></div>-->
+        <div class="col-md-12">
+            <div class="stepwizard ">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step">
+                        <a href="#step-1" type="button" class="btn bg-primary btn-circle " id="first">
+                            <img class="img-responsive tick" src="assets/images/tick.png">
+                        </a>
+                        <h6 class="blu-color" id="p1">Suppliers Details</h6>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-2" type="button" class="btn bg-default btn-circle " id="second">
+                            <img class="img-responsive tick2" src="assets/images/tick.png">
+                        </a>
+                        <h6 id="p2">Review Details</h6>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-md-2 col-sm-2 top_back no-show">
+    <h5 class="blu-color"> <a href="#" class="backBtn"><img src="assets/images/left-arrow.png"> Back </a></h5></div>-->
+        <div class="clearfix"></div>
+        <form role="form" class="contact-form ">
+            <div class="col-md-12">
+
+                <div class="row setup-content form_bg" id="step-1">
+                    <div class="col-md-12 padlft">
+                        <a class="btn btn-primary btn-outline ResponsiveBtnWidth pull-right">
+                            <img _ngcontent-c8="" src="assets/images/downloadlist.png"> Download Template</a>
+                    </div>
+                    <div class="col-md-12 extra_padd">
+                        <div class="col-xs-10 col-xs-offset-1 col-md-offset-3 col-sm-offset-2 col-sm-8 col-md-6 col-lg-offset-4 col-lg-4 text-center">
+                            <div class="uploadimg">
+                                <img src="assets/images/upload.png" class="zin" />
+                            </div>
+                            <div class=" row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 text-center nextpay dnddive" id="file-drag">
+                                    <form id="file-upload-form">
+                                        <input id="file-upload" type="file" name="fileUpload" />
+                                        <label for="file-upload">
+                                            <span class="blu-color dndlabel">
+                                                Drag n Drop
+                                            </span>
+                                            <span class="blu-color chota">
+                                                to Upload your File or
+                                            </span>
+                                            <div class="clear20"></div>
+                                            <span class="btn bg-primary nextBtn">
+                                                <input type='file' id="fileupload" value="browses" /> Click to Browse</span>
+                                        </label>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear20"></div>
+                        <div class="clear20"></div>
+                        <div class="clear20"></div>
+                    </div>
+                </div>
+                <div class="row setup-content form_bg" id="step-2">
+                    <h4 class="Top5Heading111 col-md-6 col-sm-6">Review uploaded file</h4>
+                    <div class="col-md-6 col-sm-6 text-right topspace">
+                        <a class="btn btn-primary btn-outline ResponsiveBtnWidth ">
+                            <img src="assets/images/downloadlist.png"> Download List</a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="BorderBottom"></div>
+                    <div class="clearfix"></div>
+                    <app-supplierreviewdetails></app-supplierreviewdetails>
+                </div>
+                <div id="pagi">
+                    <app-pagination></app-pagination>
+                </div>
+                <div class="row setup-content cust_width form_bg" id="step-3">
+                    <div class="col-md-12 text-center ">
+                        <img src="assets/images/done.png">
+                        <h4>Supplier has been successfully added and sent for approval</h4>
+                        <h5>You can view the summary and status of the request on the supplier page</h5>
+                        <div class="col-md-12 col-sm-12 top-spac margin20">
+                            <a routerLink="../listpayment" class="btn btn-primary btn-outline btn-spac btn-spac2 Btn_Width2 margbtnRES">Go to Supplier</a>
+                            <a href="" class="btn btn-primary btn-outline Btn_Width2">Go to Dashboard</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>

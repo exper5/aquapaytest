@@ -1,0 +1,31 @@
+.shad {
+    border-bottom: 3px solid #fff33b;
+}
+.paycard{
+    width: 17%;
+    display: inline-block;
+    margin-right: 2%;
+}
+.innercard {
+    width: 100%;
+    border: 1px solid rgba(151, 121, 186, 0.24);
+    padding: 4px 14px 0px 14px;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px
+}
+.addborder{border: 2px solid rgba(20, 65, 148, 0.57)}
+.uk-card-primary{height: 100%!important; width: 100%}
+.uk-card-title{margin-top: 0px}
+.my-btn {
+    width: 26px;
+}
+.fntwt {
+    font-weight: 600;
+}
+.margbot {
+    margin-bottom: 15px;
+}
+.padlft {
+    padding-left: 40px;
+}

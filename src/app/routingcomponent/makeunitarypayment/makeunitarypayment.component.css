@@ -1,0 +1,11 @@
+.tick2,.tick3,.tick4{
+    margin-top: -3px;
+    width: 10px;
+    height: 10px;
+    display: none;
+    margin-left: 3px;
+}
+.stepwizard-row2:before {
+    width: 66%;
+    right: 112px;
+}
