@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
+declare var loadCharts: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     window.location.reload;
-  
+    loadCharts();
   }
 
 }

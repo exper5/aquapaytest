@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './supportingcomponents/home/home.component';
 import { CardsliderComponent } from './supportingcomponents/cardslider/cardslider.component';
@@ -176,7 +177,7 @@ const routes: Routes = [
     MrulevalidationComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

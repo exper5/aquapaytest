@@ -17,13 +17,11 @@ export class MasterServiceService {
    * you have to design methods as per your requirement.  
    **/ 
   getRestItems() :any{
-    // 'https://public-api.wordpress.com/rest/v1.1/sites/vocon-it.com/posts'
-    let Url = 'https://public-api.wordpress.com/rest/v1.1/sites/vocon-it.com/posts';
+    let Url = 'Your api url';
     this.getRestService(Url)
       .subscribe(
         restItems => {
           this.restItems = restItems;
-          console.log(this.restItems);
         }
       )
     return this.restItems;

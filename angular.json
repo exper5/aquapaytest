@@ -39,7 +39,8 @@
               "src/assets/js/uikit.min.js",
               "src/assets/js/uikit-icons.min.js",
               "src/assets/js/owl.carousel.js",
-              "src/assets/js/myscript.js"
+              "src/assets/js/myscript.js",
+              "src/assets/js/custom.charts.js"
             ]
           },
           "configurations": {
@@ -96,7 +97,8 @@
               "src/assets/js/uikit.min.js",
               "src/assets/js/uikit-icons.min.js",
               "src/assets/js/owl.carousel.js",
-              "src/assets/js/myscript.js"
+              "src/assets/js/myscript.js",
+              "src/assets/js/custom.charts.js"
             ],
             "styles": [
               "src/styles.css",
