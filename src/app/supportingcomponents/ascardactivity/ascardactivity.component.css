@@ -1,0 +1,6 @@
+#donut_chart1 tspan{
+    font-weight: bold !important;
+}
+#donut_chart svg {
+    height: 267px!important;
+}

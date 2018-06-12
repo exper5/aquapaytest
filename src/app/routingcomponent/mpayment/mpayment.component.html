@@ -1,0 +1,2221 @@
+<app-makernavigation></app-makernavigation>
+
+<div class="container" id="lstpaymt">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+    
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div _ngcontent-c4="" class="clear20"></div>
+                    <div class="col-md-12 text-right btninCenter">
+                        <a class="btn btn-primary btn-outline ResponsiveBtnWidth" data-toggle="modal" data-target="#payreport">
+                            <img src="assets/images/downloadlist.png"> Download Customized Reports</a>
+                    </div>
+                    <div _ngcontent-c4="" class="clear20"></div>
+                </div>
+                <div class="white-bg">
+                    <h4 class="col-md-9 col-sm-6 Top5Heading111 mrgnone">List of Payment</h4>
+                    <div class="form-group col-md-3 col-sm-6 top-spac text-right right-spac">
+    
+    
+    
+                        <div class="btn-group rsspac">
+                            <button type="button" class="btn dropdown-toggle droparrow" data-toggle="dropdown">
+    
+                                <span>Today</span>
+    
+                            </button>
+    
+                            <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right2" role="menu">
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">Today</div>
+                                    </a>
+                                </li>
+    
+                                <li class="divider"></li>
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">This Week</div>
+                                    </a>
+                                </li>
+    
+                                <li class="divider"></li>
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">This Month</div>
+                                    </a>
+                                </li>
+    
+                                <li class="divider"></li>
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">All</div>
+                                    </a>
+                                </li>
+    
+                            </ul>
+    
+                        </div>
+                        <div class="btn-group ">
+                            <button type="button" class="btn dropdown-toggle droparrow" data-toggle="dropdown">
+    
+                                <span>Batch</span>
+    
+                            </button>
+    
+                            <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right2" role="menu">
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">Batch 1</div>
+                                    </a>
+                                </li>
+    
+                                <li class="divider"></li>
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">Batch 2</div>
+                                    </a>
+                                </li>
+    
+                                <li class="divider"></li>
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">Batch 3</div>
+                                    </a>
+                                </li>
+    
+                                <li class="divider"></li>
+    
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="place"></div>
+                                        <div class="txt-div">All</div>
+                                    </a>
+                                </li>
+    
+                            </ul>
+    
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+    
+                    <div class="BorderBottom"></div>
+                    <div class="col-md-8 col-sm-6  top-spac">
+                        <input type="text" class="form-control search noborder" name="search">
+    
+                    </div>
+                    <div class="form-group col-md-4 col-sm-6 top-spac text-right right-spac">
+                        <label>Show:
+                            <select name="example_length" aria-controls="example" class=" input-sm bbor">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </label>
+                        &nbsp;&nbsp;&nbsp;
+                        <a class="btn btn-primary btn-outline ResponsiveBtnWidth pull-right">
+                            <img src="assets/images/downloadlist.png"> Download List</a>
+    
+                    </div>
+                    <div class="clear"></div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+    
+                                <tr class="cust-color">
+                                    <td>
+                                        <div class="place big_place"></div>
+                                    </td>
+                                    <td>
+    
+                                        <span class="bold-txt">Supplier Code</span> &nbsp;&nbsp;&nbsp;
+    
+                                        <div class="btn-group dropdown">
+    
+                                            <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
+    
+                                                <span class="sr-only">Toggle Dropdown</span>
+    
+                                            </button>
+    
+                                            <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right1" role="menu">
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="assets/images/Sort_Ascending.png"> &nbsp;&nbsp;Sort Ascending</a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="assets/images/Sort_Descending.png"> &nbsp;&nbsp;Sort Descending</a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="assets/images/search-icon.png"> &nbsp;&nbsp;
+                                                        <input class="search_box" type="text" placeholder="Search">
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">All</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">1234</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">12354</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">56214</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">1956</div>
+                                                    </a>
+                                                </li>
+    
+    
+    
+                                            </ul>
+    
+                                        </div>
+    
+                                    </td>
+    
+                                    <td>
+                                        <span class="bold-txt">Supplier Name</span> &nbsp;&nbsp;&nbsp;
+                                        <div class="btn-group dropdown">
+    
+                                            <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
+    
+                                                <span class="sr-only">Toggle Dropdown</span>
+    
+                                            </button>
+    
+                                            <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right1" role="menu">
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="assets/images/Sort_Ascending.png"> &nbsp;&nbsp;Sort Ascending</a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="assets/images/Sort_Descending.png"> &nbsp;&nbsp;Sort Descending</a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <img src="assets/images/search-icon.png"> &nbsp;&nbsp;
+                                                        <input class="search_box" type="text" placeholder="Search">
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">All</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">ABC Engineering</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">PQR Software Soluction</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">XYZ Consultancy</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">ZEE Engineering</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">LMN Consultancy</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+    
+                                        </div>
+                                    </td>
+    
+                                    <td>
+                                        <span class="bold-txt">Amount</span> &nbsp;&nbsp;&nbsp;
+                                        <div class="btn-group">
+    
+                                            <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
+    
+                                                <span class="sr-only">Toggle Dropdown</span>
+    
+                                            </button>
+    
+                                            <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right2" role="menu">
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">0-10000</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">10001-20000</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">20001-30000</div>
+                                                    </a>
+                                                </li>
+    
+                                                <li class="divider"></li>
+    
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="place"></div>
+                                                        <div class="txt-div">30001-40000 </div>
+                                                    </a>
+                                                </li>
+    
+                                            </ul>
+    
+                                        </div>
+                                        <td>
+    
+                                            <span class="bold-txt">Transaction Status</span> &nbsp;&nbsp;&nbsp;
+    
+                                            <div class="btn-group">
+    
+                                                <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
+    
+                                                    <span class="sr-only">Toggle Dropdown</span>
+    
+                                                </button>
+    
+                                                <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right2" role="menu">
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">All</div>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Approved</div>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Pending</div>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Rejected</div>
+                                                        </a>
+                                                    </li>
+    
+                                                </ul>
+    
+                                            </div>
+    
+                                        </td>
+    
+                                        <td>
+    
+                                            <span class="bold-txt">Payment Status</span> &nbsp;&nbsp;&nbsp;
+                                            <div class="btn-group">
+    
+                                                <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
+    
+                                                    <span class="sr-only">Toggle Dropdown</span>
+    
+                                                </button>
+    
+                                                <ul class="dropdown-menu dropdown-menuu dropdown-menu-right dropdown-menu-right1" role="menu">
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">All</div>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Card Debited</div>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Pending</div>
+                                                        </a>
+                                                    </li>
+    
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Processed</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Returned</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Refunded</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Error</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="divider"></li>
+    
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <div class="place"></div>
+                                                            <div class="txt-div">Card Declined</div>
+                                                        </a>
+                                                    </li>
+    
+                                                </ul>
+    
+                                            </div>
+    
+                                        </td>
+    
+                                        <td></td>
+    
+                                </tr>
+    
+                            </thead>
+                            <tbody>
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>34987</td>
+    
+                                    <td>Fasus</td>
+    
+                                    <td>Rs. 75,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Card Debited</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment6 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Payment Advise:</div>
+                                                <div class="bold_span">Yes</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Cut off Date:</div>
+                                                <div class="bold_span">21/01/2017</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">2</div>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Rayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>643809</td>
+    
+                                    <td>Maz Computers </td>
+    
+                                    <td>Rs. 15,0000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Processed</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment7 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Payment Advise:</div>
+                                                <div class="bold_span">Yes</div>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Cut off Date:</div>
+                                                <div class="bold_span">21/01/2017</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">2</div>
+                                            </div>
+    
+    
+                                        </div>
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Rayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn2" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>897</td>
+    
+                                    <td>Pune IT Park</td>
+    
+                                    <td>Rs. 13,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Rejected" role="button">Rejected </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Rejected" role="button">Error</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment8 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+                                        <div class="tablediv">
+    
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Cut Off Date:</div>
+                                                <div class="bold_span">21/01/2017</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">1</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Rejected On:</div>
+                                                <div class="bold_span">21/01/2017 | 12:00 PM</div>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        Reason : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>305</td>
+    
+                                    <td>Reliance</td>
+    
+                                    <td>Rs. 40,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Rejected" role="button">Returned</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment9 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">1</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Rejected On:</div>
+                                                <div class="bold_span">21/01/2017 | 12:00 PM</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv noborder">
+    
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        Reason : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>897</td>
+    
+                                    <td>Pune IT Park</td>
+    
+                                    <td>Rs. 13,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Pending" role="button">Pending </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Pending" role="button">Pending</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment10 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Contact No:</div>
+                                                <div class="bold_span">7876451928</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>34987</td>
+                                    <td>Fasus</td>
+                                    <td>Rs. 75,000</td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    </td>
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Card Debited</a>
+                                    </td>
+                                    <td>
+                                        <div class="flash equipment11 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+                                    <td colspan="7" class="custmtd">
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Payment Advise:</div>
+                                                <div class="bold_span">Yes</div>
+                                            </div>
+    
+                                        </div>
+    
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Cut off Date:</div>
+                                                <div class="bold_span">21/01/2017</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">2</div>
+                                            </div>
+    
+    
+                                        </div>
+    
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Rayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+    
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>643809</td>
+    
+                                    <td>Maz Computers </td>
+    
+                                    <td>Rs. 15,0000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Processed</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment12 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Payment Advise:</div>
+                                                <div class="bold_span">Yes</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv">
+    
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Cut off Date:</div>
+                                                <div class="bold_span">21/01/2017</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">2</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv noborder">
+    
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Rayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn2" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>897</td>
+    
+                                    <td>Pune IT Park</td>
+    
+                                    <td>Rs. 13,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Rejected" role="button">Rejected </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Rejected" role="button">Error</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment13 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Cut Off Date:</div>
+                                                <div class="bold_span">21/01/2017</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">1</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Rejected On:</div>
+                                                <div class="bold_span">21/01/2017 | 12:00 PM</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        Reason : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>305</td>
+    
+                                    <td>Reliance</td>
+    
+                                    <td>Rs. 40,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Rejected" role="button">Returned</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment14 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">UTR No:</div>
+                                                <div class="bold_span">0023</div>
+                                            </div>
+                                        </div>
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Batch:</div>
+                                                <div class="bold_span">1</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Rejected On:</div>
+                                                <div class="bold_span">21/01/2017 | 12:00 PM</div>
+                                            </div>
+                                        </div>
+                                        <div class="tablediv noborder">
+    
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 1:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approver 2:</div>
+                                                <div class="bold_span">Jayesh Jadhav</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Approved on :</div>
+                                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        Reason : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+    
+                                <tr>
+                                    <td>
+                                        <div _ngcontent-c3="" class="place big_place"></div>
+                                    </td>
+                                    <td>897</td>
+    
+                                    <td>Pune IT Park</td>
+    
+                                    <td>Rs. 13,000</td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Pending" role="button">Pending </a>
+                                    </td>
+    
+                                    <td>
+                                        <a href="javascript:void(0);" class="btn Pending" role="button">Pending</a>
+                                    </td>
+    
+                                    <td>
+                                        <div class="flash equipment15 showhide">
+                                            <span class="showhide">+</span>
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7" class="custmtd">
+    
+                                        <div class="tablediv">
+                                            <h5>Supplier Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Corp GSTIN:</div>
+                                                <div class="bold_span">562802482774GG</div>
+                                            </div>
+                                            <div>
+                                                <div class="span_width">Contact No:</div>
+                                                <div class="bold_span">7876451928</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Card No: </div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Invoice No:</div>
+                                                <div class="bold_span">633122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Trans Ref No:</div>
+                                                <div class="bold_span">9385695</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv">
+                                            <h5>Bank Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Account No:</div>
+                                                <div class="bold_span">63122148</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">IFSC: </div>
+                                                <div class="bold_span">SBI00676</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Bank Name:</div>
+                                                <div class="bold_span">State Bank Of India</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Branch:</div>
+                                                <div class="bold_span">Ambarnath</div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="tablediv noborder">
+                                            <h5>Other Details</h5>
+    
+                                            <div>
+                                                <div class="span_width">Initiated by :</div>
+                                                <div class="bold_span">Sammer</div>
+                                            </div>
+    
+                                            <div>
+                                                <div class="span_width">Initiated on : </div>
+                                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            </div>
+    
+                                        </div>
+                                    </td>
+    
+                                </tr>
+    
+                                <tr class="rowShow">
+    
+                                    <td colspan="7">
+    
+                                        <span class="pull-right">
+    
+                                            <img src="assets/images/Download.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;
+                                            <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+    
+                                            <a href="#myModal" id="openBtn" data-toggle="modal">
+                                                <img src="assets/images/popup.png">
+                                            </a>
+    
+                                        </span>
+    
+                                    </td>
+    
+                                </tr>
+    
+    
+                            </tbody>
+    
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a class="abg" href="#">
+                                <img src="assets/images/leftarrow.png">
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a class="abg" href="#">
+                                <img src="assets/images/right-arrow.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.modal-content -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content modelWidth">
+                            <div class="modal-header myheader">
+                                <button type="button" class="close close2" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title">Payment Status</h4>
+                            </div>
+                            <div class="modal-body mybody">
+                                <table class="table table-striped mycustomtable" id="tblGrid">
+                                    <thead id="tblHead">
+                                        <tr class="text-center">
+                                            <th>State</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Card Debited</td>
+                                            <td>28/04/2018</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>UTR</td>
+                                            <td>25/05/2018</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Card Refunded</td>
+                                            <td>NA</td>
+                                            <td>NA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fund Refunded</td>
+                                            <td>25/05/2018</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+    
+                <!-- Modal2 -->
+                <div id="payreport" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+    
+                        <!-- Modal content-->
+                        <div class="modal-content modelWidth">
+                            <div class="modal-header myheader">
+                                <button type="button" class="close close2" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Customise Report </h4>
+                            </div>
+                            <div class="modal-body mybody2">
+                                <div>
+                                    <input class="form-control  noborder3" placeholder="Enter Report Name" name="search" type="text">
+                                </div>
+                                <div class="clear10"></div>
+                                <h5>Select required fields</h5>
+                                <div class="clear10"></div>
+                                <div class="table-responsive norespopad">
+                                    <table class="table noborder">
+    
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="place"></div> Account Number</td>
+                                                <td>
+                                                    <div class="place"></div> Approved On</td>
+                                                <td>
+                                                    <div class="place"></div> Transaction Date</td>
+                                                <td>
+                                                    <div class="place"></div> Amount</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="place"></div> Bank Name</td>
+                                                <td>
+                                                    <div class="place"></div> Approver</td>
+                                                <td>
+                                                    <div class="place"></div> Transaction Status</td>
+                                                <td>
+                                                    <div class="place"></div> Supplier Name</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="place"></div> Account Number</td>
+                                                <td>
+                                                    <div class="place"></div> Approved On</td>
+                                                <td>
+                                                    <div class="place"></div> Transaction Date</td>
+                                                <td>
+                                                    <div class="place"></div> Amount</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="place"></div> IFSC</td>
+                                                <td>
+                                                    <div class="place"></div> Initiator</td>
+                                                <td>
+                                                    <div class="place"></div> Transaction Ref. No.</td>
+                                                <td>
+                                                    <div class="place"></div> Supplier Code</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="place"></div> Card Number</td>
+                                                <td>
+                                                    <div class="place"></div> Initiated On</td>
+                                                <td>
+                                                    <div class="place"></div> Invoice Number</td>
+                                                <td>
+                                                    <div class="place"></div> Organisation</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="place"></div> Payment Status</td>
+                                                <td>
+                                                    <div class="place"></div> GSTIN</td>
+                                                <td>
+                                                    <div class="place"></div> Card Cycle</td>
+                                                <td>
+                                                    <div class="place"></div> Cut Off Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+    
+                                <h5>Date Range</h5>
+                                <div class="clear10"></div>
+                                <div class="form-group">
+                                    <div class="">
+                                        <div class="lft-div">
+                                            <p>From</p>
+                                        </div>
+                                        <div class="lft-div2">
+                                            <input class="form-control example1 btn-primary btn-outline bolda bolda1 no-bg" type="text" placeholder="20 JAN 10">
+                                        </div>
+    
+                                        <div class="lft-div WidthOfLFTDIV">
+                                            <p>To</p>
+                                        </div>
+                                        <div class="lft-div2">
+                                            <input class="form-control example1 btn-primary btn-outline bolda bolda1 no-bg" type="text" placeholder="20 JUN 10">
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+                                <div class="clear10"></div>
+                                <a routerLink="../mreportname"><button class="btn bg-primary nextBtn nxt2" data-dismiss="modal" type="button">Submit</button></a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <div class="clear20"></div>
+    <div class="clear20"></div>
+    
+    

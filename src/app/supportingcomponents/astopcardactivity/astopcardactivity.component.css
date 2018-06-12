@@ -1,0 +1,12 @@
+ 
+        .row{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        #areachart{
+            background: #fff;
+            /* box-shadow: 1px 1px 5px #aaa; */
+            padding: 0px;
+            width:100%;
+            height: 285px!important;
+        }        

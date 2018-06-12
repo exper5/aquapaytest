@@ -24,9 +24,9 @@ export class AsapprovecardComponent implements OnInit {
       $(".thumbnail").click(function(){
         $(this).toggleClass("bluebr");
     });
-      $('#media').carousel({
-        interval: 100000
-      })
+    $('#media').carousel({
+      interval:0
+    })
       
       $("#next").click(function(){
         $("#prev").show();

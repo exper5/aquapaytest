@@ -1009,6 +1009,11 @@ a.btn.Pending {
     text-align: left;
 }
 
+.CardWhitebox1n h3 {
+    padding:30px 0px 30px 27px;
+    text-align: left;
+}
+
 
 
 .PendingRequest {
@@ -1315,6 +1320,7 @@ img.cardimg {
           transform: translateY(-12px);
 }
 .contact-form .label {
+    margin-bottom: 20px;
   position: absolute;
   left: -10px;
   bottom: 0;
@@ -1775,3 +1781,23 @@ padding-left: 10px !important;
     }
 }
 /*===========    Media Query End ===payal=========*/
+
+
+
+path.highcharts-button-symbol, 
+.highcharts-yaxis > tspan, 
+.highcharts-legend, 
+.highcharts-credits, 
+.highcharts-title, 
+.highcharts-markers{
+    display: none !important;
+}
+
+.tooltip {
+    background-Color: #3814a1;
+}
+.highcharts-xaxis-labels text{
+    font-size: 10px;
+    transform: none;
+    text-anchor: middle;
+} 

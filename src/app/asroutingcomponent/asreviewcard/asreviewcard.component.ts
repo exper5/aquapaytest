@@ -15,12 +15,12 @@ export class AsreviewcardComponent implements OnInit {
 
 
     $(document).ready(function(){
-      $("#pagi").hide();
-      $('input[type=file]').change(function () {
-        $("#pagi").show();
-        $("#step-1").hide();
+      $("#step-3").hide();
+      $("#step-2").hide();
+      $('.appbtn').click(function () {
         $("#step-2").show();
-    $(".backBtn").show();
+        $("#step-1").hide();
+          
      $("#first").addClass("big-circle");
     $("#second").addClass("bg-primary");
     $(".tick").css({"display": "block"});
@@ -28,11 +28,9 @@ export class AsreviewcardComponent implements OnInit {
     $("#p2").addClass("blu-color");
     });
   
-     $(".backBtn").click(function(){
-      $("#pagi").hide();
+     $(".otpbbtn").click(function(){
          $("#step-2").hide();
-         $("#step-1").show();
-     $(".backBtn").hide();
+         $("#step-1").show(); 
      $("#first").addClass("bg-primary");
      $("#first").removeClass("bg-default");
      $("#second").addClass("bg-default");
@@ -40,11 +38,9 @@ export class AsreviewcardComponent implements OnInit {
      $("#p1").addClass("blu-color");
      $("#p2").removeClass("blu-color");
      });
-    $(".approval").click(function(){
+    $(".verify").click(function(){
          $("#step-2").hide();
          $("#step-3").show();
-         $("#pagi").hide();
-     $(".backBtn").hide();
      $("#first").addClass("bg-primary");
      $("#second").addClass("bg-primary");
      $("#p1").addClass("blu-color");
@@ -56,10 +52,6 @@ export class AsreviewcardComponent implements OnInit {
      });
     });
 
-    $(".app").click(function(){
-      $("#step-1").hide();
-      $("#step-2").show();
-    });
   }
 
 }

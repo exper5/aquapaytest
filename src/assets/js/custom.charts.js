@@ -409,3 +409,186 @@ $('#donut_chart svg tspan').css({
 });
 //---------------------------------------pie chart js edn-------------------------------------------
 }
+
+
+
+function loadAsCharts(){
+
+    Highcharts.chart('areachart', {
+        chart: {
+          type: 'areaspline',
+        },
+          
+       xAxis: {
+              categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec 2018'],
+          },
+              
+      yAxis: {
+      tickInterval: 1000,           
+                  labels: {
+                      formatter: function () {
+                          return this.value/100 + 'L';
+                      }
+                  }        
+      },
+        tooltip: {
+            backgroundColor: '#3814a1',
+            borderColor: '#3814a1',
+            color: '#fff',
+            borderRadius: '0',
+       formatter : function() {
+                       return this.y/100 + '%' ;
+                  },
+            //      pointFormat: '<b>{this.value}</b>',
+          style: {
+            color: '#fff',
+          }
+        },
+        plotOptions: {
+          area: {
+            marker: {
+              enabled: false,
+              
+            }
+          }
+        },
+        series: [{
+          data: [
+            0, 2500, 3500, 2500, 2200, 2000, 4000, 5000, 3700, 3000, 4500, 6800,
+          ],
+            color: '#F7BCAE',
+            lineWidth: 0,
+        }, {
+          data: [
+            0, 1800, 2500, 1700, 3350, 5500, 4650, 3800, 3200, 2900, 3600, 4500
+          ],
+           color: '#6DE3EC',
+            lineWidth: 0,
+      
+        },
+           {
+          data: [      
+            0, 1400, 2200, 2000, 3250, 4500, 3700, 3000, 2600, 2400, 3600, 6000
+          ],
+                color: '#4AB2E4',
+            lineWidth: 0,
+           
+        }]      
+      });
+}
+
+function loadAsPiCharts(){
+
+
+(function () {
+    var $, MyMorris;
+
+    MyMorris = window.MyMorris = {};
+    $ = jQuery;
+
+    MyMorris = Object.create(Morris);
+
+    MyMorris.Donut.prototype.select = function (idx) {
+        var row, s, segment, _i, _len, _ref, _fill_color; // ADDED _fill_color
+        _ref = this.segments;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            s = _ref[_i];
+            s.deselect();
+        }
+        segment = this.segments[idx];
+        segment.select();
+        row = this.data[idx];
+        _fill_color = row.labelColor || this.options.labelColor || '#000000'; // ADDED
+        return this.setLabels(row.label, this.options.formatter(row.value, row), _fill_color); // ADDED parameter _fill_color
+    };
+
+
+    MyMorris.Donut.prototype.setLabels = function (label1, label2, fill_color) {
+        var inner, maxHeightBottom, maxHeightTop, maxWidth, text1bbox, text1scale, text2bbox, text2scale;
+        _default_fill = fill_color || '#000000'; // ADDED
+        inner = (Math.min(this.el.width() / 2, this.el.height() / 2) - 10) * 2 / 3;
+        maxWidth = 1.8 * inner;
+        maxHeightTop = inner / 2;
+        maxHeightBottom = inner / 3;
+        //maxHeightTop1 = inner / 4;
+       
+        this.text1.attr({
+            text: "Paid",
+            transform: '',
+            fill: '#000000' // ADDED
+        });
+        //alert(text1bbox.width);
+       // alert(text1bbox.height);
+        text1bbox = this.text1.getBBox();
+        text1scale = Math.min(maxWidth / text1bbox.width, maxHeightBottom / text1bbox.height);
+       // alert(text1scale);
+        this.text1.attr({
+         transform: "S" + text1scale + "," + text1scale + "," + (text1bbox.x + text1bbox.width / 2) + "," + (text1bbox.y + text1bbox.height)
+         //transform: "S" + text1scale + "," + text1scale + "," + (text1bbox.x + text1bbox.width / 2) + "," + text1bbox.y
+        });
+        this.text2.attr({
+           // text: label2,
+           text: label1,
+            transform: '',
+            fill: fill_color ,// ADDED,
+            font : 'bold'
+        });
+        text2bbox = this.text2.getBBox();
+       
+        text2scale = Math.min(maxWidth / text2bbox.width, maxHeightTop / text2bbox.height);
+        
+        return this.text2.attr({
+            transform: "S" + text2scale + "," + text2scale + "," + (text2bbox.x + text2bbox.width / 2) + "," + text2bbox.y
+        });
+    };
+}).call(this);
+	
+
+$(function () { 
+        getMorris2('donut', 'donut_chart1');
+        $('#donut_chart1 svg tspan').css({
+            'font-weight': 'bold'
+        });
+	});
+	
+	function getMorris2(type, element) {
+			    if (type === 'donut') {
+			        Morris.Donut({
+			            element: element,
+			            data: [
+			            {
+			                label: '60L',
+			                value:60,
+                            labelColor:"#ab0764", 
+                            
+			            }, {
+			                    label: '50L',
+			                    value: 50,
+								labelColor:"#fff33b", 
+			                }, {
+			                    label: '40L',
+			                    value: 40,
+								labelColor:"#52178b",
+			                },
+                  {
+			                    label: '20L',
+			                    value: 20,
+								labelColor:"#34bfa3",
+			                }, {
+			                    label: '30L',
+			                    value: 30,
+								labelColor:"#b6bccd",
+			                }],
+                resize: true,
+  redraw: true,
+			              
+			            colors: ['#ab0764', '#fff33b','#52178b','#34bfa3','#b6bccd',],
+			            formatter: function (y) {
+			                return y
+			            }
+			        });
+			    }
+            }
+             
+            
+}

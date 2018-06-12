@@ -13,8 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.location.reload;
     loadCharts();
+
   }
 
 }

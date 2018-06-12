@@ -12,6 +12,7 @@ export class AddbulksuppierComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
     $(document).ready(function(){
       $("#pagi").hide();
       $('input[type=file]').change(function () {

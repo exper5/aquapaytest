@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './supportingcomponents/home/home.component';
 import { CardsliderComponent } from './supportingcomponents/cardslider/cardslider.component';
@@ -69,6 +68,17 @@ import { MnotificationmatrixComponent } from './routingcomponent/mnotificationma
 import { McontactusComponent } from './routingcomponent/mcontactus/mcontactus.component';
 import { McardsComponent } from './routingcomponent/mcards/mcards.component';
 import { MrulevalidationComponent } from './routingcomponent/mrulevalidation/mrulevalidation.component';
+import { AsdashboardComponent } from './asroutingcomponent/asdashboard/asdashboard.component';
+import { AshomeComponent } from './supportingcomponents/ashome/ashome.component';
+import { AscardsliderComponent } from './supportingcomponents/ascardslider/ascardslider.component';
+import { AscardactivityComponent } from './supportingcomponents/ascardactivity/ascardactivity.component';
+import { AstopcardactivityComponent } from './supportingcomponents/astopcardactivity/astopcardactivity.component';
+import { AspaymentsComponent } from './asroutingcomponent/aspayments/aspayments.component';
+import { MpaymentComponent } from './routingcomponent/mpayment/mpayment.component';
+import { AsreportnameComponent } from './supportingcomponents/asreportname/asreportname.component';
+import { MreportnameComponent } from './supportingcomponents/mreportname/mreportname.component';
+import { AssuppliersreportComponent } from './supportingcomponents/assuppliersreport/assuppliersreport.component';
+import { MsuppliersreportComponent } from './supportingcomponents/msuppliersreport/msuppliersreport.component';
 const routes: Routes = [
   { path: '', component: MasterComponent},
   { path: 'makeunitarypayment', component: MakeunitarypaymentComponent },
@@ -105,7 +115,23 @@ const routes: Routes = [
   { path: 'mrulevalidation', component: MrulevalidationComponent },
   { path: 'reportname', component: ReportnameComponent },
   { path: 'suppliersreport', component: SuppliersreportComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'asreviewcard', component: AsreviewcardComponent },
+  { path: 'asrulevalidation', component: AsrulevalidationComponent },
+  { path: 'asdashboard', component: AsdashboardComponent },
+  { path: 'ashome', component: AshomeComponent },
+  { path: 'ascardslider', component: AscardsliderComponent },
+  { path: 'ascardactivity', component: AscardactivityComponent },
+  { path: 'asviewrules', component: AsviewrulesComponent },
+  { path: 'asrulesucessmsg', component: AsrulesucessmsgComponent },
+  { path: 'aspayments', component: AspaymentsComponent },
+  { path: 'mpayment', component: MpaymentComponent },
+  { path: 'asreportname', component: AsreportnameComponent },
+  { path: 'mreportname', component: MreportnameComponent },
+  { path: 'assuppliers', component: AssuppliersComponent },
+  { path: 'assuppliersreport', component: AssuppliersreportComponent },
+  { path: 'msuppliersreport', component: MsuppliersreportComponent },
+  { path: 'asuserlist', component: AsuserlistComponent },
+  { path: 'dashboard', component: DashboardComponent },
   
 ]
 @NgModule({
@@ -174,10 +200,21 @@ const routes: Routes = [
     MnotificationmatrixComponent,
     McontactusComponent,
     McardsComponent,
-    MrulevalidationComponent
+    MrulevalidationComponent,
+    AsdashboardComponent,
+    AshomeComponent,
+    AscardsliderComponent,
+    AscardactivityComponent,
+    AstopcardactivityComponent,
+    AspaymentsComponent,
+    MpaymentComponent,
+    AsreportnameComponent,
+    MreportnameComponent,
+    AssuppliersreportComponent,
+    MsuppliersreportComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,
+    BrowserModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

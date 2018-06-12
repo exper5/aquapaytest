@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { MasterServiceService} from './master-service.service'
+import { Component,OnInit } from '@angular/core';
 import * as $ from 'jquery';
-
 declare var variableName:any;
 declare var jquery:any;
 declare var $ :any;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,7 +10,7 @@ declare var $ :any;
 })
 export class AppComponent implements OnInit{
 
-  
+
   ngOnInit(): void {
     $(".nav a").on("click", function () {
       $(".nav").find(".active").removeClass("active");

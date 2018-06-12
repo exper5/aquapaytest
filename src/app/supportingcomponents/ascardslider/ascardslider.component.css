@@ -1,0 +1,22 @@
+.margnrht{
+    margin-right: 20px;
+
+}
+.mrgntpminus{
+    margin-top: -25px;
+}
+.uk-card-primaryn{
+
+    width: 90%!important;
+}
+.highcharts-background{
+    height:320px !important;
+
+}
+.CardWhiteboxn {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-bottom: 3%;
+}

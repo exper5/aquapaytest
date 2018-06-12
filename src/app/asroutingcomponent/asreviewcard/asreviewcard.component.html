@@ -1,13 +1,46 @@
 <app-asnav></app-asnav>
 <div class="container ">
-    <div class="step-1">
-        <app-asapprovecard></app-asapprovecard>
-    </div>
-    <div class="step-2">
-        <app-asapproveotp></app-asapproveotp>
-    </div>
-    <div class="step-3">
-        <app-ascardsuccess></app-ascardsuccess>
-    </div>
+    <section class="content ">
+        <!--<div class="col-md-2 col-sm-2 top_back no-show2">
+            <h5 class="blu-color"> <a class="backBtn"><img src="assets/images/left-arrow.png"> Back </a></h5></div>-->
+        <div class="col-md-12">
+            <div class="stepwizard ">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step">
+                        <a href="#step-1" type="button" class="btn bg-primary btn-circle dotmrgnl" id="first">
+                            <img class="img-responsive tick" src="assets/images/tick.png">
+                        </a>
+                        <h6 class="blu-color" id="p1">Review Cards</h6>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-2" type="button" class="btn dotmrgnl bg-default btn-circle " id="second">
+                            <img class="img-responsive tick2" src="assets/images/tick.png">
+                        </a>
+                        <h6 id="p2">Mobile Verification</h6>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-md-2 col-sm-2 top_back no-show">
+    <h5 class="blu-color"> <a href="#" class="backBtn"><img src="assets/images/left-arrow.png"> Back </a></h5></div>-->
+        <div class="clearfix"></div>
+        <div role="form" class="contact-form ">
+            <div class="col-md-12">
+
+                <div class="row setup-content form_bg" id="step-1">
+                   <app-asapprovecard></app-asapprovecard>
+                </div>
+                <div class="row setup-content form_bg" id="step-2">
+    
+                    <app-asapproveotp></app-asapproveotp>
+    
+                </div>
+
+                <div class="" id="step-3">
+                   <app-ascardsuccess></app-ascardsuccess>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

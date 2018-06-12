@@ -59,14 +59,14 @@ export class SupplierlistComponent implements OnInit {
   
 
 
-$(".rowShow").hide();
+  $(".rowShow").hide();
 
-$('.showhide').click(function(){
-  //alert("clicked");
-  var row=$(this).parent().parent().next();
-  $(row).toggle();
-  $(row).next().toggle();
-})
+  $('.showhide').click(function(){
+    //alert("clicked");
+    var row=$(this).parent().parent().next();
+    $(row).toggle();
+    $(row).next().toggle();
+  });
 //---------------------------------------toggle class for table collapse-------------------------------------------
   }
 

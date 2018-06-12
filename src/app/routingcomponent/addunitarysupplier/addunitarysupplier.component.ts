@@ -101,11 +101,15 @@ $('#magic-toggle_sup').click(function() {
             op.appendTo(tbodyopd);
             }
             else{
-
+                     opdcount=opdcount-1;
                 alert("Can not add more than 4 email");
             }
             
         });
+        $("body").on("click",".remove",function(){ 
+            $(this).parents(".control-group").remove();
+            opdcount=opdcount-1;
+      });
     });
     var opdcount_sup = 1;
    
@@ -128,12 +132,14 @@ $('#magic-toggle_sup').click(function() {
                                         op.appendTo("");
                                     }
                                     else{
+                                        opdcount_sup=opdcount_sup-1;
                                         alert("Can not add more than 4 contact");
-                                       op.appendTo("");
+                                       
                                     }
 								});
      $("body").on("click",".remove",function(){ 
-$(this).parents(".control-group").remove();
+      $(this).parents(".control-group").remove();
+      opdcount_sup=opdcount_sup-1;
 });
     //---------------------------------------check box js -------------------------------------------
 
