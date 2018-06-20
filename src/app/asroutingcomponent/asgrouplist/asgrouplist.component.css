@@ -21,4 +21,6 @@
 .table tbody tr td.custmtdn {
   padding: 20px 20px;
 }
-
+.padlnon{
+  padding-left: 0px!important;
+}

@@ -1,0 +1,50 @@
+.CardWhitebox_CS h3 {
+    font-size: 17.2px;
+    color: #2c2e30;
+    text-align: center;
+    padding: 8%;
+    margin: 0px;
+    font-family: 'Poppins-Medium';
+}
+
+.Num {
+    font-size: 24px !important;
+  font-weight: 500;
+  color: #000000;
+}
+
+.CardWhitebox_CS h3 span {
+    color: #575962;
+    font-size: 17.3px !important;
+  font-weight: 500;
+}
+
+.CardWhitebox_CS h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+ .CardWhitebox_CS h5 span {
+    color: #575962;
+    font-size: 12.8px !important;
+    
+}
+.CardWhitebox_CS{
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-bottom: 5%;
+}
+
+.Text_Pad{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+.clear5 {
+    clear: both;
+    height: 5px;
+}

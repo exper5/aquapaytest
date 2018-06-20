@@ -57,7 +57,7 @@ import { AsapproveotpComponent } from './supportingcomponents/asapproveotp/asapp
 import { AsuserlistComponent } from './asroutingcomponent/asuserlist/asuserlist.component';
 import { AscardsuccessComponent } from './supportingcomponents/ascardsuccess/ascardsuccess.component';
 import { AscardsComponent } from './asroutingcomponent/ascards/ascards.component';
-import { AspendingusersComponent } from './asroutingcomponent/aspendingusers/aspendingusers.component';
+import { AspendingusersComponent } from './supportingcomponents/aspendingusers/aspendingusers.component';
 import { AsuserapprovemsgComponent } from './supportingcomponents/asuserapprovemsg/asuserapprovemsg.component';
 import { AsuserslistreportComponent } from './supportingcomponents/asuserslistreport/asuserslistreport.component';
 import { AssuppliersComponent } from './asroutingcomponent/assuppliers/assuppliers.component';
@@ -79,6 +79,30 @@ import { AsreportnameComponent } from './supportingcomponents/asreportname/asrep
 import { MreportnameComponent } from './supportingcomponents/mreportname/mreportname.component';
 import { AssuppliersreportComponent } from './supportingcomponents/assuppliersreport/assuppliersreport.component';
 import { MsuppliersreportComponent } from './supportingcomponents/msuppliersreport/msuppliersreport.component';
+import { AsnpendingusersComponent } from './asroutingcomponent/asnpendingusers/asnpendingusers.component';
+import { CheckernavigationComponent } from './supportingcomponents/checkernavigation/checkernavigation.component';
+import { CrulevalidationComponent } from './chroutingcomponents/crulevalidation/crulevalidation.component';
+import { AslastpaymentComponent } from './asroutingcomponent/aslastpayment/aslastpayment.component';
+import { ChdashboardComponent } from './chroutingcomponents/chdashboard/chdashboard.component';
+import { ChhomeComponent } from './supportingcomponents/chhome/chhome.component';
+import { ChpaystatusComponent } from './supportingcomponents/chpaystatus/chpaystatus.component';
+import { ChsuprequestComponent } from './supportingcomponents/chsuprequest/chsuprequest.component';
+import { ChcardsliderComponent } from './supportingcomponents/chcardslider/chcardslider.component';
+import { ChpaymentComponent } from './chroutingcomponents/chpayment/chpayment.component';
+import { ChreportnameComponent } from './supportingcomponents/chreportname/chreportname.component';
+import { ChpendingpaymentComponent } from './chroutingcomponents/chpendingpayment/chpendingpayment.component';
+import { ChreviewpaymentComponent } from './supportingcomponents/chreviewpayment/chreviewpayment.component';
+import { ChpaymentsuccessmsgComponent } from './supportingcomponents/chpaymentsuccessmsg/chpaymentsuccessmsg.component';
+import { ChcardsComponent } from './chroutingcomponents/chcards/chcards.component';
+import { ChfaqComponent } from './chroutingcomponents/chfaq/chfaq.component';
+import { ChmyprofileComponent } from './chroutingcomponents/chmyprofile/chmyprofile.component';
+import { ChcontactusComponent } from './chroutingcomponents/chcontactus/chcontactus.component';
+import { ChnotificationComponent } from './chroutingcomponents/chnotification/chnotification.component';
+import { ChlastpaymentComponent } from './supportingcomponents/chlastpayment/chlastpayment.component';
+import { ChsupplierlistComponent } from './supportingcomponents/chsupplierlist/chsupplierlist.component';
+import { ChsupplierreportComponent } from './supportingcomponents/chsupplierreport/chsupplierreport.component';
+import {FormsModule} from '@angular/forms';
+
 const routes: Routes = [
   { path: '', component: MasterComponent},
   { path: 'makeunitarypayment', component: MakeunitarypaymentComponent },
@@ -131,6 +155,22 @@ const routes: Routes = [
   { path: 'assuppliersreport', component: AssuppliersreportComponent },
   { path: 'msuppliersreport', component: MsuppliersreportComponent },
   { path: 'asuserlist', component: AsuserlistComponent },
+  { path: 'aspendingusers', component: AspendingusersComponent },
+  { path: 'asnpendingusers', component: AsnpendingusersComponent },
+  { path: 'checkernavigation', component: CheckernavigationComponent },
+  { path: 'crulevalidation', component: CrulevalidationComponent },
+  { path: 'aslastpayment', component: AslastpaymentComponent },
+  { path: 'chdashboard', component: ChdashboardComponent },
+  { path: 'chpayment', component: ChpaymentComponent },
+  { path: 'chreportname', component: ChreportnameComponent },
+  { path: 'chpendingpayment', component: ChpendingpaymentComponent },
+  { path: 'chcards', component: ChcardsComponent },
+  { path: 'chfaq', component: ChfaqComponent },
+  { path: 'chmyprofile', component: ChmyprofileComponent },
+  { path: 'chcontactus', component: ChcontactusComponent },
+  { path: 'chnotification', component: ChnotificationComponent },
+  { path: 'chsupplierlist', component: ChsupplierlistComponent },
+  { path: 'chsupplierreport', component: ChsupplierreportComponent },
   { path: 'dashboard', component: DashboardComponent },
   
 ]
@@ -211,10 +251,32 @@ const routes: Routes = [
     AsreportnameComponent,
     MreportnameComponent,
     AssuppliersreportComponent,
-    MsuppliersreportComponent
+    MsuppliersreportComponent,
+    AsnpendingusersComponent,
+    CheckernavigationComponent,
+    CrulevalidationComponent,
+    AslastpaymentComponent,
+    ChdashboardComponent,
+    ChhomeComponent,
+    ChpaystatusComponent,
+    ChsuprequestComponent,
+    ChcardsliderComponent,
+    ChpaymentComponent,
+    ChreportnameComponent,
+    ChpendingpaymentComponent,
+    ChreviewpaymentComponent,
+    ChpaymentsuccessmsgComponent,
+    ChcardsComponent,
+    ChfaqComponent,
+    ChmyprofileComponent,
+    ChcontactusComponent,
+    ChnotificationComponent,
+    ChlastpaymentComponent,
+    ChsupplierlistComponent,
+    ChsupplierreportComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

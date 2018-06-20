@@ -13,6 +13,18 @@ export class AsgroupspendingComponent implements OnInit {
 
   ngOnInit() {
 
+    $(document).ready(function(){
+      $(".success").hide();
+    
+      $('.activeapp').click(function () {
+        $(".success").show();
+        $(".abc").hide();
+      });
+
+    });
+
+    
+
 
     $("#reportname").hide();
     $(".nxt2").click(function () {

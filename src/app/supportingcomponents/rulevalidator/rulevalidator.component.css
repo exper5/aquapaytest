@@ -3,6 +3,17 @@
     box-shadow: 0px 0px 5px #ccc;
     min-height:50px;
 }
+
+.tdwidth{
+    width: 80px!important;
+    vertical-align: top!important;
+    }
+
+.padlnon{
+    padding-left:0px!important;
+}
+
+
 .mrg-none{
     margin:0px;
 }
@@ -98,6 +109,13 @@ padding: 6px 25px;
 border-radius: 18.5px;
 background-color: #52178b;
 }
+.nxt2nn {
+    width: auto;
+    padding: 6px 25px;  
+    border-radius: 18.5px;
+    background-color: #52178b;
+    margin-right: 30px;
+    }
 input.invalid, textarea.invalid{
 border: 2px solid red;
 }

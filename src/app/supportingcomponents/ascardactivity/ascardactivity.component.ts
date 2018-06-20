@@ -18,6 +18,10 @@ export class AscardactivityComponent implements OnInit {
   ngOnInit() {
 
     loadAsPiCharts();
+    $('.example2').datepicker({
+      autoclose: true,
+      format: "dd M yy"
+  });
     
 
   }

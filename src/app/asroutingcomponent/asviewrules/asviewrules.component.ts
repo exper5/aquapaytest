@@ -14,6 +14,18 @@ export class AsviewrulesComponent implements OnInit {
   ngOnInit() {
 
 
+    $(document).ready(function(){
+      $(".sucess").hide();
+    
+      $('.activeapp').click(function () {
+        $(".sucess").show();
+        $(".abc").hide();
+      });
+
+    });
+
+
+
     $("#reportname").hide();
     $(".nxt2").click(function () {
       $("#reportname").show();

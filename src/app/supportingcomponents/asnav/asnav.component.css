@@ -11,3 +11,7 @@
     min-width: 400px;
     padding: 0px;
 }
+
+ul.dropdown-menu.dropdown-menu2 li, ul.dropdown-menu.dropdown-menu3 li, ul.dropdown-menu.dropdown-menu4 li {
+    border-bottom: 0px!important;
+}

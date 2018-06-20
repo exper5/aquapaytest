@@ -13,6 +13,7 @@ export class AsuserlistComponent implements OnInit {
 
   ngOnInit() {
 
+    
 
     $(".nxt2").click(function () {
       $("#reportname").show();

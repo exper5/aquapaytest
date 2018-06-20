@@ -33,4 +33,11 @@ input.form-control.noborder3::-ms-input-placeholder {
 .brdlft{
     border-left: 1px solid #eee;
 }
-
+.chkselect{
+    background-color: #64289d;
+}
+.prevlghd{
+    font-size: 12.4px;
+    font-weight: 600;
+    color: #3f4245;
+}

@@ -14,6 +14,7 @@ export class AsdashboardComponent implements OnInit {
 
   ngOnInit() {
     loadCharts();
+    
   }
 
 }

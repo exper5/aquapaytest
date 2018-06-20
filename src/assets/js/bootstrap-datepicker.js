@@ -21,6 +21,8 @@
  * limitations under the License.
  * ========================================================= */
 
+function loadDate(){
+
 (function($, undefined){
 
 	var $window = $(window);
@@ -1669,4 +1671,23 @@
 		$('[data-provide="datepicker-inline"]').datepicker();
 	});
 
+
+
+
+	$('.from').datepicker({
+		autoclose: true,
+		minViewMode: 1,
+		format: 'M'
+	}).on('changeDate', function (selected) {
+		startDate = new Date(selected.date.valueOf());
+		startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+	});
+
+
+
+
+
 }(window.jQuery));
+
+
+}

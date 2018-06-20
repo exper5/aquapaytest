@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+
 import * as $ from 'jquery';
+import { NgStyle } from '@angular/common';
 declare var jquery:any;
 declare var $ :any;
 
@@ -8,11 +11,149 @@ declare var $ :any;
   templateUrl: './addunitarysupplier.component.html',
   styleUrls: ['./addunitarysupplier.component.css']
 })
-export class AddunitarysupplierComponent implements OnInit {
+export class AddunitarysupplierComponent implements OnInit
+ {
 
-  constructor() { }
+  buttonDisabled: boolean=false;
+
+  constructor() {
+
+  }
+
+  supplier_code; 
+  model_1:any={};
+  addSupplierCode():void{
+    this.supplier_code=this.model_1;
+    this.model_1={};
+  }
+  
+  supplier_name; 
+  model_2:any={};
+  addSupplier_name():void{
+    this.supplier_name=this.model_2;
+    this.model_2={};
+  }
+  email_cnt=1;
+  email_supplier1; 
+  model_3_1:any={};
+  addEmailSupplier1():void{
+      this.email_cnt++;
+        if(this.email_cnt==4)
+        {
+          this.buttonDisabled = true;
+        }
+    this.email_supplier1.push(this.model_3_1);
+    this.model_3_1={};
+    
+  }
+  email_supplier2; 
+  model_3_2:any={};
+  addEmailSupplier2():void{
+   
+    this.email_supplier1.push(this.model_3_2);
+    this.model_3_2={};
+    
+  }
+  email_supplier3; 
+  model_3_3:any={};
+  addEmailSupplier3():void{
+  
+    this.email_supplier1.push(this.model_3_3);
+    this.model_3_3={};
+    
+  }
+  email_supplier4; 
+  model_3_4:any={};
+  addEmailSupplier4():void{
+   
+    this.email_supplier1.push(this.model_3_4);
+    this.model_3_4={};
+    
+  }
+  removeEmailSuppliers():void{
+      if(this.email_cnt==2)
+      {
+        this.email_supplier2=this.email_supplier3;
+        this.email_supplier3=this.email_supplier4;
+        this.email_supplier4=null;
+      }
+      if(this.email_cnt==3)
+      {
+        this.email_supplier3=this.email_supplier4;
+        this.email_supplier4=null;
+      }
+      if(this.email_cnt==4)
+      {
+        this.email_supplier4=null;
+      }
+      this.email_cnt--;
+  }
+  contact_supplier1; 
+  contactButton:boolean=false;
+  contact_cnt=1;
+  model_4_1:any={};
+  addSupplierContact1():void{
+      this.contact_cnt++;
+        if(this.contact_cnt==4)
+        {
+             this.contactButton=true;
+        }
+    this. contact_supplier1.push(this.model_4_1);
+    this.model_4_1={};
+  }
+  contact_supplier2; 
+  model_4_2:any={};
+  addSupplierContact2():void{
+    this. contact_supplier2.push(this.model_4_2);
+    this.model_4_2={};
+  }
+
+  contact_supplier3; 
+  model_4_3:any={};
+  addSupplierContact3():void{
+    this. contact_supplier3.push(this.model_4_3);
+    this.model_4_3={};
+  }
+  contact_supplier4; 
+  model_4_4:any={};
+  addSupplierContact4():void{
+    this. contact_supplier4.push(this.model_4_4);
+    this.model_4_4={};
+  }
+
+  removeContactSuppliers():void{
+      this.contact_cnt--;
+  }
+  account_no;
+  model_5:any={};
+  addAccountNo():void{
+      this.account_no=this.model_5;
+      this.model_5={};
+  }
+
+  ifsc;
+  model_6:any={};
+  addIfsc():void{
+      this.ifsc=this.model_6;
+      this.model_6={};
+  }
+
+  bank_name;
+  model_7:any={};
+  addBankName():void{
+      this.bank_name=this.model_7;
+      this.model_7={};
+  }
+  branch_name;
+  model_8:any={};
+ addBranchName ():void{
+      this.branch_name=this.model_8;
+      this.model_8={};
+  }
+
 
   ngOnInit() {
+
     $(document).ready(function(){
       $(".add-moree").click(function(){ 
         var html = $(".copyy").html();
@@ -82,65 +223,7 @@ $('#magic-toggle_sup').click(function() {
       $('.fun-img_sup').attr('src', plus)
     }
   });
-     $(document).ready(function(){			
-        var opdcount = 1;
-            $("button[id^='add_div']").click(function(){
-            var attri=$(this).attr('class');
-         
-            opdcount++;
-            if(opdcount<5){
-            var opdnewclass=attri.replace('add','append');
-            var opdtr = "opdtr" + opdcount;
-        
-            var tbodyopd = ("#new_id");
-            var addnewclass=attri.replace('append','add');
-            var add="add" + addnewclass;
-            
-            var op = $("<div id="+ opdtr +" ><div class='control-group input-group user-input-wrp' style='margin-top:36px'><input type='email' name='addmore[]' class='input-text'> <label class='label floating-label' for='email' id='email_count'>Supplier Email "+ opdcount +"</label><div class='input-group-btn bordr'> <button class='btn remove' type='button'>-</button></div></div></div>");
-            
-            op.appendTo(tbodyopd);
-            }
-            else{
-                     opdcount=opdcount-1;
-                alert("Can not add more than 4 email");
-            }
-            
-        });
-        $("body").on("click",".remove",function(){ 
-            $(this).parents(".control-group").remove();
-            opdcount=opdcount-1;
-      });
-    });
-    var opdcount_sup = 1;
-   
-                                    $("button[id^='add_div_sup']").click(function(){
-                                    var attri=$(this).attr('class');
-                                    
-                                    opdcount_sup++;
-                                    var op;
-                                    if(opdcount_sup<5){
-
-                                       // alert("inside if");
-                                        var opdnewclass_sup=attri.replace('add_sup','append_sup');
-                                        var opdtr_sup = "opdtr_sup" + opdcount_sup;
-                                        
-                                        var tbodyopd_sup = ("#new_id_sup");
-                                        var addnewclass_sup=attri.replace('append_sup','add_sup');
-                                        var add="add_sup" + addnewclass_sup;
-                                        var op_sup = $("<div id="+ opdtr_sup +" ><div class='control-group  input-group ' onfocusout='uptext();' style='margin-top:36px'><input type='email' name='addmore[]' class='input-text'> <label class='label floating-label' for='email' id='email_count'>Supplier Contact "+ opdcount_sup +"</label><div class='input-group-btn bordr'> <button class='btn remove' type='button'>-</button></div></div></div>");
-                                        op_sup.appendTo(tbodyopd_sup);
-                                        op.appendTo("");
-                                    }
-                                    else{
-                                        opdcount_sup=opdcount_sup-1;
-                                        alert("Can not add more than 4 contact");
-                                       
-                                    }
-								});
-     $("body").on("click",".remove",function(){ 
-      $(this).parents(".control-group").remove();
-      opdcount_sup=opdcount_sup-1;
-});
+     
     //---------------------------------------check box js -------------------------------------------
 
 $(".place").click(function () {

@@ -1,4 +1,5 @@
 <app-makernavigation></app-makernavigation>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <div class="container ">
   <section class="content ">
     <div class="col-md-2 col-sm-2 top_back no-show2">
@@ -44,42 +45,212 @@
               <div class="col-md-6 col-sm-6">
                 <div class="lft_div">
                   <div class="form-field col x-50">
-                    <input id="name" class="input-text js-input" type="text" required>
-                    <label class="label" for="name">Supplier Code</label>
+                    <input type="text"  class="input-text js-input" id="supplier_code" name="supplier_code"  [(ngModel)]="model_1.supplier_code"  required>
+                    <label class="label" for="supplier_code">Supplier Code</label>
                   </div>
+
+
+                  
+                  
+
                   <div class="form-field col x-50">
-                    <input id="email" class="input-text js-input" type="text" required>
-                    <label class="label" for="email">Supplier Name</label>
+                    <input type="text" class="input-text js-input"  id="supplier_name" name="supplier_name" [(ngModel)]="model_2.supplier_name" required>
+                    <label class="label" for="supplier_name">Supplier Name</label>
                   </div>
+
+                   
+
                   <!-- add email dynamically -->
-                  <div class="form-field col x-50 ">
-                    <div class="input-group control-group after-add-more user-input-wrp">
-                      <input type="email" name="addmore[]" class="input-text">
-                      <label class="label floating-label" for="email">Supplier Email 1</label>
+                  <div class="form-field col x-50 " >
+                    <div class="input-group control-group after-add-more user-input-wrp" id="email_op">
+                      <input type="email"  class="input-text js-input" name=" email_supplier1" [(ngModel)]="model_3_1.email_supplier1">
+                     
+                      <label class="label floating-label"  for="email_supplier1">Supplier Email 1</label>
                       <div class="input-group-btn bordr">
-                        <button class="btn add-more" id="add_div0" type="button">+</button>
+                        <div *ngIf="email_cnt > 3">
+                        <button disabled="{{ buttonDisabled }}" class="btn add-more" id="email_supplier1" type="button" (click)="addEmailSupplier2();addEmailSupplier3();addEmailSupplier4(); myFunction();myFunction2();" >+</button>
+                         </div>
+                         <div *ngIf="email_cnt < 4">
+                            <button  class="btn add-more" id="email_supplier1" type="button" (click)="addEmailSupplier2();addEmailSupplier3();addEmailSupplier4(); myFunction();myFunction2();" >+</button>
+                             </div>
+
+                          
                       </div>
                     </div>
                     <!-- Copy Fields -->
+                   
+                
+  
 
-                  </div>
+                      <div  class="form-field  "   >
+                      <div class="input-group control-group after-add-more user-input-wrp" *ngIf="email_cnt==2 || email_cnt==4 || email_cnt ==3 ">
+                          
+                        <input type="email"  class="input-text js-input" name=" email_supplier2" [(ngModel)]="model_3_2.email_supplier2">
+                      
+                         <div *ngIf="email_cnt==2">  
+                           <label class="label floating-label"  for="email_supplier2">Supplier Email {{email_cnt}}</label>
+                           </div>
+                           <div *ngIf="email_cnt==4">  
+                              <label class="label floating-label"  for="email_supplier2">Supplier Email {{email_cnt-2}}</label>
+                              </div>
+                              <div *ngIf="email_cnt==3">  
+                                  <label class="label floating-label"  for="email_supplier2">Supplier Email {{email_cnt-1}}</label>
+                                  </div>
+                          <div class="input-group-btn bordr">
+                            <button class="btn add-more" id="email_supplier2" type="button" (click)="removeEmailSuppliers()" >-</button>
+                        
+                          </div>
+                        </div>
+                       
+                      
+                
+                        <div  class="form-field " >
+                            <div class="input-group control-group after-add-more user-input-wrp" id="email_op"  *ngIf="email_cnt==3 || email_cnt ==4  ">
+                              
+                              <input type="email"  class="input-text js-input" name=" email_supplier3" [(ngModel)]="model_3_3.email_supplier3">
+                             <div *ngIf="email_cnt==3">
+                              <label class="label floating-label"  for="email_supplier3">Supplier Email {{email_cnt}}</label>
+                              </div>
+                              <div *ngIf="email_cnt==4">
+                                  <label class="label floating-label"  for="email_supplier3">Supplier Email {{email_cnt-1}}</label>
+                                  </div>
+                                  
+                                <div class="input-group-btn bordr">
+                                  <button class="btn add-more" id="email_supplier3" type="button" (click)="removeEmailSuppliers()" >-</button>
+                               
+                              
+                                </div>
+                              </div>
+                              </div>
+
+                              
+                            <div  class="form-field " >
+                                <div class="input-group control-group after-add-more user-input-wrp" id="email_op"  *ngIf="email_cnt==4  ">
+                                  
+                                  <input type="email"  class="input-text js-input" name=" email_supplier4" [(ngModel)]="model_3_4.email_supplier4">
+                                  <div *ngIf="email_cnt==4">
+                                  <label class="label floating-label"  for="email_supplier4">Supplier Email {{email_cnt}}</label>
+                                  </div>
+                                  
+                                    <div class="input-group-btn bordr">
+                                      <button class="btn add-more" id="email_supplier4" type="button" (click)="removeEmailSuppliers()" >-</button>
+                                   
+                                      
+                                  
+                                    </div>
+                                  </div>
+                                  </div>
+                           
+                            </div>
+              
+                            </div>
+
+                      
+
+
+
+
+
                   <div class="append " id="new_id">
                   </div>
                   <!-- add email dynamically -->
 
                   <!-- add email dynamically -->
+
                   <div class="form-field col x-50">
                     <div class="input-group control-group after-add-more2 user-input-wrp">
-                      <input type="email" name="addmore[]" class="input-text">
-                      <label class="label floating-label" for="email">Supplier Contact 1</label>
+                      <input type="text" name="supplier_contact1" class="input-text js-input" [(ngModel)]="model_4_1.supplier_contact1">
+                      <label class="label floating-label" for="supplier_contact1">Supplier Contact 1</label>
                       <div class="input-group-btn bordr">
-                        <button class="btn add-more" id="add_div_sup0" type="button">+</button>
+                        <div *ngIf="contact_cnt > 3">
+                        <button  disabled="{{contactButton}}" class="btn add-more" id="supplier_contact1" type="button" (click)="addSupplierContact1();addSupplierContact2();addSupplierContact3();addSupplierContact4()">+</button>
+                        </div>
+                        <div *ngIf="contact_cnt < 4">
+                            <button class="btn add-more" id="supplier_contact1" type="button" (click)="addSupplierContact1();addSupplierContact2();addSupplierContact3();addSupplierContact4()">+</button>
+                        </div>
+
                       </div>
                     </div>
                   </div>
+
+              
+
+
+
+                 
+                  <div  class="form-field  "   >
+                      <div class="input-group control-group after-add-more user-input-wrp" *ngIf="contact_cnt==2 || contact_cnt==4 || contact_cnt ==3 ">
+                          <input type="email"  class="input-text js-input" name=" contact_supplier2" [(ngModel)]="model_4_2.contact_supplier2">
+                         <div *ngIf="contact_cnt==2">  
+                           <label class="label floating-label"  for="contact_supplier2">Supplier Contact {{contact_cnt}}</label>
+                           </div>
+                           <div *ngIf="contact_cnt==4">  
+                              <label class="label floating-label"  for="email_supplier2">Supplier Contact {{contact_cnt-2}}</label>
+                              </div>
+                              <div *ngIf="contact_cnt==3">  
+                                  <label class="label floating-label"  for="contact_supplier2">Supplier Contact {{contact_cnt-1}}</label>
+                                  </div>
+                          <div class="input-group-btn bordr">
+                            <button class="btn add-more" id="contact_supplier2" type="button" (click)="removeContactSuppliers()" >-</button>
+                                     
+                            
+                           
+                        
+                          </div>
+                        </div>
+                       
+                      
+                
+                        <div  class="form-field " >
+                            <div class="input-group control-group after-add-more user-input-wrp" id="email_op"  *ngIf="contact_cnt==3 || contact_cnt ==4  ">
+                              
+                              <input type="email"  class="input-text js-input" name=" contact_supplier3" [(ngModel)]="model_4_3.contact_supplier3">
+                             <div *ngIf="contact_cnt==3">
+                              <label class="label floating-label"  for="contact_supplier3">Supplier Contact {{contact_cnt}}</label>
+                              </div>
+                              <div *ngIf="contact_cnt==4">
+                                  <label class="label floating-label"  for="contact_supplier3">Supplier Contact {{contact_cnt-1}}</label>
+                                  </div>
+                                  
+                                <div class="input-group-btn bordr">
+                                  <button class="btn add-more" id="contact_supplier3" type="button" (click)="removeContactSuppliers()" >-</button>
+                               
+                              
+                                </div>
+                              </div>
+                              </div>
+
+                              
+                            <div  class="form-field " >
+                                <div class="input-group control-group after-add-more user-input-wrp" id="email_op"  *ngIf="contact_cnt==4  ">
+                                  
+                                  <input type="email"  class="input-text js-input" name=" contact_supplier4" [(ngModel)]="model_4_4.contact_supplier4">
+                                  <div *ngIf="contact_cnt==4">
+                                  <label class="label floating-label"  for="contact_supplier4">Supplier Contact {{contact_cnt}}</label>
+                                  </div>
+                                  
+                                    <div class="input-group-btn bordr">
+                                      <button class="btn add-more" id="contact_supplier4" type="button" (click)="removeContactSuppliers()" >-</button>
+                                   
+                                      
+                                  
+                                    </div>
+                                  </div>
+                                  </div>
+                           
+                            </div>
+              
+                            
+
+
+
+
+
                   <div class="append_sup" id="new_id_sup">
                   </div>
+
                   <!-- add email dynamically -->
+
                   <div class="radio radio-primary np-padd">
                     <strong> Do you need payment advice ?</strong>
                   </div>
@@ -89,6 +260,7 @@
                       Yes
                     </label>
                   </div>
+
                   <div class="radio radio-primary">
                     <input type="radio" name="radio1" id="radio2" value="option2">
                     <label for="radio2">
@@ -97,24 +269,27 @@
                   </div>
                 </div>
               </div>
+
               <div class="col-md-6 col-sm-6">
                 <div class="rgt_div">
                   <div class="form-field col x-50">
-                    <input id="name" class="input-text js-input" type="text" required>
-                    <label class="label" for="name">Account Number</label>
+                    <input id="account_no" class="input-text js-input" type="text" [(ngModel)]="model_5. account_no" required>
+                    <label class="label" for="account_no">Account Number</label>
+                  </div>
+
+                  <div class="form-field col x-50">
+                    <input id="ifsc" class="input-text js-input" type="text" [(ngModel)]="model_6.ifsc" required>
+                    <label class="label" for="ifsc">IFSC</label>
                   </div>
                   <div class="form-field col x-50">
-                    <input id="email" class="input-text js-input" type="text" required>
-                    <label class="label" for="email">IFSC</label>
+                    <input id="bank_name" class="input-text js-input" type="text"  [(ngModel)]="model_7.bank_name" required>
+                    <label class="label" for="bank_name">Bank Name</label>
                   </div>
                   <div class="form-field col x-50">
-                    <input id="name" class="input-text js-input" type="text" required>
-                    <label class="label" for="name">Bank Name</label>
+                    <input id="branch_name" class="input-text js-input" type="text" [(ngModel)]="model_8.branch_name" required>
+                    <label class="label" for="branch_name">Branch Name</label>
                   </div>
-                  <div class="form-field col x-50">
-                    <input id="email" class="input-text js-input" type="text" required>
-                    <label class="label" for="email">Branch Nane</label>
-                  </div>
+
                   <app-fileupload></app-fileupload>
 
                 </div>
@@ -123,7 +298,7 @@
               <div class="clearfix"></div>
               <div class="col-md-12">
                 <div class="form-field col x-50">
-                  <button class="btn bg-primary nextBtn nxt2" type="button">Next</button>
+                  <button class="btn bg-primary nextBtn nxt2" type="button" (click)="addSupplierCode();   addSupplier_name();  addAccountNo(); addIfsc();addBankName();addBranchName();">Next</button>
                 </div>
               </div>
             </div>
@@ -186,7 +361,7 @@
                     <!-- Copy Fields -->
                     <div class="gayb" id="panel-sup">
                       <div class="form-field col x-50">
-                        <input id="email" class="input-text bold-holder" type="text" placeholder="7849367203" required>
+                        <input id="email_count" class="input-text bold-holder" type="number" placeholder="7849367203" required>
                       </div>
 
                     </div>
@@ -334,7 +509,12 @@
                         <div class="input-group input-group2 control-group top-spac">
                           <label class="label label-cust" for="email">Remove Approver</label>
                           <button class=" remove" type="button"> -</button>
+                        
                         </div>
+
+                        
+
+
                       </div>
                     </div>
                   </div>

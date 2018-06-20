@@ -62,7 +62,7 @@ input[type=radio] {
     outline-color: transparent; 
 }
 .span_width {
-    width: 110px;
+    width: 115px;
     display: inline-block;
     vertical-align: top;
     font-size: 13px;
@@ -125,7 +125,9 @@ a.btn.appoved, a.btn.Rejected, a.btn.Pending {
 .rsspac{margin-right: 16%}
 
 span.bold-txt {
-    font-weight: bold;
+    font-size: 15.8px;
+    font-weight: 600;
+    color: #3f4245;
 }
 
 a.btn.Rejected {
@@ -852,7 +854,7 @@ a.btn.Pending {
 }
 
 .dropdown-menu-right2 {
-    right: 13px;
+    right: -35px;
 }
 
 .Top5Heading111 {
@@ -1010,7 +1012,7 @@ a.btn.Pending {
 }
 
 .CardWhitebox1n h3 {
-    padding:30px 0px 30px 27px;
+    padding:15px 0px 15px 27px;
     text-align: left;
 }
 

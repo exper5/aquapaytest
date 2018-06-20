@@ -30,5 +30,8 @@
 }
 .btnwdauto{
     width: auto!important;
-    padding: 6px 25px!important;
+    padding: 7px 15px!important;
+}
+.borderradius{
+    border-radius: 20px!important;
 }

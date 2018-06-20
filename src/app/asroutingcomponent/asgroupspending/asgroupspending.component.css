@@ -40,3 +40,10 @@
 .table tbody tr td.custmtdn {
     padding: 20px 20px;
 }
+.borderradius{
+    border-radius: 20px!important;
+}
+.padlnon{
+    padding-left: 0px!important;
+  }
+  
