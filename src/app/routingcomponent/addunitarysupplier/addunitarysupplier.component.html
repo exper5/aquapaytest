@@ -68,10 +68,10 @@
                       <label class="label floating-label"  for="email_supplier1">Supplier Email 1</label>
                       <div class="input-group-btn bordr">
                         <div *ngIf="email_cnt > 3">
-                        <button disabled="{{ buttonDisabled }}" class="btn add-more" id="email_supplier1" type="button" (click)="addEmailSupplier2();addEmailSupplier3();addEmailSupplier4(); myFunction();myFunction2();" >+</button>
+                        <button disabled="{{ buttonDisabled }}" class="btn add-more" id="email_supplier1" type="button" (click)="addEmailSupplier1();addEmailSupplier2();addEmailSupplier3();addEmailSupplier4(); myFunction();myFunction2();" >+</button>
                          </div>
                          <div *ngIf="email_cnt < 4">
-                            <button  class="btn add-more" id="email_supplier1" type="button" (click)="addEmailSupplier1(); addEmailSupplier2();addEmailSupplier3();addEmailSupplier4(); myFunction();myFunction2();" >+</button>
+                            <button  class="btn add-more" id="email_supplier1" type="button" (click)="addEmailSupplier1();addEmailSupplier2();addEmailSupplier3();addEmailSupplier4(); myFunction();myFunction2();" >+</button>
                              </div>
 
                           
@@ -298,7 +298,7 @@
               <div class="clearfix"></div>
               <div class="col-md-12">
                 <div class="form-field col x-50">
-                  <button class="btn bg-primary nextBtn nxt2" type="button" (click)="addSupplierCode();   addSupplier_name();  addAccountNo(); addIfsc();addBankName();addBranchName();">Next</button>
+                  <button class="btn bg-primary nextBtn nxt2" type="button" (click)="addSupplierCode();   addSupplier_name(); addAccountNo(); addIfsc();addBankName();addBranchName();">Next</button>
                 </div>
               </div>
             </div>
@@ -558,8 +558,8 @@
             <h4>Supplier has been successfully added and sent for approval</h4>
             <h5>You can view the summary and status of the request on the supplier page</h5>
             <div class="col-md-12 col-sm-12 top-spac margin20">
-              <a routerLink="../listpayment" class="btn btn-primary btn-outline btn-spac btn-spac2 Btn_Width2 margbtnRES">Go to Supplier</a>
-              <a href="" class="btn btn-primary btn-outline Btn_Width2">Go to Dashboard</a>
+              <a routerLink="../supplierlist" class="btn btn-primary btn-outline btn-spac btn-spac2 Btn_Width2 margbtnRES">Go to Supplier</a>
+              <a routerLink="../dashboard" class="btn btn-primary btn-outline Btn_Width2">Go to Dashboard</a>
 
             </div>
 
