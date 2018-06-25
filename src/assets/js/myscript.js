@@ -36,7 +36,7 @@ $(document).on("shown.bs.dropdown", ".dropdown", function () {
 // switch to dropup only if there is no space at the bottom
 
 //---------------------------------------Datepicker js start--------------------------------------------
-/*
+
 $('.from').datepicker({
     autoclose: true,
     minViewMode: 1,
@@ -50,7 +50,6 @@ $('.example1').datepicker({
     autoclose: true,
     format: "dd M yy"
 });
-*/
 //---------------------------------------Datepicker js END-------------------------------------------
 
 //---------------------------------------check box js -------------------------------------------

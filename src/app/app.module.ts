@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routing,routes } from './app.routing';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './supportingcomponents/home/home.component';
 import { CardsliderComponent } from './supportingcomponents/cardslider/cardslider.component';
@@ -230,7 +231,7 @@ import { CaaddcardsComponent } from './supportingcomponents/caaddcards/caaddcard
     CaaddcardsComponent
   ],
   imports: [
-    BrowserModule,FormsModule,routing,
+    BrowserModule,FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
