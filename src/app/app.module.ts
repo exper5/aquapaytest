@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing,routes } from './app.routing';
 
+import {routing,routes} from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './supportingcomponents/home/home.component';
 import { CardsliderComponent } from './supportingcomponents/cardslider/cardslider.component';
@@ -115,6 +115,9 @@ import { CanotificationmatrixComponent } from './caroutingcomponent/canotificati
 import { CafaqComponent } from './caroutingcomponent/cafaq/cafaq.component';
 import { CacardsComponent } from './caroutingcomponent/cacards/cacards.component';
 import { CaaddcardsComponent } from './supportingcomponents/caaddcards/caaddcards.component';
+import { CaaddcardsuccessmsgComponent } from './supportingcomponents/caaddcardsuccessmsg/caaddcardsuccessmsg.component';
+import { CagroupsComponent } from './caroutingcomponent/cagroups/cagroups.component';
+
 
 @NgModule({
   declarations: [
@@ -228,7 +231,9 @@ import { CaaddcardsComponent } from './supportingcomponents/caaddcards/caaddcard
     CanotificationmatrixComponent,
     CafaqComponent,
     CacardsComponent,
-    CaaddcardsComponent
+    CaaddcardsComponent,
+    CaaddcardsuccessmsgComponent,
+    CagroupsComponent
   ],
   imports: [
     BrowserModule,FormsModule,

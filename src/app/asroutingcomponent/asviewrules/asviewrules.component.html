@@ -1,7 +1,7 @@
 <app-asnav></app-asnav>
 <div class="container" id="lstpaymt">
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper abc">
 
         <!-- Main content -->
         <section class="content abc">
@@ -28,7 +28,7 @@
                     <div class="clear20"></div>
                     <a><button class="btn bg-primary mrtfi nextBtn nxt2n btnwdauto ruleNextBtn mrg0Auto activeapp " type="button">Approve</button></a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="btn btn-primary btn-outline btnw ResponsiveBtnWidth">Reject</a>
+                    <a class="btn btn-primary btn-outline btnw ResponsiveBtnWidth" data-toggle="modal" data-target="#payreport">Reject</a>
 
                 </div>
 
@@ -255,7 +255,7 @@
 
                             <tr>
                                 <td>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
                                 <td>A & B</td>
                                 <td>0</td>
@@ -264,13 +264,13 @@
                                     <a href="javascript:void(0);" class="btn Pending" role="button">Pending </a>
                                 </td>
                                 <td>
-                                    <div class="flash equipment6">
-                                        <span>+</span>
+                                    <div class="flash equipment6 showhide">
+                                        <span class="showhide">+</span>
                                     </div>
                                 </td>
                             </tr>
 
-                            <tr class="row6 grayStrip">
+                            <tr class="rowShow grayStrip">
                                 <td colspan="6" class="custmtdn">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="col-md-3 col-sm-3 col-xs-6 padlnon">
@@ -309,7 +309,7 @@
 
                             <tr class="whiteStrip">
                                 <td>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
                                 <td>A & C</td>
 
@@ -320,13 +320,13 @@
                                     <a href="javascript:void(0);" class="btn Pending" role="button">Pending </a>
                                 </td>
                                 <td>
-                                    <div class="flash equipment7">
-                                        <span>+</span>
+                                    <div class="flash equipment7 showhide">
+                                        <span class="showhide">+</span>
                                     </div>
                                 </td>
                             </tr>
 
-                            <tr class="row7">
+                            <tr class="rowShow">
                                 <td colspan="6" class="custmtdn">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="col-md-3 col-sm-3 col-xs-6 padlnon">
@@ -365,7 +365,7 @@
 
                             <tr>
                                 <td>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
                                 <td>B & C</td>
                                 <td>0</td>
@@ -374,13 +374,13 @@
                                     <a href="javascript:void(0);" class="btn Pending" role="button">Pending </a>
                                 </td>
                                 <td>
-                                    <div class="flash equipment8">
-                                        <span>+</span>
+                                    <div class="flash equipment8 showhide">
+                                        <span class="showhide">+</span>
                                     </div>
                                 </td>
                             </tr>
 
-                            <tr class="row8 grayStrip">
+                            <tr class="rowShow grayStrip">
 
                                 <td colspan="6" class="custmtdn">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -425,7 +425,27 @@
                 </div>
             </div>
 
-          
+            <div id="payreport" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+            
+                        <!-- Modal content-->
+                        <div class="modal-content modelWidth">
+                            <div class="modal-header myheader">
+                                <button type="button" class="close close2" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Comment</h4>
+                            </div>
+                            <div class="modal-body mybody2">
+            
+                                <div class="col-md-12 col-sm-12 col-xs-12 ">
+                                    <textarea class="form-control popupborder" rows="5" placeholder="Reason for Rejection"></textarea>
+                                </div>
+                                <div class="clear10"></div>
+                               <a routerLink="./../asrulevalidation"> <button class="btn bg-primary btnw nextBtn  rejectapp" data-dismiss="modal"  type="button">Reject</button></a>
+                            </div>
+                        </div>
+            
+                    </div>
+            </div>
         </section>
     </div>
 </div>

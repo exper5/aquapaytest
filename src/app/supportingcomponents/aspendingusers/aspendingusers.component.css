@@ -53,5 +53,20 @@ input.form-control.noborder3::-ms-input-placeholder {
 .popupborder{
     border: 1px solid #eee;
     background-color: #eee;
-    height:300px;
+}
+input[type="checkbox"]{
+    
+    -webkit-appearance: initial;
+    width: 16px;
+    height: 16px;
+    background-color: #c7c7c7;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 6px;
+    vertical-align: sub;
+    outline: none
+    
+}
+input[type="checkbox"]:hover, input[type="checkbox"]:checked {
+    background: #64289d;
 }

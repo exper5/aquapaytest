@@ -59,69 +59,39 @@ export class AsuserlistComponent implements OnInit {
   
 //---------------------------------------toggle class for table collapse-------------------------------------------
 
-  $(".row6,.row7,.row8,.row9,.row10,.row11,.row12,.row13,.row14,.row15").hide();
+$(".rowShow").hide();
 
-$('.equipment6').click(function () {
-
-  $('.equipment6').toggleClass('flashOn flash');
-$(".row6").toggle();
-
-});
-$('.equipment7').click(function () {
-
-  $('.equipment7').toggleClass('flashOn flash');
-$(".row7").toggle();
-
-});
-$('.equipment8').click(function () {
-
-  $('.equipment8').toggleClass('flashOn flash');
-$(".row8").toggle();
-
-});
-$('.equipment9').click(function () {
-
-  $('.equipment9').toggleClass('flashOn flash');
-$(".row9").toggle();
-
-});
-$('.equipment10').click(function () {
-
-  $('.equipment10').toggleClass('flashOn flash');
-$(".row10").toggle();
-
-});
-$('.equipment11').click(function () {
-
-  $('.equipment11').toggleClass('flashOn flash');
-$(".row11").toggle();
-
-});
-$('.equipment12').click(function () {
-
-  $('.equipment12').toggleClass('flashOn flash');
-$(".row12").toggle();
-
-});
-$('.equipment13').click(function () {
-
-  $('.equipment13').toggleClass('flashOn flash');
-$(".row13").toggle();
-
-});
-$('.equipment14').click(function () {
-
-  $('.equipment14').toggleClass('flashOn flash');
-$(".row14").toggle();
-
-});
-$('.equipment15').click(function () {
-
-  $('.equipment15').toggleClass('flashOn flash');
-$(".row15").toggle();
-
+$('.showhide').click(function(){
+  //alert("clicked");
+  var row=$(this).parent().parent().next();
+  $(row).toggle();
+  $(row).next().toggle();
 });
 
+//-----------------on click all row select---------------------------------------------------------
+
+$(" input[name='mainmenu']").click(function(){
+  var  is_checked=$(this).is(":checked");
+    $("input[name='submenu']").prop("checked",is_checked);
+});
+//-----------------------------on click all row select-----------------------------------------------------
+//------------------------pagignation-----------------------------------------------------------
+$(".one a").on("click", function () {
+  $(".one").addClass("active");
+  $(".one").siblings(".active").removeClass("active");
+});
+
+$(".two a").on("click", function () {
+  $(".two").addClass("active");
+  $(".two").siblings(".active").removeClass("active");
+});
+
+$(".three a").on("click", function () {
+  $(".three").addClass("active");
+  $(".three").siblings(".active").removeClass("active");
+});
+
+//------------------------pagignation---------end--------------------------------------------------
   }
 
 }

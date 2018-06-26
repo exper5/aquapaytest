@@ -31,7 +31,7 @@
           <a> <button class="btn bg-primary borderradius nxt2n nxtbbgcolor activeapp" type="button">Approve</button></a>
         
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <a class="btn btn-primary btn-outline btnw ResponsiveBtnWidth">Reject</a>
+          <a class="btn btn-primary btn-outline btnw ResponsiveBtnWidth"  data-toggle="modal" data-target="#payreport">Reject</a>
 
         </div>
 
@@ -42,7 +42,7 @@
 
               <tr class="cust-color">
                 <td>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox" name="mainmenu"></div>
                 </td>
                 <td>
                   <span class="bold-txtn">Group Name</span> &nbsp;&nbsp;&nbsp;
@@ -265,7 +265,7 @@
 
               <tr>
                 <td>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                 </td>
                 <td>A</td>
                 <td>20</td>
@@ -319,7 +319,7 @@
 
               <tr class="whiteStrip">
                 <td>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                 </td>
                 <td>B</td>
 
@@ -375,7 +375,7 @@
 
               <tr class="">
                 <td>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                 </td>
                 <td>C</td>
                 <td>0</td>
@@ -433,7 +433,7 @@
 
               <tr class="whiteStrip">
                 <td>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3="" class="place"></div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                 </td>
                 <td>D</td>
                 <td>0</td>
@@ -496,6 +496,28 @@
       <!-- Modal2 -->
      
     </section>
+
+    <div id="payreport" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content modelWidth">
+                <div class="modal-header myheader">
+                    <button type="button" class="close close2" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Comment</h4>
+                </div>
+                <div class="modal-body mybody2">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
+                        <textarea class="form-control popupborder" rows="5" placeholder="Reason for Rejection"></textarea>
+                    </div>
+                    <div class="clear10"></div>
+                   <a routerLink="../asgrouplist"> <button class="btn bg-primary btnw nextBtn" data-dismiss="modal" type="button">Reject</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
   </div>
 </div>
 <div class="success">

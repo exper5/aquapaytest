@@ -58,73 +58,39 @@ export class AssuppliersComponent implements OnInit {
   //---------------------------------------Prevent anchor default action-------------------------------------------
   
 //---------------------------------------toggle class for table collapse-------------------------------------------
+$(".rowShow").hide();
 
-  $(".row6,.row7,.row8,.row9,.row10,.row11,.row12,.row13,.row14,.row15").hide();
+$('.showhide').click(function(){
+  //alert("clicked");
+  $(this).toggleClass('flashOn flash');
+  var row=$(this).parent().parent().next();
+  $(row).toggle();
+ // $(row).next().toggle();
+})
 
-$('.equipment6').click(function () {
-
-  $('.equipment6').toggleClass('flashOn flash');
-$(".row6").toggle();
-
-});
-$('.equipment7').click(function () {
-
-  $('.equipment7').toggleClass('flashOn flash');
-$(".row7").toggle();
-
-});
-$('.equipment8').click(function () {
-
-  $('.equipment8').toggleClass('flashOn flash');
-$(".row8").toggle();
-
-});
-$('.equipment9').click(function () {
-
-  $('.equipment9').toggleClass('flashOn flash');
-$(".row9").toggle();
-
-});
-$('.equipment10').click(function () {
-
-  $('.equipment10').toggleClass('flashOn flash');
-$(".row10").toggle();
-
-});
-$('.equipment11').click(function () {
-
-  $('.equipment11').toggleClass('flashOn flash');
-$(".row11").toggle();
-
-});
-$('.equipment12').click(function () {
-
-  $('.equipment12').toggleClass('flashOn flash');
-$(".row12").toggle();
-
+//-----------------------------------pagignation strt-------------------------------------
+$(".one a").on("click", function () {
+  $(".one").addClass("active");
+  $(".one").siblings(".active").removeClass("active");
 });
 
-$('.equipment13').click(function () {
-
-  $('.equipment13').toggleClass('flashOn flash');
-$(".row13").toggle();
-
+$(".two a").on("click", function () {
+  $(".two").addClass("active");
+  $(".two").siblings(".active").removeClass("active");
 });
 
-$('.equipment14').click(function () {
-
-  $('.equipment14').toggleClass('flashOn flash');
-$(".row14").toggle();
-
+$(".three a").on("click", function () {
+  $(".three").addClass("active");
+  $(".three").siblings(".active").removeClass("active");
 });
+//---------------------------------pagignation end-----------------------------------------
+//-----------------on click all row select---------------------------------------------------------
 
-$('.equipment15').click(function () {
-
-  $('.equipment15').toggleClass('flashOn flash');
-$(".row15").toggle();
-
+$(" input[name='mainmenu']").click(function(){
+  var  is_checked=$(this).is(":checked");
+    $("input[name='submenu']").prop("checked",is_checked);
 });
-
+//-----------------------------on click all row select-----------------------------------------------------
   }
 
 }

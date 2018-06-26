@@ -66,7 +66,32 @@ $('.showhide').click(function(){
   $(row).toggle();
   $(row).next().toggle();
 });
+//---------------------------------------toggle class for table collapse---------------------------------------------------------
+//------------------------------pagegnation start------------------------------------------
+$(".one a").on("click", function () {
+  $(".one").addClass("active");
+  $(".one").siblings(".active").removeClass("active");
+});
 
-  }
+$(".two a").on("click", function () {
+  $(".two").addClass("active");
+  $(".two").siblings(".active").removeClass("active");
+});
+
+$(".three a").on("click", function () {
+  $(".three").addClass("active");
+  $(".three").siblings(".active").removeClass("active");
+});
+
+//-------------------------------------pagegnation end ----------------------------------------------------------------
+
+//-----------------on click all row select---------------------------------------------------------
+
+  $(" input[name='mainmenu']").click(function(){
+    var  is_checked=$(this).is(":checked");
+      $("input[name='submenu']").prop("checked",is_checked);
+  });
+//-----------------------------on click all row select-----------------------------------------------------
+}
 
 }

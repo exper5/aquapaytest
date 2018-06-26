@@ -1,0 +1,42 @@
+.paracolor{
+    color: #52178b;
+}
+.divmrgnlft{
+    margin-left: 4%;
+}
+.divwidth{
+    width: 15%;
+    display:inline-block;
+    vertical-align: top;
+    margin:3px;
+    align-content: center;
+}
+.inputstyle{
+    border: 0px;
+    border-bottom: 1px solid #b7b7b7;
+    width: 100%;
+    }
+    .padln{
+        padding-left: 0px!important;
+    }
+
+    .example1 {
+        cursor:pointer;
+        
+        
+    
+    }
+.fake-input { position: relative; width:520px; }
+.fake-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
+.fake-input img { position: absolute; top: 2px; right: 5px }
+
+.inpstyle{
+    cursor:pointer;
+    background: url('assets/images/datepicker.png') no-repeat 100% 6px!important;
+}
+
+.toptxt{
+    font-size: 17.3px;
+    font-weight: 600;
+    color: #2c2e30;
+}

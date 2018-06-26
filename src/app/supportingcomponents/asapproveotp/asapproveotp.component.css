@@ -12,6 +12,7 @@
 border: 0px;
 border-bottom: 1px solid #b7b7b7;
 width: 100%;
+padding-left: 16px;
 }
 .rsotp{
     font-size: 13.1px;
@@ -45,3 +46,11 @@ width: 100%;
 .btnw{
     padding: 6px 28px;
   }
+
+  .divwidth{
+    width: 15%;
+    display:inline-block;
+    vertical-align: top;
+    margin:4px;
+    align-content: center;
+}

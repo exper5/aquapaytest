@@ -81,6 +81,15 @@ $('.showhide').click(function(){
  // $(row).next().toggle();
 })
 
+
+ //-----------------on click all row select---------------------------------------------------------
+
+ $(" input[name='mainmenu']").click(function(){
+  var  is_checked=$(this).is(":checked");
+    $("input[name='submenu']").prop("checked",is_checked);
+});
+//-----------------------------on click all row select-----------------------------------------------------
+
   }
 
 }

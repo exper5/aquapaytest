@@ -54,6 +54,8 @@ export class AddbulksuppierComponent implements OnInit {
      $(".big-circle").css({"width": "16px","height":"16px"});
      });
     });
+
+    
   }
 
 }
