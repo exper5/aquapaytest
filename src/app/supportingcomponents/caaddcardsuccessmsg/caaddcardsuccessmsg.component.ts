@@ -19,6 +19,7 @@ export class CaaddcardsuccessmsgComponent implements OnInit {
     
       $('.gotocard').click(function () {
         $(".abc").show();
+        $(".pqr").hide();
     
        
       });

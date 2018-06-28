@@ -1,0 +1,66 @@
+.resetstyle{
+    font-size: 14px;
+  font-weight: 300;
+  color: #575962;
+}
+.padlrnone{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+.divmrgnlft{
+    margin-left: 4%;
+}
+.toptxt{
+    font-size: 17.3px;
+    font-weight: 600;
+    color: #2c2e30;
+}
+.inputstyle{
+    border: 0px;
+    border-bottom: 1px solid #b7b7b7;
+    width: 100%;
+}
+.padln{
+    padding-left: 0px!important;
+}
+.padrn{
+    padding-right: 0px!important;
+}
+.groupfont{
+    font-size: 14px;
+  font-weight: 500;
+  color: #575962;
+  padding: 3px 12px;
+  border:0px!important;
+}
+.mrgnrten{
+    margin-right: 10px;
+}
+.input-group-btn > .btn:active, .input-group-btn > .btn:focus, .input-group-btn > .btn:hover {
+    z-index: 2;
+    background-color: #ffffff!important;
+}
+.dropdown-menu {
+    position: absolute;
+    min-width: 99px!important;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.ulwidth{
+    width:97px!important;
+}
+.divbor-bot{
+    border-bottom:  solid 1px #d5d5d5;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 1px solid #d5d5d5!important;
+}

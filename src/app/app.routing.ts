@@ -114,6 +114,12 @@ import { CacardsComponent } from './caroutingcomponent/cacards/cacards.component
 import { CagroupsComponent } from './caroutingcomponent/cagroups/cagroups.component';
 import { CaaddcardsuccessmsgComponent } from './supportingcomponents/caaddcardsuccessmsg/caaddcardsuccessmsg.component';
 import { CaaddcardsComponent } from './supportingcomponents/caaddcards/caaddcards.component';
+import { CarulevalidationComponent } from './caroutingcomponent/carulevalidation/carulevalidation.component';
+import { CapaymentComponent } from './caroutingcomponent/capayment/capayment.component';
+import { CaviewgroupsComponent } from './caroutingcomponent/caviewgroups/caviewgroups.component';
+import { CacreateruleComponent } from './caroutingcomponent/cacreaterule/cacreaterule.component';
+import { CareportnameComponent } from './supportingcomponents/careportname/careportname.component';
+
 
 export const routes: Routes = [
     { path: '', component: MasterComponent},
@@ -194,6 +200,11 @@ export const routes: Routes = [
     { path: 'cacards', component: CacardsComponent },
     { path: 'cagroups', component: CagroupsComponent },
     { path: 'caaddcardsuccessmsg', component: CaaddcardsuccessmsgComponent },
+    { path: 'carulevalidation', component: CarulevalidationComponent },
+    { path: 'capayment', component: CapaymentComponent },
+    { path: 'caviewgroups', component: CaviewgroupsComponent },
+    { path: 'cacreaterule', component: CacreateruleComponent },
+    { path: 'careportname', component: CareportnameComponent },
     { path: 'dashboard', component: DashboardComponent },
     
     

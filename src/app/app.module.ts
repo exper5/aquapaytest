@@ -117,6 +117,12 @@ import { CacardsComponent } from './caroutingcomponent/cacards/cacards.component
 import { CaaddcardsComponent } from './supportingcomponents/caaddcards/caaddcards.component';
 import { CaaddcardsuccessmsgComponent } from './supportingcomponents/caaddcardsuccessmsg/caaddcardsuccessmsg.component';
 import { CagroupsComponent } from './caroutingcomponent/cagroups/cagroups.component';
+import { CarulevalidationComponent } from './caroutingcomponent/carulevalidation/carulevalidation.component';
+import { CapaymentComponent } from './caroutingcomponent/capayment/capayment.component';
+import { CaviewgroupsComponent } from './caroutingcomponent/caviewgroups/caviewgroups.component';
+import { GrouplistComponent } from './supportingcomponents/grouplist/grouplist.component';
+import { CacreateruleComponent } from './caroutingcomponent/cacreaterule/cacreaterule.component';
+import { CareportnameComponent } from './supportingcomponents/careportname/careportname.component';
 
 
 @NgModule({
@@ -233,7 +239,13 @@ import { CagroupsComponent } from './caroutingcomponent/cagroups/cagroups.compon
     CacardsComponent,
     CaaddcardsComponent,
     CaaddcardsuccessmsgComponent,
-    CagroupsComponent
+    CagroupsComponent,
+    CarulevalidationComponent,
+    CapaymentComponent,
+    CaviewgroupsComponent,
+    GrouplistComponent,
+    CacreateruleComponent,
+    CareportnameComponent
   ],
   imports: [
     BrowserModule,FormsModule,

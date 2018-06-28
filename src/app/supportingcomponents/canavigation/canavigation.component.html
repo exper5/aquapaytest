@@ -26,12 +26,38 @@
                       <i class="nav-ico-menu"></i>Organisation</a>
               </li>
               <li class="menu_sel paylink">
-                  <a routerLink="./../cagroups" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Groups </a>
-                
+                  <a  class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Groups </a>
+                  <ul class="[ dropdown-menu ]" role="menu">
+                        <li class="col-md-6 cust text-center">
+                            <a routerLink="./../cagroups" class="[ animate ]">
+                                <span>
+                                    <img src="assets/images/group.png" />
+                                </span> Add Groups </a>
+                        </li>
+                        <li class="col-md-6 cust text-center">
+                            <a routerLink="./../caviewgroups" class="[ animate ]">
+                                <span>
+                                    <img src="assets/images/group.png" />
+                                </span> View Groups </a>
+                        </li>
+                    </ul>
               </li>
               <li class="menu_sel rulelink">
-                  <a class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Rules </a>
-                 
+                  <a  class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Rules </a>
+                  <ul class="[ dropdown-menu ]" role="menu">
+                        <li class="col-md-6 cust text-center">
+                            <a routerLink="./../cacreaterule" class="[ animate ]">
+                                <span>
+                                    <img src="assets/images/gavel.png" />
+                                </span> Create Rule </a>
+                        </li>
+                        <li class="col-md-6 cust text-center">
+                            <a routerLink="./../carulevalidation" class="[ animate ]">
+                                <span>
+                                    <img src="assets/images/gavel.png" />
+                                </span> Rules Validator </a>
+                        </li>
+                    </ul>
               </li>
               <li class="menu_sel supplink">
                   <a routerLink="./../cacards" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">Cards </a>
