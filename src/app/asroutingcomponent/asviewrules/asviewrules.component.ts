@@ -25,11 +25,22 @@ export class AsviewrulesComponent implements OnInit {
 
     $(document).ready(function(){
       $(".sucess").hide();
+      $("#step-2").hide();
     
       $('.activeapp').click(function () {
-        $(".sucess").show();
+        $("#step-2").show();
         $(".abc").hide();
       });
+
+      $(".otpback").click(function(){
+        $("#step-2").hide();
+        $(".abc").show();
+      })
+
+      $('.verify').click(function(){
+        $("#step-2").hide();
+        $(".sucess").show();
+      })
 
     });
 

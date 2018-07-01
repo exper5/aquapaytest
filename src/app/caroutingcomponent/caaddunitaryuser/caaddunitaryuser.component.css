@@ -1,0 +1,50 @@
+.tick2,.tick3,.tick4{
+    margin-top: -3px;
+    width: 10px;
+    height: 10px;
+    display: none;
+    margin-left: 3px;
+}
+.stepwizard-row2:before {
+    width: 66%;
+    right: 112px;
+}
+.inputstyle{
+    border: 0px;
+    border-bottom: 1px solid #b7b7b7;
+    width: 100%;
+}
+.inpstyle{
+    cursor:pointer;
+    background: url('assets/images/datepicker.png') no-repeat 100% 6px!important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px 6px 0px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border:0px;
+}
+#dropdown1 button.btn.btn-default.dropdown-toggle.btn_width {
+    border-bottom: 1px solid #b7b7b7;
+}
+#dropdown1 .btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default, .btn-default:hover {
+    color: #333;
+    background-color: #ffffff;
+    border-color: #adadad;
+}
+
+#dropdown1 button.btn.btn-default.dropdown-toggle.btn_width {
+    width: 100%;
+}
+#dropdown1 span#search_concept {
+    margin-right: 88%;
+}

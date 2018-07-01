@@ -119,6 +119,10 @@ import { CapaymentComponent } from './caroutingcomponent/capayment/capayment.com
 import { CaviewgroupsComponent } from './caroutingcomponent/caviewgroups/caviewgroups.component';
 import { CacreateruleComponent } from './caroutingcomponent/cacreaterule/cacreaterule.component';
 import { CareportnameComponent } from './supportingcomponents/careportname/careportname.component';
+import { CasupplierComponent } from './caroutingcomponent/casupplier/casupplier.component';
+import { CasuppliersreportComponent } from './supportingcomponents/casuppliersreport/casuppliersreport.component';
+import { CauserlistComponent } from './caroutingcomponent/causerlist/causerlist.component';
+import { CaaddunitaryuserComponent } from './caroutingcomponent/caaddunitaryuser/caaddunitaryuser.component';
 
 
 export const routes: Routes = [
@@ -205,6 +209,10 @@ export const routes: Routes = [
     { path: 'caviewgroups', component: CaviewgroupsComponent },
     { path: 'cacreaterule', component: CacreateruleComponent },
     { path: 'careportname', component: CareportnameComponent },
+    { path: 'casupplier', component: CasupplierComponent },
+    { path: 'casuppliersreport', component: CasuppliersreportComponent },
+    { path: 'causerlist', component: CauserlistComponent },
+    { path: 'caaddunitaryuser', component: CaaddunitaryuserComponent },
     { path: 'dashboard', component: DashboardComponent },
     
     

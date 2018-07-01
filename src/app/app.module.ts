@@ -123,6 +123,10 @@ import { CaviewgroupsComponent } from './caroutingcomponent/caviewgroups/caviewg
 import { GrouplistComponent } from './supportingcomponents/grouplist/grouplist.component';
 import { CacreateruleComponent } from './caroutingcomponent/cacreaterule/cacreaterule.component';
 import { CareportnameComponent } from './supportingcomponents/careportname/careportname.component';
+import { CasupplierComponent } from './caroutingcomponent/casupplier/casupplier.component';
+import { CasuppliersreportComponent } from './supportingcomponents/casuppliersreport/casuppliersreport.component';
+import { CauserlistComponent } from './caroutingcomponent/causerlist/causerlist.component';
+import { CaaddunitaryuserComponent } from './caroutingcomponent/caaddunitaryuser/caaddunitaryuser.component';
 
 
 @NgModule({
@@ -245,7 +249,11 @@ import { CareportnameComponent } from './supportingcomponents/careportname/carep
     CaviewgroupsComponent,
     GrouplistComponent,
     CacreateruleComponent,
-    CareportnameComponent
+    CareportnameComponent,
+    CasupplierComponent,
+    CasuppliersreportComponent,
+    CauserlistComponent,
+    CaaddunitaryuserComponent
   ],
   imports: [
     BrowserModule,FormsModule,

@@ -3,38 +3,15 @@ import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
 @Component({
-  selector: 'app-asgroupspending',
-  templateUrl: './asgroupspending.component.html',
-  styleUrls: ['./asgroupspending.component.css']
+  selector: 'app-casupplier',
+  templateUrl: './casupplier.component.html',
+  styleUrls: ['./casupplier.component.css']
 })
-export class AsgroupspendingComponent implements OnInit {
+export class CasupplierComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
-
-    $(document).ready(function(){
-      $(".success").hide();
-      $("#step-2").hide();
-
-      $('.activeapp').click(function () {
-        $("#step-2").show();
-        $(".abc").hide();
-      });
-
-      $(".otpback").click(function(){
-        $("#step-2").hide();
-        $(".abc").show();
-      })
-
-      $(".verify").click(function(){
-        $("#step-2").hide();
-        $(".success").show();
-      })
-
-    });
-
-    
 
 
     $("#reportname").hide();
@@ -81,25 +58,40 @@ export class AsgroupspendingComponent implements OnInit {
   //---------------------------------------Prevent anchor default action-------------------------------------------
   
 //---------------------------------------toggle class for table collapse-------------------------------------------
-
 $(".rowShow").hide();
 
 $('.showhide').click(function(){
   //alert("clicked");
-  // $('.equipment').toggleClass('flashOn flash');
+  $(this).toggleClass('flashOn flash');
   var row=$(this).parent().parent().next();
   $(row).toggle();
  // $(row).next().toggle();
 })
 
+//-----------------------------------pagignation strt-------------------------------------
+$(".one a").on("click", function () {
+  $(".one").addClass("active");
+  $(".one").siblings(".active").removeClass("active");
+});
 
- //-----------------on click all row select---------------------------------------------------------
+$(".two a").on("click", function () {
+  $(".two").addClass("active");
+  $(".two").siblings(".active").removeClass("active");
+});
 
- $(" input[name='mainmenu']").click(function(){
+$(".three a").on("click", function () {
+  $(".three").addClass("active");
+  $(".three").siblings(".active").removeClass("active");
+});
+//---------------------------------pagignation end-----------------------------------------
+//-----------------on click all row select---------------------------------------------------------
+
+$(" input[name='mainmenu']").click(function(){
   var  is_checked=$(this).is(":checked");
     $("input[name='submenu']").prop("checked",is_checked);
 });
 //-----------------------------on click all row select-----------------------------------------------------
+
 
   }
 
