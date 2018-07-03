@@ -123,6 +123,10 @@ import { CasupplierComponent } from './caroutingcomponent/casupplier/casupplier.
 import { CasuppliersreportComponent } from './supportingcomponents/casuppliersreport/casuppliersreport.component';
 import { CauserlistComponent } from './caroutingcomponent/causerlist/causerlist.component';
 import { CaaddunitaryuserComponent } from './caroutingcomponent/caaddunitaryuser/caaddunitaryuser.component';
+import { CauserreportComponent } from './supportingcomponents/causerreport/causerreport.component';
+import { CaaddbulkusersComponent } from './caroutingcomponent/caaddbulkusers/caaddbulkusers.component';
+import { AsuserreportComponent } from './supportingcomponents/asuserreport/asuserreport.component';
+import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsupplier/chpendingsupplier.component';
 
 
 export const routes: Routes = [
@@ -213,6 +217,12 @@ export const routes: Routes = [
     { path: 'casuppliersreport', component: CasuppliersreportComponent },
     { path: 'causerlist', component: CauserlistComponent },
     { path: 'caaddunitaryuser', component: CaaddunitaryuserComponent },
+    { path: 'causerreport', component: CauserreportComponent },
+    { path: 'caaddbulkusers', component: CaaddbulkusersComponent },
+    { path: 'caaddcards', component: CaaddcardsComponent },
+    { path: 'caaddcardsuccessmsg', component: CaaddcardsuccessmsgComponent },
+    { path: 'asuserreport', component: AsuserreportComponent },
+    { path: 'chpendingsupplier', component: ChpendingsupplierComponent },
     { path: 'dashboard', component: DashboardComponent },
     
     

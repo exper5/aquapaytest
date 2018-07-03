@@ -17,12 +17,12 @@ export class CaaddcardsuccessmsgComponent implements OnInit {
     $(document).ready(function(){
     
     
-      $('.gotocard').click(function () {
-        $(".abc").show();
-        $(".pqr").hide();
+      // $('.gotocard').click(function () {
+      //   $(".abc").show();
+      //   $(".pqr").hide();
     
        
-      });
+      // });
 
     });
 

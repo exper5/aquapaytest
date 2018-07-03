@@ -1,4 +1,4 @@
-
+#reportname{display: none}
 .noborder3 {
     border: none;
     outline: none;
@@ -23,15 +23,26 @@ input.form-control.noborder3::-ms-input-placeholder {
     opacity: 1;
     font-weight: 600;
 }
-
-.clear5 {
-    clear: both;
-    height: 7px;
+.modelWidthn {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0px;
 }
 
-
-
+.mybody2n{padding: 50px 20px}
+.brdlft{
+    border-left: 1px solid #eee;
+}
+.chkselect{
+    background-color: #64289d;
+}
+.prevlghd{
+    font-size: 12.4px;
+    font-weight: 600;
+    color: #3f4245;
+}
 input[type="checkbox"]{
+    
     -webkit-appearance: initial;
     width: 16px;
     height: 16px;
@@ -45,4 +56,19 @@ input[type="checkbox"]{
 }
 input[type="checkbox"]:hover, input[type="checkbox"]:checked {
     background: #64289d;
+}
+.tablediv1 {
+
+    display: inline-block;
+    border-right: 1px solid #c0bebe;
+    padding: 14px 0px 14px 6%;
+    vertical-align: top;
+    height: 150px;
+}
+.tablediv2 {
+
+    display: inline-block;
+    padding: 14px 0px 14px 8%;
+    vertical-align: top;
+    height: 150px;
 }

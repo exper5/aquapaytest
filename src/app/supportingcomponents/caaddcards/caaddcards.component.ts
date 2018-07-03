@@ -15,15 +15,15 @@ export class CaaddcardsComponent implements OnInit {
   ngOnInit() {
 
 
-    $(document).ready(function(){
-      $(".nxt").hide();
+    // $(document).ready(function(){
+    //   $(".nxt").hide();
     
-      $('.submit').click(function () {
-        $(".nxt").show();
-        $(".xyz").hide();
-      });
+    //   $('.submit').click(function () {
+    //     $(".nxt").show();
+    //     $(".xyz").hide();
+    //   });
 
-    });
+    // });
 
 
 

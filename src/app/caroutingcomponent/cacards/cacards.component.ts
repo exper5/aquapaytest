@@ -14,15 +14,15 @@ export class CacardsComponent implements OnInit {
   ngOnInit() {
 
 
-    $(document).ready(function(){
-      $(".success").hide();
+    // $(document).ready(function(){
+    //   $(".success").hide();
     
-      $('.activeapp').click(function () {
-        $(".success").show();
-        $(".abc").hide();
-      });
+    //   $('.activeapp').click(function () {
+    //     $(".success").show();
+    //     $(".abc").hide();
+    //   });
 
-    });
+    // });
 
 
 
