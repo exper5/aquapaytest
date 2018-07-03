@@ -15,16 +15,27 @@ export class CaaddcardsComponent implements OnInit {
   ngOnInit() {
 
 
-    $(document).ready(function(){
-      $(".nxt").hide();
+    // $(document).ready(function(){
+    //   $(".nxt").hide();
     
-      $('.submit').click(function () {
-        $(".nxt").show();
-        $(".xyz").hide();
-      });
+    //   $('.submit').click(function () {
+    //     $(".nxt").show();
+    //     $(".xyz").hide();
+    //   });
 
+    // });
+    
+    $('.inputstyledot').bind('keyup', function(event) {
+      var val=$(this).val();
+      if(val != ''){
+        var parId=$(this).parent().attr('id');
+        if(parId == 'par1') {
+          $(this).parent().next().find('input').focus();
+        }else{
+          $(this).parent().parent().next().find('input:first').focus();
+        }
+       }
     });
-
 
 
    //---------------------------------------Datepicker js start--------------------------------------------

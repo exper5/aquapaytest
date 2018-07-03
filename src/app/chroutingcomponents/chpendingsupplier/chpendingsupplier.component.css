@@ -1,0 +1,78 @@
+.padlft {
+    padding: 3%;
+}
+.topspace {
+    padding-top: 20px;
+}
+input[type="file"] {
+    display: none;
+}
+.extpad {
+    padding: 0 2%;
+}
+
+#file-drag {
+    border-radius: 6px;
+    background-color: #f2f6f7;
+    border: dashed 2px #b69ef6;
+    cursor: pointer;
+    display: block;
+    margin: 1em 0;
+    padding: 3em;
+    text-align: center;
+    
+}
+
+
+#file-progress {
+    display: none;
+    margin: 1em auto;
+    width: 100%;
+}
+
+#file-upload-btn {
+    margin: auto;
+}
+.blu-color.dndlabel {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+}
+.blu-color.chota {
+    font-size: 16px;
+}
+#file-upload-form {
+    margin: auto;
+    width: 100%;
+}
+
+.zin {
+    position: relative;
+    margin-bottom: -45px;
+    z-index: 21;
+}
+.stepwizard-row:before {
+    width: 49%;
+    right: 165px;
+}
+.tick,.tick2 {
+    margin-top: -3px;
+    width: 10px;
+    height: 10px;
+    display: none;
+    margin-left: 2px;
+}
+.stepwizard {
+    /* margin-top: 30px; */
+    display: table;
+    width: 62%;
+    position: relative;
+    margin: 15px auto;
+}
+
+.dotmrgnl{
+    margin-left: 18px!important;
+}
+.hsix-space{
+    margin-left: 16px;
+}

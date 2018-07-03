@@ -24,7 +24,7 @@ export class CaaddunitaryuserComponent implements OnInit {
          $("#step-5").show();
          $("#step-6").hide();
          $("#step-7").hide();
-     $(".backBtnpay_sup").show();
+     $(".backBtnpay_sup").hide();
      $("#fourth").addClass("bg-primary");
      $("#fourth").addClass("big-circle");
      $("#fifth").addClass("bg-primary");
@@ -112,12 +112,23 @@ export class CaaddunitaryuserComponent implements OnInit {
 //---------------------------------------Datepicker js END-------------------------------------------
 //----------------------------drop down btn js----------------------------------------------------------
 $(document).ready(function (e) {
-  $('.search-panel .dropdown-menu').find('a').click(function (e) {
+  $('.firstgrp .dropdown-menu').find('a').click(function (e) {
       e.preventDefault();
-      var param = $(this).attr("href").replace("#", "");
+      // var param = $(this).attr("href").replace("#", "");
       var concept = $(this).text();
-      $('.search-panel span#search_concept').text(concept);
-      $('.input-group #search_param').val(param);
+      $('.firstgrp span#search_concept').text(concept);
+      // $('.input-group #search_param').val(param);
+  });
+});
+
+
+$(document).ready(function (e) {
+  $('.secondgrp .dropdown-menu').find('a').click(function (e) {
+      e.preventDefault();
+      // var param = $(this).attr("href").replace("#", "");
+      var concept = $(this).text();
+      $('.secondgrp span#search_concept').text(concept);
+      // $('.input-group #search_param').val(param);
   });
 });
 //---------------------------drop down btn js-End---------------------------------------------------------

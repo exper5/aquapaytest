@@ -15,7 +15,24 @@
     border: 0px;
     border-bottom: 1px solid #b7b7b7;
     width: 100%;
+    font-size: 13.1px;
+    font-weight: 300;
+    color: #3f4245;
     }
+.calpos{
+    position: relative;
+}
+
+    .inputstyledot{
+        border: 0px;
+        border-bottom: 1px solid #58109d;
+        width: 100%;
+        font-size: 13.1px;
+        font-weight: 300;
+        color: #3f4245;
+        }
+
+
     .padln{
         padding-left: 0px!important;
     }

@@ -30,18 +30,6 @@ input.form-control.noborder3::-ms-input-placeholder {
 }
 
 
-.pagination>li>a, .pagination>li>span {
-    border-radius: 50% !important;
-    margin: 0 3px;
-    padding: 5px 10px;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    color: #938989;
-    background-color: #fff0;
-    border: 1px solid #ddd0;
-    
-}
 
 input[type="checkbox"]{
     -webkit-appearance: initial;

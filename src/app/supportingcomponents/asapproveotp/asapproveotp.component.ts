@@ -13,6 +13,15 @@ export class AsapproveotpComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('.inputstyle').bind('keyup', function(event) {
+      var val=$(this).val();
+      if(val != ''){
+       
+        
+          $(this).parent().next().find('input').focus();
+        
+       }
+    });
 
     
   }

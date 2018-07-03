@@ -19,6 +19,9 @@
     border: 0px;
     border-bottom: 1px solid #b7b7b7;
     width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #575962;
 }
 .padln{
     padding-left: 0px!important;
@@ -325,4 +328,13 @@ color: #3f4245;
     padding: 0px;
     outline: none;
     margin-top: 5px;
+}
+.sgtxt{
+    font-size: 14px;
+  font-weight: 300;
+  color: #575962;
+}
+.table-responsive {
+    overflow-x: unset;
+    padding: 1%!important;
 }

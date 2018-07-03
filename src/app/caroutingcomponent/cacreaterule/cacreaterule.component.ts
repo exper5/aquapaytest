@@ -13,7 +13,10 @@ export class CacreateruleComponent implements OnInit {
 
   ngOnInit() {
 
-
+    $(".gtor").on("click", function () {
+      $(".rulelink").addClass("active");
+      $(".rulelink").siblings(".active").removeClass("active");
+  });
 //--------------------------------drop down---------------------------------------
 
 $(document).ready(function (e) {

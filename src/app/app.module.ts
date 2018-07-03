@@ -127,6 +127,14 @@ import { CasupplierComponent } from './caroutingcomponent/casupplier/casupplier.
 import { CasuppliersreportComponent } from './supportingcomponents/casuppliersreport/casuppliersreport.component';
 import { CauserlistComponent } from './caroutingcomponent/causerlist/causerlist.component';
 import { CaaddunitaryuserComponent } from './caroutingcomponent/caaddunitaryuser/caaddunitaryuser.component';
+import { CauserreviewdetailsComponent } from './supportingcomponents/causerreviewdetails/causerreviewdetails.component';
+import { CauserreportComponent } from './supportingcomponents/causerreport/causerreport.component';
+import { CaaddbulkusersComponent } from './caroutingcomponent/caaddbulkusers/caaddbulkusers.component';
+import { CareviewusersComponent } from './supportingcomponents/careviewusers/careviewusers.component';
+import { UserreportsComponent } from './supportingcomponents/userreports/userreports.component';
+import { AsuserreportComponent } from './supportingcomponents/asuserreport/asuserreport.component';
+import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsupplier/chpendingsupplier.component';
+import { ChreviewsupplierComponent } from './supportingcomponents/chreviewsupplier/chreviewsupplier.component';
 
 
 @NgModule({
@@ -253,7 +261,15 @@ import { CaaddunitaryuserComponent } from './caroutingcomponent/caaddunitaryuser
     CasupplierComponent,
     CasuppliersreportComponent,
     CauserlistComponent,
-    CaaddunitaryuserComponent
+    CaaddunitaryuserComponent,
+    CauserreviewdetailsComponent,
+    CauserreportComponent,
+    CaaddbulkusersComponent,
+    CareviewusersComponent,
+    UserreportsComponent,
+    AsuserreportComponent,
+    ChpendingsupplierComponent,
+    ChreviewsupplierComponent
   ],
   imports: [
     BrowserModule,FormsModule,
