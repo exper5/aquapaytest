@@ -13,7 +13,39 @@
     border: 0px;
     border-bottom: 1px solid #b7b7b7;
     width: 100%;
+    font-size: 13.1px;
+    font-weight: 300;
+    color: #3f4245;
 }
+.inputstyle1{
+    border: 0px;
+    border-bottom: 1px solid #b7b7b7;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #3f4245;
+}
+
+.inputstylerole{
+    border: 0px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    color: #3f4245;
+}
+.inputstyletitle{
+    border: 0px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    color: #3f4245;
+}
+.preregtxt{
+    font-size: 12.4px;
+  font-weight: 300;
+  color: #3f4245;
+}
+
 .inpstyle{
     cursor:pointer;
     background: url('assets/images/datepicker.png') no-repeat 100% 6px!important;
@@ -83,7 +115,7 @@
     padding: 6px 25px!important;
 }
 .btnmargin{
-    margin-left: 4%!important;
+    margin-left: %!important;
 }
 .stepmrgnlft{
     margin-left: 22px;

@@ -76,3 +76,12 @@ margin: 0px!important;
     clear: both;
     height: 5px;
 }
+.CardWhitebox1n h3 {
+    padding: 5px 0px 15px 27px!important;
+    text-align: left;
+}
+.tfcard{
+    font-size: 18.1px;
+  font-weight: 600;
+  color: #2c2e30;
+}

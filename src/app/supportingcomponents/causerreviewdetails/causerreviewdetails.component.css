@@ -1,9 +1,36 @@
+.contact-form .label {
+    margin-bottom: 20px;
+    position: absolute;
+    left: -10px!important;
+    padding-left: 0px!important;
+    bottom: 0;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #888;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
 .tick2,.tick3,.tick4{
     margin-top: -3px;
     width: 10px;
     height: 10px;
     display: none;
     margin-left: 3px;
+}
+.inptxt{
+    font-size: 13.1px;
+    font-weight: 500;
+    line-height: 1.83;
+    color: #3f4245;
+}
+.preregtxt{
+    font-size: 12.4px;
+  font-weight: 300;
+  color: #3f4245;
 }
 .stepwizard-row2:before {
     width: 66%;
@@ -100,4 +127,9 @@ input[type="checkbox"]{
 }
 input[type="checkbox"]:hover, input[type="checkbox"]:checked {
     background: #64289d;
+}
+.labpos{
+    
+    padding-left: -10px!important;    
+    
 }

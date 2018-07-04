@@ -13,7 +13,10 @@ export class CauserlistComponent implements OnInit {
 
   ngOnInit() {
 
-
+    $(".Submit").on("click", function () {
+      $(".paylink2").addClass("active");
+      $(".paylink2").siblings(".active").removeClass("active");
+    });
 
     $(".nxt2").click(function () {
       $("#reportname").show();

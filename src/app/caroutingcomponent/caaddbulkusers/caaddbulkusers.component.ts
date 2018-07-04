@@ -14,6 +14,11 @@ export class CaaddbulkusersComponent implements OnInit {
   ngOnInit() {
 
 
+    $(".gtou").on("click", function () {
+      $(".paylink2").addClass("active");
+      $(".paylink2").siblings(".active").removeClass("active");
+    });
+
     $(document).ready(function(){
       $("#pagi").hide();
       $('input[type=file]').change(function () {
