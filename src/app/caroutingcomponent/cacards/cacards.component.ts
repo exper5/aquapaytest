@@ -14,6 +14,12 @@ export class CacardsComponent implements OnInit {
   ngOnInit() {
 
 
+    $(".activeapp").on("click", function () {
+        $(".supplink").addClass("active");
+        $(".supplink").siblings(".active").removeClass("active");
+      });
+
+
     // $(document).ready(function(){
     //   $(".success").hide();
     

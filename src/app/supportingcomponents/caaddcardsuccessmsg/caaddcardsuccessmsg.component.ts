@@ -17,12 +17,10 @@ export class CaaddcardsuccessmsgComponent implements OnInit {
     $(document).ready(function(){
     
     
-      // $('.gotocard').click(function () {
-      //   $(".abc").show();
-      //   $(".pqr").hide();
-    
-       
-      // });
+      $(".gtog").on("click", function () {
+        $(".supplink").addClass("active");
+        $(".supplink").siblings(".active").removeClass("active");
+      });
 
     });
 

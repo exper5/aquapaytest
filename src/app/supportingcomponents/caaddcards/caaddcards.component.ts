@@ -15,6 +15,11 @@ export class CaaddcardsComponent implements OnInit {
   ngOnInit() {
 
 
+    $(".submit").on("click", function () {
+      $(".supplink").addClass("active");
+      $(".supplink").siblings(".active").removeClass("active");
+    });
+
     // $(document).ready(function(){
     //   $(".nxt").hide();
     
@@ -24,7 +29,6 @@ export class CaaddcardsComponent implements OnInit {
     //   });
 
     // });
-<<<<<<< HEAD
     
     $('.inputstyledot').bind('keyup', function(event) {
       var val=$(this).val();
@@ -37,8 +41,6 @@ export class CaaddcardsComponent implements OnInit {
         }
        }
     });
-=======
->>>>>>> 34440d3cfa4f2440fb7fa343fa1ff493f8232fb2
 
 
    //---------------------------------------Datepicker js start--------------------------------------------

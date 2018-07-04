@@ -13,6 +13,11 @@ export class CasupplierComponent implements OnInit {
 
   ngOnInit() {
 
+    $(".submit").on("click", function () {
+      $(".rulelink2").addClass("active");
+      $(".rulelink2").siblings(".active").removeClass("active");
+    });
+
 
     $("#reportname").hide();
     $(".nxt2").click(function () {

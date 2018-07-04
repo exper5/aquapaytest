@@ -13,6 +13,11 @@ export class CapaymentComponent implements OnInit {
 
   ngOnInit() {
 
+    $(".submit").on("click", function () {
+      $(".cardlink").addClass("active");
+      $(".cardlink").siblings(".active").removeClass("active");
+    });
+    
 
     $(".nxt2").click(function () {
       $("#reportname").show();
