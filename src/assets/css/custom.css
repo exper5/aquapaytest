@@ -1324,7 +1324,7 @@ img.cardimg {
 .contact-form .label {
     margin-bottom: 20px;
   position: absolute;
-  left: -10px;
+  left: -10px!important;
   bottom: 0;
   font-size: 14px;
   line-height: 26px;

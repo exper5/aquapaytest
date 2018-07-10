@@ -14,6 +14,15 @@ export class CagroupsComponent implements OnInit {
 
   ngOnInit() {
 
+  
+    $(".Resetin").on("click", function () {
+      $(".input-text").val("");
+     
+    });
+
+
+
+
     $(".gtog").on("click", function () {
       $(".paylink").addClass("active");
       $(".paylink").siblings(".active").removeClass("active");

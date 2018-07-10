@@ -31,7 +31,7 @@ export class ChreviewpaymentComponent implements OnInit {
       //alert("clicked");
       var row=$(this).parent().parent().next();
       $(row).toggle();
-      $(row).next().toggle();
+      // $(row).next().toggle();
     });
     });
    //-----------------------------------pagignation strt---------------------------------

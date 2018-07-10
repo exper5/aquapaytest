@@ -16,6 +16,17 @@ export class ChsupplierlistComponent implements OnInit {
 
   }
   ngOnInit() {
+    $(".hs").hide();
+    $(document).ready(function(){
+      $(".lbt").click(function(){
+          $(".hs").toggle();
+      });
+  });
+
+    $(".submit").on("click", function () {
+      $(".supplink").addClass("active");
+      $(".supplink").siblings(".active").removeClass("active");
+    });
 
 
     $("#reportname").hide();

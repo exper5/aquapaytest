@@ -135,6 +135,7 @@ import { UserreportsComponent } from './supportingcomponents/userreports/userrep
 import { AsuserreportComponent } from './supportingcomponents/asuserreport/asuserreport.component';
 import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsupplier/chpendingsupplier.component';
 import { ChreviewsupplierComponent } from './supportingcomponents/chreviewsupplier/chreviewsupplier.component';
+import { ChsuppliersuccessComponent } from './chsuppliersuccess/chsuppliersuccess.component';
 
 
 @NgModule({
@@ -269,7 +270,8 @@ import { ChreviewsupplierComponent } from './supportingcomponents/chreviewsuppli
     UserreportsComponent,
     AsuserreportComponent,
     ChpendingsupplierComponent,
-    ChreviewsupplierComponent
+    ChreviewsupplierComponent,
+    ChsuppliersuccessComponent
   ],
   imports: [
     BrowserModule,FormsModule,

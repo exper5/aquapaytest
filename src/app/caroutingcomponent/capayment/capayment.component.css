@@ -23,6 +23,9 @@ input.form-control.noborder3::-ms-input-placeholder {
     opacity: 1;
     font-weight: 600;
 }
+.mrgnr{
+    margin-right: 5px;
+}
 input[type="checkbox"]{
     
     -webkit-appearance: initial;

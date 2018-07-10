@@ -49,6 +49,7 @@
 .inpstyle{
     cursor:pointer;
     background: url('assets/images/datepicker.png') no-repeat 100% 6px!important;
+    padding-bottom: 10px;
 }
 
 #dropdown1 .btn {
@@ -115,7 +116,7 @@
     padding: 6px 25px!important;
 }
 .btnmargin{
-    margin-left: %!important;
+    margin-left: 2%!important;
 }
 .stepmrgnlft{
     margin-left: 22px;

@@ -79,3 +79,6 @@
     input[type="checkbox"]:hover, input[type="checkbox"]:checked {
         background: #64289d;
     }
+    .collapsetdpad{
+        padding: 0px 20px!important;
+    }

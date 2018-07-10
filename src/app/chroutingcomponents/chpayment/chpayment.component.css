@@ -39,3 +39,8 @@ input[type="checkbox"]{
 input[type="checkbox"]:hover, input[type="checkbox"]:checked {
     background: #64289d;
 }
+
+
+.mrgnright{
+    margin-right: 10px;
+}

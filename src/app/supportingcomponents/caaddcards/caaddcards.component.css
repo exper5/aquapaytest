@@ -1,6 +1,9 @@
 .paracolor{
     color: #52178b;
 }
+.divpaddr{
+    padding-right: 33px;
+}
 .divmrgnlft{
     margin-left: 4%;
 }
@@ -43,13 +46,11 @@
         
     
     }
-.fake-input { position: relative; width:520px; }
-.fake-input input { border:none; background:#fff; display:block; width: 100%; box-sizing: border-box }
-.fake-input img { position: absolute; top: 2px; right: 5px }
 
 .inpstyle{
     cursor:pointer;
     background: url('assets/images/datepicker.png') no-repeat 100% 6px!important;
+    padding-bottom: 10px;
 }
 
 .toptxt{
@@ -57,6 +58,12 @@
     font-weight: 600;
     color: #2c2e30;
 }
+
+
+
+
+
+
 
 
 

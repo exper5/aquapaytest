@@ -14,6 +14,12 @@ export class ChpaymentComponent implements OnInit {
   ngOnInit() {
 
 
+    $(".Submit").on("click", function () {
+      $(".paylink").addClass("active");
+      $(".paylink").siblings(".active").removeClass("active");
+    });
+    
+
 
     $(".nxt2").click(function () {
       $("#reportname").show();

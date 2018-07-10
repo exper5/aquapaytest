@@ -20,15 +20,7 @@ export class CaaddcardsComponent implements OnInit {
       $(".supplink").siblings(".active").removeClass("active");
     });
 
-    // $(document).ready(function(){
-    //   $(".nxt").hide();
-    
-    //   $('.submit').click(function () {
-    //     $(".nxt").show();
-    //     $(".xyz").hide();
-    //   });
-
-    // });
+   
     
     $('.inputstyledot').bind('keyup', function(event) {
       var val=$(this).val();
@@ -56,6 +48,14 @@ export class CaaddcardsComponent implements OnInit {
 
 
 //----------------------for only digit validation----------------------------------------------------
+
+
+
+//-----------------------------------------------------------------------------------------------------------
+
+
+
+//------------------------------------------------------------------------------------------------------------------
 
   }
 
