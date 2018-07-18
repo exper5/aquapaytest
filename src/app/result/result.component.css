@@ -73,3 +73,51 @@ select {
     opacity: 1;
     color: #888888
 }
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+.col-md-12.extra_padd .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 1px;
+    border-color: #53397957;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.col-md-12.extra_padd label {
+    margin-bottom: 20px;
+    /* position: absolute; */
+    left: -10px!important;
+    bottom: 0;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #888;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    
+}
+.suppnewtxt {
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 11px 10px;
+}
+.extra_padd {
+    padding: 2% 2% 1%;
+}
+.col-md-12.extra_padd input {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 1px;
+    border-color: #53397957;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.form-field.col.x-50{margin-top:20px;}

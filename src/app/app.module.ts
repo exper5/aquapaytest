@@ -136,6 +136,12 @@ import { AsuserreportComponent } from './supportingcomponents/asuserreport/asuse
 import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsupplier/chpendingsupplier.component';
 import { ChreviewsupplierComponent } from './supportingcomponents/chreviewsupplier/chreviewsupplier.component';
 import { ChsuppliersuccessComponent } from './chsuppliersuccess/chsuppliersuccess.component';
+import { WorkflowService } from './workflow/workflow.service';
+import { PersonalComponent } from './personal/personal.component';
+import { FormDataService } from './data/formData.service';
+import { ResultComponent } from './result/result.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UserService, AuthenticationService, AlertService } from './_services';
 
 
 @NgModule({
@@ -271,13 +277,17 @@ import { ChsuppliersuccessComponent } from './chsuppliersuccess/chsuppliersucces
     AsuserreportComponent,
     ChpendingsupplierComponent,
     ChreviewsupplierComponent,
-    ChsuppliersuccessComponent
+    ChsuppliersuccessComponent,
+    PersonalComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [ { provide: FormDataService, useClass: FormDataService },
+    { provide: WorkflowService, useClass: WorkflowService }, AlertService,
+    AuthenticationService,UserService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

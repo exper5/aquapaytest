@@ -127,6 +127,8 @@ import { CauserreportComponent } from './supportingcomponents/causerreport/cause
 import { CaaddbulkusersComponent } from './caroutingcomponent/caaddbulkusers/caaddbulkusers.component';
 import { AsuserreportComponent } from './supportingcomponents/asuserreport/asuserreport.component';
 import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsupplier/chpendingsupplier.component';
+import { PersonalComponent } from './personal/personal.component';
+import { ResultComponent } from './result/result.component';
 
 
 export const routes: Routes = [
@@ -224,6 +226,8 @@ export const routes: Routes = [
     { path: 'asuserreport', component: AsuserreportComponent },
     { path: 'chpendingsupplier', component: ChpendingsupplierComponent },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'form', component: PersonalComponent },
+    { path: 'result', component: ResultComponent },
     
     
   ]

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-
+import { Router }              from '@angular/router';
 import * as $ from 'jquery';
 import { NgStyle } from '@angular/common';
+import { FormDataService } from '../../data/formData.service';
+import { Personal } from '../../data/formData.model';
 declare var jquery:any;
 declare var $ :any;
 
@@ -13,28 +15,17 @@ declare var $ :any;
 })
 export class AddunitarysupplierComponent implements OnInit
  {
-
+  title = 'Please tell us about yourself.';
+  personal: Personal;
   buttonDisabled: boolean=false;
 
-  constructor() {
-
+  constructor(private router: Router, private formDataService: FormDataService) {
+      
   }
 
-  supplier_code; 
-  model_1:any={};
-  addSupplierCode():void{
-    this.supplier_code=this.model_1;
-    this.model_1={};
-  }
   
-  supplier_name; 
-  model_2:any={};
-  addSupplier_name():void{
-    this.supplier_name=this.model_2;
-    this.model_2={};
-  }
   email_cnt=1;
-  email_supplier1; 
+  email; 
   model_3_1:any={};
   addEmailSupplier1():void{
       this.email_cnt++;
@@ -42,49 +33,49 @@ export class AddunitarysupplierComponent implements OnInit
         {
           this.buttonDisabled = true;
         }
-    this.email_supplier1.push(this.model_3_1);
+    this.email.push(this.model_3_1);
     this.model_3_1={};
     
   }
-  email_supplier2; 
+  email1; 
   model_3_2:any={};
   addEmailSupplier2():void{
    
-    this.email_supplier1.push(this.model_3_2);
+    this.email.push(this.model_3_2);
     this.model_3_2={};
     
   }
-  email_supplier3; 
+  email2; 
   model_3_3:any={};
   addEmailSupplier3():void{
   
-    this.email_supplier1.push(this.model_3_3);
+    this.email.push(this.model_3_3);
     this.model_3_3={};
     
   }
-  email_supplier4; 
+  email3; 
   model_3_4:any={};
   addEmailSupplier4():void{
    
-    this.email_supplier1.push(this.model_3_4);
+    this.email.push(this.model_3_4);
     this.model_3_4={};
     
   }
   removeEmailSuppliers():void{
       if(this.email_cnt==2)
       {
-        this.email_supplier2=this.email_supplier3;
-        this.email_supplier3=this.email_supplier4;
-        this.email_supplier4=null;
+        this.email1=this.email2;
+        this.email2=this.email3;
+        this.email3=null;
       }
       if(this.email_cnt==3)
       {
-        this.email_supplier3=this.email_supplier4;
-        this.email_supplier4=null;
+        this.email2=this.email3;
+        this.email3=null;
       }
       if(this.email_cnt==4)
       {
-        this.email_supplier4=null;
+        this.email3=null;
       }
       this.email_cnt--;
   }
@@ -124,35 +115,11 @@ export class AddunitarysupplierComponent implements OnInit
   removeContactSuppliers():void{
       this.contact_cnt--;
   }
-  account_no;
-  model_5:any={};
-  addAccountNo():void{
-      this.account_no=this.model_5;
-      this.model_5={};
-  }
-
-  ifsc;
-  model_6:any={};
-  addIfsc():void{
-      this.ifsc=this.model_6;
-      this.model_6={};
-  }
-
-  bank_name;
-  model_7:any={};
-  addBankName():void{
-      this.bank_name=this.model_7;
-      this.model_7={};
-  }
-  branch_name;
-  model_8:any={};
- addBranchName ():void{
-      this.branch_name=this.model_8;
-      this.model_8={};
-  }
-
+  
 
   ngOnInit() {
+    this.personal = this.formDataService.getPersonal();
+    console.log('Personal feature loaded!');
 
     $(document).ready(function(){
       $(".add-moree").click(function(){ 
@@ -244,5 +211,22 @@ $('.dropdown-menu').on('click', function (e) {
 
 
   }
+
+
+  save(form: any): boolean {
+    if (!form.valid) {
+        return false;
+    }
+        
+    this.formDataService.setPersonal(this.personal);
+    return true;
+}
+
+goToNext(form: any) {
+    if (this.save(form)) {
+        // Navigate to the work page
+        this.router.navigate(['/result']);
+    }
+}
 
 }
