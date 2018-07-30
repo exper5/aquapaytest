@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
+import { AuthenticationService } from '../../_services';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var jquery:any;
 declare var $ :any;
 @Component({
@@ -8,8 +10,10 @@ declare var $ :any;
   styleUrls: ['./makernavigation.component.css']
 })
 export class MakernavigationComponent implements OnInit {
+  returnUrl: string;
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService, private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     $(".dash a").on("click", function () {
@@ -71,4 +75,9 @@ $('ul.nav li.dropdown').hover(function() {
 });
   }
 
+  myMethod(event){
+    this.authenticationService.logout();
+    
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '';
+  } 
 }

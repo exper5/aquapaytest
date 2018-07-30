@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 import {Highcharts} from 'highcharts';
 declare var jquery:any;
 declare var $ :any;

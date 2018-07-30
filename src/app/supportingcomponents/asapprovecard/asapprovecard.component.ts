@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
 

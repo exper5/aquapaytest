@@ -1,27 +1,44 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
 export class AuthenticationService {
+    @Output() isLoggedIn: EventEmitter<string> = new EventEmitter();
+    loggedIn = false;
     constructor(private http: HttpClient) { }
 
-    login(email: string, password: string) {
-        return this.http.post<any>('/api/authenticate', { email: email, password: password })
+    login(username: string, password: string) {
+        return this.http.post<any>('http://aquapayfake.ap-south-1.elasticbeanstalk.com/api/login?username=' + username +  '&password=' + btoa(password), null)
             .pipe(map(user => {
                 // login successful if there's a jwt token in the response
-                if (user && user.token) {
+                console.log("successfully loggedin");
+                if (user && user['token']) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(user));
+
+                    // this.isLoggedIn.emit("true");
                 }
 
                 return user;
             }));
     }
 
+
+    getIsLoggedIn(){
+        if(localStorage.getItem('currentUser')){
+            console.log("User is logged in")
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
+        this.isLoggedIn.emit("false");
+        console.log('user logged out');
     }
 }

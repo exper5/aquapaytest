@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormDataService } from '../data/formData.service';
-import { FormData } from '../data/formData.model';
-import * as $ from 'jquery';
+import { FormData, Personal } from '../data/formData.model';
+// //import * as $ from 'jquery';
 import { FormGroup } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { UserService, AlertService } from '../_services';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var jquery:any;
 declare var $ :any;
 @Component({
@@ -15,15 +15,18 @@ declare var $ :any;
 })
 export class ResultComponent implements OnInit {
   title = 'Thanks for staying tuned!';
-    @Input() formData: FormData;
+    @Input() formData: Personal;
     isFormValid: boolean = false;
     submitted = false;
-  personalForm: FormGroup;
+  returnUrl: string;
+  // personalForm: FormGroup;
   constructor(
     private formDataService: FormDataService,
-     private userService: UserService,
+    private userService: UserService,
     private alertService: AlertService,
     private router: Router,
+    private route: ActivatedRoute,
+
   ) { }
 
   ngOnInit() {
@@ -31,7 +34,7 @@ export class ResultComponent implements OnInit {
         this.isFormValid = this.formDataService.isFormValid();
         console.log('Result feature loaded!');
 
-
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/complete';
         $(document).ready(function(){
           $(".add-moree").click(function(){ 
             var html = $(".copyy").html();
@@ -54,9 +57,9 @@ export class ResultComponent implements OnInit {
          //$("#first").removeClass("bg-primary");
          });
          $(".backBtn").click(function(){
-             $("#step-2").hide();
-             $("#step-1").show();
-         $(".backBtn").hide();
+            //  $("#step-2").hide();
+            //  $("#step-1").show();
+        //  $(".backBtn").hide();
          $("#first").addClass("bg-primary");
          $("#first").removeClass("bg-default");
          $("#second").addClass("bg-default");
@@ -65,9 +68,9 @@ export class ResultComponent implements OnInit {
          $("#p2").removeClass("blu-color");
          });
         $(".approval").click(function(){
-             $("#step-2").hide();
-             $("#step-3").show();
-         $(".backBtn").hide();
+            //  $("#step-2").hide();
+            //  $("#step-3").show();
+        //  $(".backBtn").hide();
          $("#first").addClass("bg-primary");
          $("#second").addClass("bg-primary");
          $("#p1").addClass("blu-color");
@@ -127,22 +130,26 @@ export class ResultComponent implements OnInit {
 //     this.isFormValid = false;
 // }
   submit() {
-    // this.submitted = true;
-    alert(this.formData);
+    this.submitted = true;
+    const newLocal = this.formData;
+    console.log(this.formData);
+    // alert(this.formData);
     
-    // this.userService.create(this.personalForm.value)
-    //   .pipe(first())
-    //   .subscribe(
-    //       data => {
-    //          // this.alertService.success('Registration successful', true);
-    //           this.router.navigate(['/dashboard']);
-    //       },
-    //       error => {
-    //           console.log("error");
-    //         //  this.alertService.error(error);
-    //           // this.loading = false;
-    //       });
-    // console.log(this.formData.accountno, this.formData.bankname, this.formData.branchname);
+    this.userService.create(newLocal)
+      .pipe(first())
+      .subscribe(
+          data => {
+             // this.alertService.success('Registration successful', true);
+             console.log('true');
+             this.router.navigate([this.returnUrl]);
+          },
+          error => {
+              console.log("error");
+            //  this.alertService.error(error);
+              // this.loading = false;
+              
+          });
+    
     this.formData = this.formDataService.resetFormData();
     this.isFormValid = false;
 }

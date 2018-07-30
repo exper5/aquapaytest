@@ -101,7 +101,7 @@ import { ChnotificationComponent } from './chroutingcomponents/chnotification/ch
 import { ChlastpaymentComponent } from './supportingcomponents/chlastpayment/chlastpayment.component';
 import { ChsupplierlistComponent } from './chroutingcomponents/chsupplierlist/chsupplierlist.component';
 import { ChsupplierreportComponent } from './supportingcomponents/chsupplierreport/chsupplierreport.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import { CanavigationComponent } from './supportingcomponents/canavigation/canavigation.component';
 import { CadashboardComponent } from './caroutingcomponent/cadashboard/cadashboard.component';
 import { CahomeComponent } from './supportingcomponents/cahome/cahome.component';
@@ -137,11 +137,16 @@ import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsuppl
 import { ChreviewsupplierComponent } from './supportingcomponents/chreviewsupplier/chreviewsupplier.component';
 import { ChsuppliersuccessComponent } from './chsuppliersuccess/chsuppliersuccess.component';
 import { WorkflowService } from './workflow/workflow.service';
-import { PersonalComponent } from './personal/personal.component';
+import {DataTableModule} from "angular-6-datatable";
 import { FormDataService } from './data/formData.service';
 import { ResultComponent } from './result/result.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UserService, AuthenticationService, AlertService } from './_services';
+import { LoginComponent } from './login/login.component';
+import { JwtInterceptor } from './_helpers';
+import { CheckerlistComponent } from './checkerlist/checkerlist.component';
+import { SuccesspageComponent } from './successpage/successpage.component';
+
 
 
 @NgModule({
@@ -278,16 +283,29 @@ import { UserService, AuthenticationService, AlertService } from './_services';
     ChpendingsupplierComponent,
     ChreviewsupplierComponent,
     ChsuppliersuccessComponent,
-    PersonalComponent,
-    ResultComponent
+    ResultComponent,
+    LoginComponent,
+    CheckerlistComponent,
+    SuccesspageComponent
+  
   ],
   imports: [
-    BrowserModule,FormsModule,
-    RouterModule.forRoot(routes)
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    ReactiveFormsModule,
+    DataTableModule
   ],
   providers: [ { provide: FormDataService, useClass: FormDataService },
     { provide: WorkflowService, useClass: WorkflowService }, AlertService,
-    AuthenticationService,UserService,],
+    AuthenticationService,UserService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+  },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

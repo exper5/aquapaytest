@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { Router }              from '@angular/router';
-import * as $ from 'jquery';
+// //import * as $ from 'jquery';
 import { NgStyle } from '@angular/common';
 import { FormDataService } from '../../data/formData.service';
 import { Personal } from '../../data/formData.model';
+import { User } from '../../_models';
+import { UserService } from '../../_services';
+import { first } from 'rxjs/operators';
 declare var jquery:any;
 declare var $ :any;
 
@@ -18,9 +21,11 @@ export class AddunitarysupplierComponent implements OnInit
   title = 'Please tell us about yourself.';
   personal: Personal;
   buttonDisabled: boolean=false;
+    checkers: User[] = [];
+    currentUser: User;
 
-  constructor(private router: Router, private formDataService: FormDataService) {
-      
+  constructor(private router: Router, private formDataService: FormDataService, private userService: UserService) {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   }
 
   
@@ -118,6 +123,7 @@ export class AddunitarysupplierComponent implements OnInit
   
 
   ngOnInit() {
+    this.loadAllUsers();
     this.personal = this.formDataService.getPersonal();
     console.log('Personal feature loaded!');
 
@@ -227,6 +233,12 @@ goToNext(form: any) {
         // Navigate to the work page
         this.router.navigate(['/result']);
     }
+}
+private loadAllUsers() {
+  this.userService.getAll().pipe(first()).subscribe(result => { 
+      this.checkers = result['data']['checkerlist']; 
+      console.log(result['data']['checkerlist']);
+  });
 }
 
 }

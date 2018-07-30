@@ -88,7 +88,7 @@
                 </div>
                 <div class="clear"></div>
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" >
                         <thead>
 
                             <tr class="cust-color">
@@ -371,20 +371,21 @@
                             </tr>
 
                         </thead>
-                        <tbody>
+                        <tbody *ngFor="let user of checkers">
 
                             <tr ng-click="myFunction(this)">
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
-                                <td>34987</td>
+                                
+                                <td>{{user.vendorcode}}</td>
 
-                                <td>Fasus</td>
+                                <td> {{user.name}}</td>
 
-                                <td>Yes</td>
+                                <td>{{user.ispaymentadvice}}</td>
 
                                 <td>
-                                    <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button">{{user.status}}</a>
                                 </td>
 
 
@@ -410,18 +411,21 @@
 
                                         <div>
                                             <div class="span_width">Email:</div>
-                                            <div class="bold_span">xyz@gmail.com</div>
+                                            <div class="bold_span">{{user.email}}</div>
                                         </div>
 
                                         <div>
                                             <div class="span_width">Contact No: </div>
-                                            <div class="bold_span">633122148</div>
+                                            <div class="bold_span">{{user.contact}}</div>
                                         </div>
-
-                                        <div>
+                                        <!-- <div>
+                                                <div class="span_width">Landline No: </div>
+                                                <div class="bold_span">{{user.landlineno}}</div>
+                                            </div> -->
+                                        <!-- <div>
                                             <div class="span_width">File No:</div>
                                             <div class="bold_span">xyz.csv</div>
-                                        </div>
+                                        </div> -->
 
                                     </div>
                                     <div class="tablediv">
@@ -430,22 +434,22 @@
 
                                         <div>
                                             <div class="span_width">Account No:</div>
-                                            <div class="bold_span">63122148</div>
+                                            <div class="bold_span">{{user.accno}}</div>
                                         </div>
 
                                         <div>
                                             <div class="span_width">IFSC: </div>
-                                            <div class="bold_span">SBI00676</div>
+                                            <div class="bold_span">{{user.ifsc}}</div>
                                         </div>
 
                                         <div>
                                             <div class="span_width">Bank Name:</div>
-                                            <div class="bold_span">State Bank Of India</div>
+                                            <div class="bold_span">{{user.bank}}</div>
                                         </div>
 
                                         <div>
                                             <div class="span_width">Branch:</div>
-                                            <div class="bold_span">Ambarnath</div>
+                                            <div class="bold_span">{{user.branch}}</div>
                                         </div>
 
                                     </div>
@@ -454,12 +458,12 @@
 
                                         <div>
                                             <div class="span_width">Initiated by :</div>
-                                            <div class="bold_span">Sammer</div>
+                                            <div class="bold_span">{{user.refadmin.firstname}}</div>
                                         </div>
 
                                         <div>
                                             <div class="span_width">Initiated on : </div>
-                                            <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                            <div class="bold_span">{{user.refadmin.regdate}}</div>
                                         </div>
 
                                     </div>
@@ -481,7 +485,7 @@
 
                             </tr>
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -503,9 +507,9 @@
                                     </div>
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr class="rowShow">
+                            <!-- <tr class="rowShow">
 
                                 <td colspan="6" class="custmtd">
 
@@ -573,9 +577,9 @@
                                     </div>
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr class="rowShow">
+                            <!-- <tr class="rowShow">
 
                                 <td colspan="6">
                                     Reason : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -587,10 +591,10 @@
                                     </span>
 
                                 </td>
+                                </tr> -->
+                                
 
-                            </tr>
-
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -611,9 +615,9 @@
                                     </div>
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr class="rowShow">
+                            <!-- <tr class="rowShow">
                                 <td colspan="6" class="custmtd">
 
                                     <div class="tablediv">
@@ -680,9 +684,9 @@
                                     </div>
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr class="rowShow">
+                            <!-- <tr class="rowShow">
 
                                 <td colspan="6">
 
@@ -695,9 +699,9 @@
 
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -802,9 +806,9 @@
 
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -909,9 +913,9 @@
 
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -1018,9 +1022,9 @@
 
                                 </td>
 
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -1098,9 +1102,9 @@
                                         <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
                                     </span>
                                 </td>
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -1178,9 +1182,9 @@
                                         <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
                                     </span>
                                 </td>
-                            </tr>
+                            </tr> -->
 
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
                                 </td>
@@ -1382,7 +1386,7 @@
                                     </span>
                                 </td>
 
-                            </tr>
+                            </tr> -->
                         </tbody>
 
                     </table>
@@ -1578,7 +1582,12 @@
                 </div>
             </div>
         </section>
+        
     </div>
 </div>
 <div class="clear20"></div>
 <div class="clear20"></div>
+
+
+
+

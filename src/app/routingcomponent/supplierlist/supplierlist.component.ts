@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
+// //import * as $ from 'jquery';
 import { visitSiblingRenderNodes } from '@angular/core/src/view/util';
+import { User } from '../../_models';
+import { UserService } from '../../_services';
+import { HttpClient } from '@angular/common/http';
+import { first } from 'rxjs/operators';
 declare var jquery:any;
 declare var $ :any;
 @Component({
@@ -10,32 +14,40 @@ declare var $ :any;
 })
 export class SupplierlistComponent implements OnInit {
 
-  constructor() { }
+
+  currentUser: User;
+  checkers: User[] = [];
+  checkers1: User[] = [];
+  constructor(private userService: UserService, private http: HttpClient) {  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));}
 
   ngOnInit() {
-
+    this.loadAllUsers();
+    // this.http.get('http://bd4a34b7.ngrok.io/api/maker/getAllSupliers').subscribe(data => {
+    //   console.log(data);
+      
+   
     $("#reportname").hide();
     $(".nxt2").click(function () {
       $("#reportname").show();
       $("#payreport").hide();
       $("#lstpaymt").hide();
-     // $("#myModal").show();
+      $("#myModal").show();
     });
     //---------------------------------------Datepicker js start--------------------------------------------
 
-    $('.from').datepicker({
-      autoclose: true,
-      minViewMode: 1,
-      format: 'M'
-    }).on('changeDate', function (selected) {
-      var startDate = new Date(selected.date.valueOf());
-      startDate.getDate();
-    });
+    // $('.from').datepicker({
+    //   autoclose: true,
+    //   minViewMode: 1,
+    //   format: 'M'
+    // }).on('changeDate', function (selected) {
+    //   var startDate = new Date(selected.date.valueOf());
+    //   startDate.getDate();
+    // });
     
-    $('.example1').datepicker({
-      autoclose: true,
-      format: "dd M yy"
-    });
+    // $('.example1').datepicker({
+    //   autoclose: true,
+    //   format: "dd M yy"
+    // });
 //---------------------------------------Datepicker js END-------------------------------------------
       //---------------------------------------check box js -------------------------------------------
   
@@ -93,5 +105,12 @@ $(" input[name='mainmenu']").click(function(){
 });
 //-----------------------------on click all row select-----------------------------------------------------
 }
-
+private loadAllUsers() {
+  this.userService.getSupplierlist().pipe(first()).subscribe(result => { 
+      this.checkers = result['data']; 
+        
+      console.log(result['data']);
+      
+  });
+}
 }

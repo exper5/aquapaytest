@@ -6,11 +6,11 @@
 <div class="container ">
   <section class="content ">
 
-        <div class="col-md-2 col-sm-2 top_back no-show2">
-                <h5 class="blu-color">
-                  <a class="backBtn">
+        <div class="col-md-2 col-sm-2 top_back">
+                <!-- <h5 class="blu-color">
+                  <a routerLink="../addunitarysupplier"  class="backBtn">
                     <img src="assets/images/left-arrow.png"> Back </a>
-                </h5>
+                </h5> -->
               </div>
               <div class="col-md-10 col-sm-9">
                     <div class="stepwizard ">
@@ -31,14 +31,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-2 col-sm-2 top_back no-show">
+                  <div class="col-md-2 col-sm-2 top_back">
                         <h5 class="blu-color">
-                          <a href="#" class="backBtn">
+                          <a routerLink="../addunitarysupplier"  class="backBtn">
                             <img src="assets/images/left-arrow.png"> Back </a>
                         </h5>
                       </div>
                       <div class="clearfix"></div>
-                      <div class="row setup-content form_bg" id="step-2">
+                      <div class="row setup-content form_bg" id="step-2" style="display: block !important;">
                             <div class="col-xs-12">
                               <h4>Review Suppliers Details</h4>
                               <div class="BorderBottom"></div>
@@ -123,9 +123,9 @@
                                     </div>
                                     <!-- add email dynamically -->
                                     <div class="form-field col x-50">
-                                      <input id="name" class="input-text js-input" type="text" required>
+                                      <!-- <input id="name" class="input-text js-input" type="text" required> -->
                                       <label class="label" for="name">Payment Advice</label>
-                                      <!-- <div class="suppnewtxt">{{formData.ispaymentadvice}}</div> -->
+                                       <div class="suppnewtxt">{{formData.notification}}</div>
                                     </div>
                                     
                                   </div>
@@ -152,6 +152,15 @@
                                       <label class="label" for="email">Branch Name</label>
                                       <div class="suppnewtxt">{{formData.branch}}</div>
                                     </div>
+                                    <div class="form-field col x-50">
+                                        <!-- <input id="email" class="input-text js-input" type="text" required> -->
+                                        <label class="label" for="email">checker Name</label>
+                                        <div class="suppnewtxt">
+                                          <select disabled>
+                                            <option>{{formData.selectcheckertemp}}</option>
+                                            </select>
+                                            </div>
+                                      </div>
                   
                                   </div>
                   

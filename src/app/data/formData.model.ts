@@ -13,10 +13,9 @@ export class FormData {
     ifsc: string = '';
     bank: string = '';
     branch: string = '';
+    notification: string='Yes';
+    selectcheckertemp:string='';
   
-    
-
-   
     clear() {
         this.vendorcode = '';
         this.name= '';
@@ -32,6 +31,8 @@ export class FormData {
         this.ifsc= '';
         this.bank= '';
         this.branch= '';
+        this.notification='Yes';
+        this.selectcheckertemp='';
         
        
     }
@@ -50,5 +51,7 @@ export class Personal {
     accno: string = '';
     ifsc: string = '';
     bank: string = '';
-    branch: string = '';  
+    branch: string = ''; 
+    notification: string='Yes'; 
+    selectcheckertemp:string='';
 }

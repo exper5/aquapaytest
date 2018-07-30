@@ -31,6 +31,8 @@ export class FormDataService {
             ifsc: this.formData.ifsc,
             bank: this.formData.bank,
             branch: this.formData.branch,
+            notification: this.formData.notification,
+            selectcheckertemp:this.formData.selectcheckertemp,
          
             
         };
@@ -54,6 +56,8 @@ export class FormDataService {
         this.formData.ifsc= data.ifsc;
         this.formData.bank= data.bank;
         this.formData.branch= data.branch;
+        this.formData.notification=data.notification;
+        this.formData.selectcheckertemp=data.selectcheckertemp.toString();
         
         
         // Validate Personal Step in Workflow

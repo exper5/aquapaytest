@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import * as $ from 'jquery';
+// //import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
 @Component({
