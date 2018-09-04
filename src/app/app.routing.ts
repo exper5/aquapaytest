@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-
+import { AuthGuard } from './_guards';
 import { HomeComponent } from './supportingcomponents/home/home.component';
 import { CardsliderComponent } from './supportingcomponents/cardslider/cardslider.component';
 import { PaystatusComponent } from './supportingcomponents/paystatus/paystatus.component';
@@ -131,13 +131,15 @@ import { ChpendingsupplierComponent } from './chroutingcomponents/chpendingsuppl
 import { ResultComponent } from './result/result.component';
 import { LoginComponent } from './login/login.component';
 
-import { CheckerlistComponent } from './checkerlist/checkerlist.component';
+
 import { SuccesspageComponent } from './successpage/successpage.component';
 
 export const routes: Routes = [
-    { path: '', component: MasterComponent},
+     { path: '', component: LoginComponent},
+    { path: 'master', component: MasterComponent},
     { path: 'makeunitarypayment', component: MakeunitarypaymentComponent },
     { path: 'addunitarysupplier', component: AddunitarysupplierComponent },
+    { path: 'addunitarysupplier/:id', component: AddunitarysupplierComponent },
     { path: 'listpayment', component: ListpaymentComponent },
     { path: 'rulevalidator', component: RulevalidatorComponent },
     { path: 'cards', component: CardsComponent },
@@ -230,9 +232,12 @@ export const routes: Routes = [
     { path: 'chpendingsupplier', component: ChpendingsupplierComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'result', component: ResultComponent },
-    { path: 'login', component: LoginComponent },
+    { path: 'result/:id', component: ResultComponent },
+    // { path: 'login', component: LoginComponent },
     { path: 'complete', component: SuccesspageComponent },
-    { path: 'checker', component: CheckerlistComponent },
+    
+
+    { path: '**', redirectTo: '' }
    
     
     

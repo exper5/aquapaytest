@@ -37,7 +37,7 @@ $(document).on("shown.bs.dropdown", ".dropdown", function () {
 
 //---------------------------------------Datepicker js start--------------------------------------------
 
-$('.from').datepicker({
+$('.from').datepicker()({
     autoclose: true,
     minViewMode: 1,
     format: 'M'

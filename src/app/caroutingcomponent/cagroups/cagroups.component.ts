@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService, AlertService } from '../../_services';
+import { first } from 'rxjs/operators';
 // //import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
@@ -9,11 +13,24 @@ declare var $ :any;
   styleUrls: ['./cagroups.component.css']
 })
 export class CagroupsComponent implements OnInit {
-
-  constructor() { }
+  addgroup: FormGroup;
+    
+    loading = false;
+    submitted = false;
+  constructor(
+    private formBuilder: FormBuilder,
+        private router: Router,
+        private userService: UserService,
+        private alertService: AlertService
+  ) { }
 
   ngOnInit() {
-
+    this.addgroup = this.formBuilder.group({
+      grpname: ['', Validators.required],
+      lwrlimit: ['', Validators.required],
+      uprlimit: ['', Validators.required],
+    
+  });
   
     $(".Resetin").on("click", function () {
       $(".input-text").val("");
@@ -100,6 +117,35 @@ $(this).parents(".control-group").remove();
 });
     
 
+  }
+
+
+
+  get f() { return this.addgroup.controls; }
+
+  onSubmit() {
+      this.submitted = true;
+     // console.log('submitted');
+      // stop here if form is invalid
+      if (this.addgroup.invalid) {
+        console.log("error");
+          return;
+      }
+
+      this.loading = true;
+      console.log(this.addgroup.value);
+      this.userService.creategroup(this.addgroup.value)
+          .pipe(first())
+          .subscribe(
+              data => {
+                 console.log('success');
+                  // this.router.navigate(['/login']);
+              },
+              error => {
+                  console.log("error");
+                 this.alertService.error(error.error.error);
+                  this.loading = false;
+              });
   }
 
 }

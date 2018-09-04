@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { first } from 'rxjs/operators';
+import { UserService } from '../../_services';
+import { User } from '../../_models';
+import { HttpClient } from '@angular/common/http';
 //import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
@@ -8,10 +12,16 @@ declare var $ :any;
   styleUrls: ['./payslider.component.css']
 })
 export class PaysliderComponent implements OnInit {
-
-  constructor() { }
+  currentUser: User;
+  tempName:any[];
+  temp :string;
+  
+  // payments: User[] = [];
+  constructor(private userService: UserService, private http: HttpClient) { this.currentUser = JSON.parse(localStorage.getItem('currentUser'));  }
 
   ngOnInit() {
+    //this.vendorName="ravi boss";
+    this.recentpayments();
     $(document).ready(function() {
       $(".thumbnail").click(function(){
         $(this).toggleClass("bluebr");
@@ -38,6 +48,16 @@ export class PaysliderComponent implements OnInit {
           $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
       });
+    });
+
+  }
+
+  private recentpayments() {
+    this.userService.allrecentpayments().pipe(first()).subscribe(result => { 
+
+        this.temp = result['data'][0]['Name'];
+          console.log(this.temp);
+        
     });
   }
 

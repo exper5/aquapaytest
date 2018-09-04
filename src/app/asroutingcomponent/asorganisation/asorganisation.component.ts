@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./asorganisation.component.css']
 })
 export class AsorganisationComponent implements OnInit {
-
-  constructor() { }
+ 
+  constructor() {}
 
   ngOnInit() {
+    
   }
 
+
+
+  
 }

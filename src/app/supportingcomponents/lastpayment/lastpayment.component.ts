@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../../_models';
+import { UserService } from '../../_services';
+import { first } from 'rxjs/operators';
 //import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
@@ -9,11 +13,12 @@ declare var $ :any;
   styleUrls: ['./lastpayment.component.css']
 })
 export class LastpaymentComponent implements OnInit {
-
-  constructor() { }
+  checkers: User[] = [];
+  currentUser: User;
+  constructor(private userService: UserService, private http: HttpClient) { this.currentUser = JSON.parse(localStorage.getItem('currentUser'));}
 
   ngOnInit() {
-
+    this.load5payments();
     //---------------------------------------modelbox js start--------------------------------------------
 function alignModal() {
   var modalDialog = $(this).find(".modal-dialog");
@@ -49,16 +54,28 @@ $('.dropdown-menuu').on('click', function (e) {
 //---------------------------------------Prevent anchor default action-------------------------------------------
 
 //---------------------------------------toggle class for table collapse-------------------------------------------
-$(".rowShow").hide();
+// $(".rowShow.grayStrip").hide();
 
-$('.showhide').click(function(){
-  //alert("clicked");
-  var row=$(this).parent().parent().next();
-  $(row).toggle();
-  $(row).next().toggle();
-})
-
+// $('.flash.equipment3.showhide').click(function(){
+//   //alert("clicked");
+//   var row=$(this).parent().parent().next();
+//   $(row).toggle();
+//   $(row).next().toggle();
+// })
+$(document).ready(function(){
+  $('.new').click(function(){
+    console.log("clicked");
+    $(this).parents('tr').siblings('tr').toggle();
+  });
+});
 //---------------------------------------toggle class for table collapse-------------------------------------------
+  }
+  private load5payments() {
+    this.userService.gettoppaymentlist().pipe(first()).subscribe(result => { 
+        this.checkers = result['data']; 
+        console.log(result['data']);
+        
+    });
   }
 
 }

@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ashome.component.css']
 })
 export class AshomeComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor() {}
 
   ngOnInit() {
+    
   }
-
+ 
 }

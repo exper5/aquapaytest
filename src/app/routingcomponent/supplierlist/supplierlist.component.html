@@ -69,9 +69,10 @@
 
                 <div class="BorderBottom"></div>
                 <div class="col-md-8 col-sm-6  top-spac">
-                    <input type="text" class="form-control search noborder" name="search">
+                    <input type="text" class="form-control search noborder" name="search"  [(ngModel)]= 'listFilter' placeholder="search by Supplier code">
 
                 </div>
+                
                 <div class="form-group col-md-4 col-sm-6 top-spac text-right right-spac">
                     <label>Show:
                         <select name="example_length" aria-controls="example" class=" input-sm bbor">
@@ -88,7 +89,7 @@
                 </div>
                 <div class="clear"></div>
                 <div class="table-responsive">
-                    <table class="table table-hover table-striped" >
+                    <table class="table table-hover table-striped">
                         <thead>
 
                             <tr class="cust-color">
@@ -96,9 +97,9 @@
                                     <div _ngcontent-c3=""><input type="checkbox" name="mainmenu"></div>
                                 </td>
                                 <td>
-                                    <span class="bold-txt">Supplier Code</span> &nbsp;&nbsp;&nbsp;
+                                   <span class="bold-txt">Supplier Code</span> &nbsp;&nbsp;&nbsp; 
 
-                                    <div class="btn-group dropdown">
+                                    <!-- <div class="btn-group dropdown">
 
                                         <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -178,13 +179,13 @@
 
                                         </ul>
 
-                                    </div>
+                                    </div> -->
 
                                 </td>
 
                                 <td>
                                     <span class="bold-txt">Supplier Name</span> &nbsp;&nbsp;&nbsp;
-                                    <div class="btn-group dropdown">
+                                    <!-- <div class="btn-group dropdown">
 
                                         <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -269,12 +270,12 @@
                                             </li>
                                         </ul>
 
-                                    </div>
+                                    </div> -->
                                 </td>
 
                                 <td>
                                     <span class="bold-txt">Payment Advice</span> &nbsp;&nbsp;&nbsp;
-                                    <div class="btn-group">
+                                    <!-- <div class="btn-group">
 
                                         <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -312,12 +313,12 @@
 
                                         </ul>
 
-                                    </div>
+                                    </div> -->
                                 </td>
 
                                 <td>
                                     <span class="bold-txt"> Status</span> &nbsp;&nbsp;&nbsp;
-                                    <div class="btn-group">
+                                    <!-- <div class="btn-group">
 
                                         <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -363,7 +364,7 @@
 
                                         </ul>
 
-                                    </div>
+                                    </div> -->
                                 </td>
 
 
@@ -371,7 +372,7 @@
                             </tr>
 
                         </thead>
-                        <tbody *ngFor="let user of checkers">
+                        <tbody *ngFor="let user of filteredProducts | paginate: { itemsPerPage: 10, currentPage: p }">
 
                             <tr ng-click="myFunction(this)">
                                 <td>
@@ -385,20 +386,23 @@
                                 <td>{{user.ispaymentadvice}}</td>
 
                                 <td>
-                                    <a href="javascript:void(0);" class="btn appoved" role="button">{{user.status}}</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.isvalidated == '1'">Approved</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.isvalidated == '0'">Rejected</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.isvalidated == '2'">Pending</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.isvalidated == '4'">Rejected</a>
                                 </td>
 
 
 
                                 <td>
-                                    <div class="flash equipment6 showhide">
+                                    <div class="flash equipment6 showhide new" >
                                         <span class="showhide">+</span>
                                     </div>
                                 </td>
-
+                                
                             </tr>
 
-                            <tr class="rowShow">
+                            <tr class="rowShow" style="display:none">
 
                                 <td colspan="6" class="custmtd">
 
@@ -470,13 +474,13 @@
                                 </td>
                             </tr>
 
-                            <tr class="rowShow">
+                            <tr class="rowShow" style="display:none">
 
                                 <td colspan="6">
 
                                     <span class="pull-right">
-                                        <img src="assets/images/delete.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <img src="assets/images/edit.png">&nbsp;&nbsp;&nbsp;
+                                        <img src="assets/images/delete.png" (click)="deletevendornew(user.id)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <img src="assets/images/edit.png"  (click)="appendToContainer(user.id)">&nbsp;&nbsp;&nbsp;
 
 
                                     </span>
@@ -484,7 +488,11 @@
                                 </td>
 
                             </tr>
+                            <!--modal start-->
 
+                           
+                                  
+                            <!--modal end-->
                             <!-- <tr>
                                 <td>
                                     <div _ngcontent-c3=""><input type="checkbox"  name="submenu"></div>
@@ -1393,7 +1401,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <ul class="pagination">
+                <!-- <ul class="pagination">
                     <li class="disabled">
                         <a class="abg">
                             <img src="assets/images/leftarrow.png">
@@ -1415,7 +1423,8 @@
                             <img src="assets/images/right-arrow.png">
                         </a>
                     </li>
-                </ul>
+                </ul> -->
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
             </div>
             <!-- /.modal-content -->
             <div class="modal fade" id="myModal">
@@ -1590,4 +1599,42 @@
 
 
 
+
+<!--datatable start-->
+<!-- <div class="container">
+    <table class="table table-hover table-striped" [mfData]="checkers" [mfSortOrder]= "asc"  #mf="mfDataTable" [mfRowsOnPage]="5"  [mfActivePage]="1" >
+        <thead>
+        <tr>
+            <th style="width: 20%">
+                <mfDefaultSorter by="name">Name</mfDefaultSorter>
+            </th>
+            <th style="width: 50%">
+                <mfDefaultSorter by="email">Email</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="age">Age</mfDefaultSorter>
+            </th>
+            <th style="width: 20%">
+                <mfDefaultSorter by="city">City</mfDefaultSorter>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of checkers">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td class="text-right">{{user.vendorcode}}</td>
+            <td>{{user.accno | uppercase}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="4">
+                <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+</div> -->
 

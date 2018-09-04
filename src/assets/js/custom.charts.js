@@ -6,7 +6,7 @@ $(function () {
         if (typeof module === 'object' && module.exports) {
             module.exports = factory;
         } else {
-            factory(Highcharts);
+       //     factory(Highcharts);
         }
     }(function (Highcharts) {
         (function (H) {
@@ -57,7 +57,7 @@ $(function () {
 
                 });
             });
-        }(Highcharts));
+        }( Highcharts));
     }));
 
     Highcharts.chart('paybar', {
@@ -84,11 +84,7 @@ $(function () {
         xAxis: {
             categories: ['XVY Supp.', 'CVS Ven', 'XVY Supp.', 'MVS Ven', 'CTSVen'],
         },
-        // yAxis: {
-        //    lineWidth: 1,
-        //    categories: ['10L', '20L', '30L', '40L', '50L', '60L', '70L', '80L'],
-        //    title: { text: '' }
-        //},
+       
         yAxis: {
             title: {
                 text: null
@@ -100,25 +96,10 @@ $(function () {
                 }
             }
         },
-        //colors: ['#10c469', '#22b9ff', '#fff33b', '#ab0764', '#564fc1'],
+        colors: ['#10c469', '#22b9ff', '#fff33b', '#ab0764', '#564fc1'],
 		
         plotOptions: {
-			//series: {
-                // stickyTracking: false,
-                // events: {
-                    // mouseOver() {
-                        // const color = arguments[0].target.color;
-
-                        // this.chart.tooltip.options.backgroundColor = color; //first time overwrite
-                        // setTimeout(() => {
-                            // const tooltipMainBox = document.querySelector('g.highcharts-tooltip path:last-of-type');
-                            // if (tooltipMainBox) {
-                                // tooltipMainBox.setAttribute('fill', color);
-                            // }
-                        // });
-                    // }
-                // }
-            // },
+		
 			
             column: {
                 grouping: false,
@@ -223,83 +204,6 @@ linearGradient: { x1: 1, x2: 1, y1: 1, y2: 0 },
         }
     });
 
-
-
-
-    //chart: {
-    //    height: (11.4 / 20 * 100) + '%',
-    // },
-
-    //  title: {
-    //    text: ''
-    //  },
-    //navigation: {
-    //    buttonOptions: {
-    //      enabled: false
-    //      }
-    // },
-    // credits: {
-    //      enabled: false
-    //  },
-    //  subtitle: {
-    //    text: ''
-    //  },
-
-    //  xAxis: {
-    //      categories: ['XVY Supp.', 'CVS Ven', 'XVY Supp.', 'MVS Ven', 'CTSVen'],
-    //      offset: 0,
-    //  },
-    //  yAxis: {
-    //             categories: ['10l', '20l', '30l', '40l', '50l','60l', '70l', '80l'],
-    //             title: { text: '' },
-    //             offset: 0,
-    //        },
-    // tooltip: {
-    //		formatter: function () {
-    //            return ' <b style="background-color:' + this.series.color + '>' + this.y + '% ' + '</b>';
-    //        },
-
-    //    },
-    //	plotOptions: {
-    //            series: {
-    //				pointWidth: 15
-    //        },
-    //            column: {
-    //                grouping: false,
-    //                borderRadiusTopLeft: 10,
-    //                borderRadiusTopRight: 10
-    //            }
-    // },
-
-    //  series: [{
-    //    type: 'column',
-    //    colorByPoint: true,
-    //    data: [1, 2, 3, 4, 5],
-    //    showInLegend: false,
-    //    shadow: {
-    //        color: 'black',
-    //        width: 5,
-    //        offsetX: 0,
-    //        offsetY: 0
-    //    },
-
-    //  }],
-    //  responsive: {
-    //        rules: [{
-    //            condition: {
-    //                maxWidth: 500
-    //            },
-    //            chartOptions: {
-    //                legend: {
-    //                    align: 'center',
-    //                    verticalAlign: 'bottom',
-    //                    layout: 'horizontal'
-    //                }
-    //            }
-    //        }]
-    //    }
-
-    //});
 });
 //---------------------------------------bar chart js edn-------------------------------------------
 
@@ -410,7 +314,7 @@ $('#donut_chart svg tspan').css({
 //---------------------------------------pie chart js edn-------------------------------------------
 }
 
-//------------------------As line chart--------------------------------------------------------------
+
 
 function loadAsCharts(){
 
@@ -476,9 +380,6 @@ function loadAsCharts(){
         }]      
       });
 }
-//----------------------------As line chart end-------------------------------------------------------
-
-//-------------------------As pichart start------------------------------------------------------------
 
 function loadAsPiCharts(){
 
@@ -592,14 +493,6 @@ $(function () {
 			        });
 			    }
             }
-         
-            
+             
             
 }
-
-
-//--------------------------As pichartend---------------------------------------------------------------------
-
-//-----------------------------AS date picker----------------------------------------------------------------
- 
-//------------------------------AS date picker -----------------------------------------------------------------

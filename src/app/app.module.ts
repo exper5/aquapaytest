@@ -144,11 +144,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UserService, AuthenticationService, AlertService } from './_services';
 import { LoginComponent } from './login/login.component';
 import { JwtInterceptor } from './_helpers';
-import { CheckerlistComponent } from './checkerlist/checkerlist.component';
+import { OwlModule } from 'ngx-owl-carousel';
 import { SuccesspageComponent } from './successpage/successpage.component';
-
-
-
+import { CommonModule } from '@angular/common';
+import {MatInputModule, MatTableModule, MatToolbarModule } from '@angular/material';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { HighchartsChartModule } from 'highcharts-angular';
+import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
+import { NgSelectModule } from '@ng-select/ng-select';
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -285,7 +289,6 @@ import { SuccesspageComponent } from './successpage/successpage.component';
     ChsuppliersuccessComponent,
     ResultComponent,
     LoginComponent,
-    CheckerlistComponent,
     SuccesspageComponent
   
   ],
@@ -295,7 +298,17 @@ import { SuccesspageComponent } from './successpage/successpage.component';
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
-    DataTableModule
+    DataTableModule,
+    CommonModule, 
+    MatToolbarModule, 
+    MatInputModule, 
+    MatTableModule,
+    NgxDatatableModule,
+    OwlModule,
+    HighchartsChartModule,
+    MultiselectDropdownModule,
+    NgSelectModule,
+    NgxPaginationModule
   ],
   providers: [ { provide: FormDataService, useClass: FormDataService },
     { provide: WorkflowService, useClass: WorkflowService }, AlertService,
@@ -306,6 +319,7 @@ import { SuccesspageComponent } from './successpage/successpage.component';
       multi: true
   },
   ],
+  exports: [CommonModule, MatToolbarModule, MatInputModule, MatTableModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

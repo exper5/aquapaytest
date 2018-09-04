@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-// //import * as $ from 'jquery';
-import { visitSiblingRenderNodes } from '@angular/core/src/view/util';
+//import * as $ from 'jquery';
+// import { visitSiblingRenderNodes } from '@angular/core/src/view/util';
 import { User } from '../../_models';
 import { UserService } from '../../_services';
 import { HttpClient } from '@angular/common/http';
 import { first } from 'rxjs/operators';
+import { Router, ActivatedRoute } from '@angular/router';
+// import { id } from '@swimlane/ngx-datatable/release/utils';
 declare var jquery:any;
 declare var $ :any;
 @Component({
@@ -14,103 +16,115 @@ declare var $ :any;
 })
 export class SupplierlistComponent implements OnInit {
 
-
+  // public show:boolean = false;
   currentUser: User;
   checkers: User[] = [];
   checkers1: User[] = [];
-  constructor(private userService: UserService, private http: HttpClient) {  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));}
-
-  ngOnInit() {
-    this.loadAllUsers();
-    // this.http.get('http://bd4a34b7.ngrok.io/api/maker/getAllSupliers').subscribe(data => {
-    //   console.log(data);
-      
-   
-    $("#reportname").hide();
-    $(".nxt2").click(function () {
-      $("#reportname").show();
-      $("#payreport").hide();
-      $("#lstpaymt").hide();
-      $("#myModal").show();
-    });
-    //---------------------------------------Datepicker js start--------------------------------------------
-
-    // $('.from').datepicker({
-    //   autoclose: true,
-    //   minViewMode: 1,
-    //   format: 'M'
-    // }).on('changeDate', function (selected) {
-    //   var startDate = new Date(selected.date.valueOf());
-    //   startDate.getDate();
-    // });
-    
-    // $('.example1').datepicker({
-    //   autoclose: true,
-    //   format: "dd M yy"
-    // });
-//---------------------------------------Datepicker js END-------------------------------------------
-      //---------------------------------------check box js -------------------------------------------
-  
-  $(".place").click(function () {
-    $(this).toggleClass("green");
-  });
+  p: number = 1;
+  order: string = 'product.name';
+  reverse: boolean = false;
+  returnUrl: string;
+  // fliterText: string= 'admin';
+  errorMessage: string;
+    _listFilter: string;
 
 
-  //---------------------------------------check box js edn-------------------------------------------
-  
-  //---------------------------------------Prevent anchor default action-------------------------------------------
-  
-  
-  $('.dropdown-menu').on('click', function (e) {
-    if ($(this).hasClass('dropdown-menu')) {
-        e.stopPropagation();
+    get listFilter(): string{
+    return this._listFilter;
     }
-  });
+
+    set listFilter(value:string){
+        this._listFilter= value;
+        this.filteredProducts= this._listFilter.length!==0 ? this.performFilter(this._listFilter): this.checkers;
+    }
+    filteredProducts: User[];
+    // products: User[]= [];
+  constructor(private userService: UserService, private http: HttpClient, private router: Router, private route: ActivatedRoute,) {  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));}
   
-  //---------------------------------------Prevent anchor default action-------------------------------------------
-  
-
-
-  $(".rowShow").hide();
-
-  $('.showhide').click(function(){
-    //alert("clicked");
-    var row=$(this).parent().parent().next();
-    $(row).toggle();
-    $(row).next().toggle();
-  });
-//---------------------------------------toggle class for table collapse-------------------------------------------
-//---------------------pagignation------------------------------------
-$(".one a").on("click", function () {
-  $(".one").addClass("active");
-  $(".one").siblings(".active").removeClass("active");
-});
-
-$(".two a").on("click", function () {
-  $(".two").addClass("active");
-  $(".two").siblings(".active").removeClass("active");
-});
-
-$(".three a").on("click", function () {
-  $(".three").addClass("active");
-  $(".three").siblings(".active").removeClass("active");
-});
-//-------------------------pagignation end------------------------
-
-//-----------------on click all row select---------------------------------------------------------
-
-$(" input[name='mainmenu']").click(function(){
-  var  is_checked=$(this).is(":checked");
-    $("input[name='submenu']").prop("checked",is_checked);
-});
-//-----------------------------on click all row select-----------------------------------------------------
+  performFilter(filterBy: string): User[]{
+    filterBy =filterBy.toLocaleLowerCase();
+    return this.checkers.filter((product: User)=>
+    product.email.toLocaleLowerCase().indexOf (filterBy) !== -1);
 }
-private loadAllUsers() {
+  ngOnInit() {
+
+
+    this.loadsuppliers();
+
+   
+      // $('.new').click(function(){
+      //   $(this).parents('tr').siblings('tr').toggle();
+      //   // alert('hi');
+      // });
+      $(document).ready(function(){
+        console.log("doc ready loading")
+        $('body').unbind('click').on("click",".new",function(){
+          console.log(this);
+          $(this).parents('tr').siblings('tr').toggle();
+  
+        });
+      });
+    
+    // this.deletevendor();
+    // $(document).ready(function(){
+    //   $('.flash').click(function(){
+    //     // $(this).parents('tr').siblings('tr').toggle();
+    //     alert("hi");
+    //   });
+    // });
+  // $(".rowShow").hide();
+
+  // $('.showhide').click(function(){
+  //   //alert("clicked");
+  //   var row=$(this).parent().parent().next();
+  //   $(row).toggle();
+  //   $(row).next().toggle();
+  // });
+
+
+  
+}
+// toggle() {
+//   this.show = !this.show;
+
+//   // CHANGE THE NAME OF THE BUTTON.
+  
+// }
+// adddet(event){
+//   $(this).parents('tr').siblings('tr').toggle();
+//   console.log("clicked");
+// }
+
+private loadsuppliers() {
   this.userService.getSupplierlist().pipe(first()).subscribe(result => { 
       this.checkers = result['data']; 
-        
-      console.log(result['data']);
-      
+      this.filteredProducts=this.checkers;
+        this.checkers1 = result['data'][0]['orgId']['status']; 
+      //console.log(result['data']);
+       //console.log(result['data'][0]['orgId']['status']);
   });
 }
+// private deletevendor(){
+//   this.userService.deletevendorbyId(id).pipe(first()).subscribe(result => { 
+//     // this.checkers = result['data']; 
+//     //   this.checkers1 = result['data'][0]['orgId']['status']; 
+//     // console.log(result['data']);
+//     //  console.log(result['data'][0]['orgId']['status']);
+// });
+// }
+setOrder(value: string) {
+  if (this.order === value) {
+    this.reverse = !this.reverse;
+  }
+
+  this.order = value;
+}
+appendToContainer(id) {
+   console.log(id); 
+  // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/addunitarysupplier';
+  this.router.navigate(['./addunitarysupplier', id]);
+}
+// deletevendornew(id){
+//   console.log(id);
+// }
 }

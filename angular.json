@@ -28,7 +28,10 @@
               "src/assets/css/owl.carousel.css",
               "src/assets/css/owlthemeDefault.css",
               "src/assets/css/uikit_min.css",
-              "./node_modules/datatables.net-dt/css/jquery.dataTables.css"
+              "./node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "./node_modules/owl.carousel/dist/assets/owl.carousel.css",
+              "./node_modules/owl.carousel/dist/assets/owl.theme.default.css"
+              
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
@@ -43,7 +46,10 @@
               "src/assets/js/myscript.js",
               "src/assets/js/custom.charts.js",
               "./node_modules/datatables.net-dt/js/dataTables.dataTables.js",
-              "./node_modules/datatables.net/js/jquery.dataTables.js"
+              "./node_modules/jquery/dist/jquery.js",
+               "./node_modules/owl.carousel/dist/owl.carousel.js"
+             
+             
             ]
           },
           "configurations": {
@@ -99,18 +105,22 @@
               "src/assets/js/morris.min.js",
               "src/assets/js/uikit.min.js",
               "src/assets/js/uikit-icons.min.js",
-              "src/assets/js/owl.carousel.js",
               "src/assets/js/myscript.js",
-              "src/assets/js/custom.charts.js"
+              "src/assets/js/custom.charts.js",
+              "../node_modules/jquery/dist/jquery.js",
+              "../node_modules/owl.carousel/dist/owl.carousel.js"
+              
             ],
             "styles": [
               "src/styles.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/datepicker.css",
               "src/assets/css/custom.css",
-              "src/assets/css/owl.carousel.css",
               "src/assets/css/owlthemeDefault.css",
-              "src/assets/css/uikit_min.css"
+              "src/assets/css/uikit_min.css",
+              "../node_modules/owl.carousel/dist/assets/owl.carousel.css",
+              "../node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "../node_modules/ng-select/themes/default.theme.css"
             ],
             "assets": [
               "src/assets",

@@ -16,6 +16,20 @@ export class MakernavigationComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+
+    $(window).bind('beforeunload',function(){
+
+      //save info somewhere
+     
+      localStorage.clear();
+     
+     var url = "http://www.mydomain.com/new-page.html";
+      $( location ).attr("href", url);
+      
+      });
+
+
+
     $(".dash a").on("click", function () {
       $(".dash").addClass("active");
       $(".dash").siblings(".active").removeClass("active");

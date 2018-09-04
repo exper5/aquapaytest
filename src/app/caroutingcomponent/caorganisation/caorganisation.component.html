@@ -4,7 +4,7 @@
         <label class="notlabel">Organisation Details</label>
     </div>
     <div class="row abc">
-        <div class="col-md-12 col-sm-12 pfcard text-center">
+        <div class="col-md-12 col-sm-12 pfcard text-center" >
             <div class="clear20"></div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 text-left magttwenty">
@@ -24,16 +24,16 @@
                         <span class="span_widthn">Convenience Fee :</span>
                         <br>
                     </div>
-                    <div class="col-xs-6 col-md-6 col-sm-6 text-left nopad magttwenty">
-                        <span class="bold_spann">SAMPLE ORGANISATION</span>
+                    <div class="col-xs-6 col-md-6 col-sm-6 text-left nopad magttwenty" >
+                        <span class="bold_spann" style="width:600px">{{organisation.companyname}}</span>
                         <br>
-                        <span class="bold_spann"> www.sample.com</span>
+                        <span class="bold_spann"> {{organisation.domain}}</span>
                         <br>
-                        <span class="bold_spann"> XVB6558BN</span>
+                        <span class="bold_spann">  {{organisation.pan}}</span>
                         <br>
-                        <span class="bold_spann"> HH786875HH545</span>
+                        <span class="bold_spann"> {{organisation.corpgstin}}</span>
                         <br>
-                        <span class="bold_spann"> 1%</span>
+                        <span class="bold_spann">{{organisation.convfee}}%</span>
                         <br>
                     </div>
 
@@ -57,15 +57,15 @@
                         <br>
                     </div>
                     <div class="col-xs-6 col-md-6 col-sm-6 text-left nopad magttwenty">
-                        <span class="bold_spann">020 45454545 </span>
+                        <span class="bold_spann">{{organisation.Contact}} </span>
                         <br>
-                        <span class="bold_spann">Tech Enclave,MG Road</span>
+                        <span class="bold_spann">{{organisation.address}}</span>
                         <br>
-                        <span class="bold_spann"> Pune</span>
+                        <span class="bold_spann"> {{organisation.city}}</span>
                         <br>
-                        <span class="bold_spann"> Maharashtra</span>
+                        <span class="bold_spann"> {{organisation.state}}</span>
                         <br>
-                        <span class="bold_spann">411051</span>
+                        <span class="bold_spann">{{organisation.pincode}}</span>
                         <br>
                     </div>
 
@@ -85,11 +85,11 @@
                         <br>
                     </div>
                     <div class="col-xs-6 col-md-6 col-sm-6 text-left nopad magttwenty">
-                        <span class="bold_spann">John Smith</span>
+                        <span class="bold_spann">{{organisation.cpname}}</span>
                         <br>
-                        <span class="bold_spann">John@xyz.com</span>
+                        <span class="bold_spann">{{organisation.cpemail}}</span>
                         <br>
-                        <span class="bold_spann">979297099</span>
+                        <span class="bold_spann">{{organisation.cpemail}}</span>
                         <br>
                     </div>
                 </div>

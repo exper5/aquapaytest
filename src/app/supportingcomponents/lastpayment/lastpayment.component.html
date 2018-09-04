@@ -18,7 +18,7 @@
 
                         <span class="bold-txt">Supplier Code</span> &nbsp;&nbsp;&nbsp;
 
-                        <div class="btn-group dropdown">
+                        <!-- <div class="btn-group dropdown">
 
                             <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -98,13 +98,13 @@
 
                             </ul>
 
-                        </div>
+                        </div> -->
 
                     </td>
 
                     <td>
                         <span class="bold-txt">Supplier Name</span> &nbsp;&nbsp;&nbsp;
-                        <div class="btn-group dropdown">
+                        <!-- <div class="btn-group dropdown">
 
                             <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -189,12 +189,12 @@
                                 </li>
                             </ul>
 
-                        </div>
+                        </div> -->
                     </td>
 
                     <td>
                         <span class="bold-txt">Amount</span> &nbsp;&nbsp;&nbsp;
-                        <div class="btn-group">
+                        <!-- <div class="btn-group">
 
                             <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -240,12 +240,12 @@
 
                             </ul>
 
-                        </div>
+                        </div> -->
                         <td>
 
                             <span class="bold-txt">Transaction Status</span> &nbsp;&nbsp;&nbsp;
 
-                            <div class="btn-group">
+                            <!-- <div class="btn-group">
 
                                 <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -291,14 +291,14 @@
 
                                 </ul>
 
-                            </div>
+                            </div> -->
 
                         </td>
 
                         <td>
 
                             <span class="bold-txt">Payment Status</span> &nbsp;&nbsp;&nbsp;
-                            <div class="btn-group">
+                            <!-- <div class="btn-group">
 
                                 <button type="button" class="btn dropdown-toggle caret2" data-toggle="dropdown">
 
@@ -376,7 +376,7 @@
 
                                 </ul>
 
-                            </div>
+                            </div> -->
 
                         </td>
 
@@ -385,33 +385,36 @@
                 </tr>
 
             </thead>
-            <tbody>
+            <tbody  *ngFor="let user of checkers">
 
                 <tr>
 
-                    <td>34987</td>
+                    <td>{{user.vendorcode}}</td>
 
-                    <td>Fasus</td>
+                    <td>{{user.name}}</td>
 
-                    <td>Rs. 75,000</td>
+                    <td>Rs. {{user.amount}}</td>
 
                     <td>
-                        <a href="javascript:void(0);" class="btn appoved" role="button">Approved </a>
+                        <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.transstatus == '1'">Approved</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.transstatus == '0'">Rejected</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.transstatus == '2'">Pending</a>
+                                    <a href="javascript:void(0);" class="btn appoved" role="button" *ngIf="user.transstatus == '4'">Rejected</a>
                     </td>
 
                     <td>
-                        <a href="javascript:void(0);" class="btn appoved" role="button">Card Debited</a>
+                        <a href="javascript:void(0);" class="btn appoved" role="button">{{user.paymentstatus}}</a>
                     </td>
 
                     <td>
-                        <div class="flash equipment3 showhide">
+                        <div class="flash equipment3 showhide new" >
                             <span class="showhide">+</span>
                         </div>
                     </td>
 
                 </tr>
 
-                <tr class="rowShow grayStrip">
+                <tr class="rowShow grayStrip" style="display:none">
 
                     <td colspan="6" class="custmtd">
 
@@ -420,17 +423,17 @@
 
                             <div>
                                 <div class="span_width">Corp GSTIN:</div>
-                                <div class="bold_span">562802482774GG</div>
+                                <div class="bold_span">{{user.vengstin}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Card No: </div>
-                                <div class="bold_span">633122148</div>
+                                <div class="bold_span">{{user.cardno}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Invoice No:</div>
-                                <div class="bold_span">633122148</div>
+                                <div class="bold_span">{{user.invnumber}}</div>
                             </div>
 
                             <div>
@@ -440,11 +443,11 @@
 
                             <div>
                                 <div class="span_width">UTR No:</div>
-                                <div class="bold_span">0023</div>
+                                <div class="bold_span">{{user.utr}}</div>
                             </div>
                             <div>
                                 <div class="span_width">Payment Advise:</div>
-                                <div class="bold_span">Yes</div>
+                                <div class="bold_span">{{user.ispaymentadvice}}</div>
                             </div>
 
                         </div>
@@ -453,26 +456,26 @@
 
                             <div>
                                 <div class="span_width">Account No:</div>
-                                <div class="bold_span">63122148</div>
+                                <div class="bold_span">{{user.accno}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">IFSC: </div>
-                                <div class="bold_span">SBI00676</div>
+                                <div class="bold_span">{{user.ifsc}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Bank Name:</div>
-                                <div class="bold_span">State Bank Of India</div>
+                                <div class="bold_span">{{user.bank}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Branch:</div>
-                                <div class="bold_span">Ambarnath</div>
+                                <div class="bold_span">{{user.branch}}</div>
                             </div>
                             <div>
                                 <div class="span_width">Cut off Date:</div>
-                                <div class="bold_span">21/01/2017</div>
+                                <div class="bold_span">{{user.cutoffdate}}</div>
                             </div>
 
                             <div>
@@ -486,32 +489,32 @@
 
                             <div>
                                 <div class="span_width">Initiated by :</div>
-                                <div class="bold_span">Sammer</div>
+                                <div class="bold_span">{{user.initiatedby}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Initiated on : </div>
-                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                <div class="bold_span">{{user.initiateddate}} | {{user.initiatedtime}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Approver 1:</div>
-                                <div class="bold_span">Jayesh Jadhav</div>
+                                <div class="bold_span">{{user.approvedby}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Approved on : </div>
-                                <div class="bold_span">21/01/2017 | 12:00PM</div>
+                                <div class="bold_span">{{user.approveddate}}|{{user.approvedtime}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Approver 2:</div>
-                                <div class="bold_span">Rayesh Jadhav</div>
+                                <div class="bold_span">{{user.approvedby}}</div>
                             </div>
 
                             <div>
                                 <div class="span_width">Approved on :</div>
-                                <div class="bold_span"> 21/01/2017 | 12:00PM</div>
+                                <div class="bold_span"> {{user.approveddate}} | {{user.approvedtime}}</div>
                             </div>
 
                         </div>
@@ -519,7 +522,7 @@
 
                 </tr>
 
-                <tr class="rowShow grayStrip">
+                <tr class="rowShow grayStrip" style="display:none">
 
                     <td colspan="6">
                         <span class="pull-right">
@@ -537,7 +540,7 @@
 
 
 
-                <tr>
+                <!-- <tr>
 
                     <td>643809</td>
 
@@ -989,11 +992,11 @@
 
                     </td>
 
-                </tr>
+                </tr> -->
 
 
 
-                <tr>
+                <!-- <tr>
 
                     <td>897</td>
 
@@ -1108,7 +1111,7 @@
 
                     </td>
 
-                </tr>
+                </tr> -->
 
 
 
@@ -1134,7 +1137,7 @@
                             <th>Time</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         <tr>
                             <td>Card Debited</td>
                             <td>28/04/2018</td>

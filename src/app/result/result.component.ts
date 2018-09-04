@@ -134,21 +134,43 @@ export class ResultComponent implements OnInit {
     const newLocal = this.formData;
     console.log(this.formData);
     // alert(this.formData);
+    this.route.params.subscribe(params => {
+      if(params['id']){
+
+        this.userService.edituser(newLocal)
+        .pipe(first())
+        .subscribe(
+            data => {
+               // this.alertService.success('Registration successful', true);
+               console.log('true');
+               this.router.navigate([this.returnUrl]);
+            },
+            error => {
+                console.log("error");
+              //  this.alertService.error(error);
+                // this.loading = false;
+                this.router.navigate(['./addunitarysupplier', params['id']]);
+                
+            });
+      }
+      else{
+        this.userService.create(newLocal)
+        .pipe(first())
+        .subscribe(
+            data => {
+               // this.alertService.success('Registration successful', true);
+               console.log('true');
+               this.router.navigate([this.returnUrl]);
+            },
+            error => {
+                console.log("error");
+              //  this.alertService.error(error);
+                // this.loading = false;
+                
+            });
+      }
+    });
     
-    this.userService.create(newLocal)
-      .pipe(first())
-      .subscribe(
-          data => {
-             // this.alertService.success('Registration successful', true);
-             console.log('true');
-             this.router.navigate([this.returnUrl]);
-          },
-          error => {
-              console.log("error");
-            //  this.alertService.error(error);
-              // this.loading = false;
-              
-          });
     
     this.formData = this.formDataService.resetFormData();
     this.isFormValid = false;

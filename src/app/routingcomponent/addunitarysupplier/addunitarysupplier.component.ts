@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import { Router }              from '@angular/router';
+import { Router, ActivatedRoute }              from '@angular/router';
 // //import * as $ from 'jquery';
 import { NgStyle } from '@angular/common';
 import { FormDataService } from '../../data/formData.service';
@@ -8,6 +8,8 @@ import { Personal } from '../../data/formData.model';
 import { User } from '../../_models';
 import { UserService } from '../../_services';
 import { first } from 'rxjs/operators';
+import { IMultiSelectOption } from 'angular-2-dropdown-multiselect';
+import { id } from '@swimlane/ngx-datatable/release/utils';
 declare var jquery:any;
 declare var $ :any;
 
@@ -23,9 +25,14 @@ export class AddunitarysupplierComponent implements OnInit
   buttonDisabled: boolean=false;
     checkers: User[] = [];
     currentUser: User;
+    // optionsModel: number[];
+    // myOptions: IMultiSelectOption[];
+    vendet: any;
+     user_Rec:any;
 
-  constructor(private router: Router, private formDataService: FormDataService, private userService: UserService) {
+  constructor(private router: Router, private formDataService: FormDataService, private userService: UserService,  private route: ActivatedRoute,) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    this.user_Rec={};
   }
 
   
@@ -123,7 +130,61 @@ export class AddunitarysupplierComponent implements OnInit
   
 
   ngOnInit() {
+
+    
     this.loadAllUsers();
+    
+
+    this.route.params.subscribe(params => {
+
+      console.log(params['id']);
+     if(params['id']){
+      this.userService.getById(params['id']).subscribe(user =>{
+        let tempchecker=[];  
+        this.user_Rec = user['vendors']; 
+        this.personal.vendorcode=user['vendors']['vendorcode'],
+        this.personal.name=user['vendors']['name'],
+        this.personal.email=user['vendors']['email'],
+        this.personal.contact=user['vendors']['contact'],
+        this.personal.contact1=user['vendors']['contact1'],
+        this.personal.contact2=user['vendors']['contact2'],
+        this.personal.contact3=user['vendors']['contact3'],
+        this.personal.accno=user['vendors']['accno'],
+        this.personal.ifsc=user['vendors']['ifsc']
+        this.personal.bank=user['vendors']['bank']
+        this.personal.branch=user['vendors']['branch'],
+        this.personal.notification=user['vendors']['ispaymentadvice'],
+        user['checkerlist'].forEach(obj => {
+          tempchecker.push(obj["id"]);
+          console.log(obj);
+        });
+        console.log(tempchecker);
+      
+        let checkerstr=tempchecker.join(',');
+        console.log(checkerstr);
+        this.personal.selectcheckertemp=checkerstr
+
+        console.log(user['checkerlist']['selectcheckertemp']);
+        // this.personal.patchValue({
+        //   vendorcode : user['vendorcode'],
+        //   name : user['name'],
+        //     email:user['email'],
+        //     contact:user['contact'],
+        //     accno:user['accno'],
+        //     ifsc:user['ifsc'],
+        //     bank:user['bank'],
+        //     branch:user['branch'],
+         
+            
+        // });
+         
+      });
+     }
+     
+     
+    //  this.vendordetails(params['id']);
+    });
+    
     this.personal = this.formDataService.getPersonal();
     console.log('Personal feature loaded!');
 
@@ -213,6 +274,9 @@ $('.dropdown-menu').on('click', function (e) {
     }
 });
 
+
+
+
 //---------------------------------------Prevent anchor default action-------------------------------------------
 
 
@@ -230,15 +294,36 @@ $('.dropdown-menu').on('click', function (e) {
 
 goToNext(form: any) {
     if (this.save(form)) {
+      this.route.params.subscribe(params => {
+        if(params['id']){
         // Navigate to the work page
-        this.router.navigate(['/result']);
+        this.router.navigate(['/result', params['id']]);
+        }
+        else{
+          this.router.navigate(['/result']);
+        }
+      });
     }
 }
 private loadAllUsers() {
   this.userService.getAll().pipe(first()).subscribe(result => { 
-      this.checkers = result['data']['checkerlist']; 
-      console.log(result['data']['checkerlist']);
+      this.checkers = result['data']; 
+      console.log(result['data']);
   });
 }
 
+
+private vendordetails(id) {
+  this.userService.getById(id).pipe(first()).subscribe(result => { 
+      this.vendet = result['vendors']; 
+      console.log(result['vendors']);
+      
+  });
+}
+
+
+
+// onChange() {
+//   console.log(this.optionsModel);
+// }
 }

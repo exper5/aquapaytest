@@ -5,4 +5,10 @@ export class User {
     firstName: string;
     lastName: string;
     email:string;
+    empId:string;
+    amount:string;
+    vendorcode:string;
+    grpname:string;
+    lwrlimit:string;
+    uprlimit:string;
 }

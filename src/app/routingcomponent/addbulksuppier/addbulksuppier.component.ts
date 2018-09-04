@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../_models';
+import { UserService } from '../../_services';
+import { HttpClient } from '@angular/common/http';
 // //import * as $ from 'jquery';
 declare var jquery:any;
 declare var $ :any;
@@ -8,11 +11,13 @@ declare var $ :any;
   styleUrls: ['./addbulksuppier.component.css']
 })
 export class AddbulksuppierComponent implements OnInit {
-
-  constructor() { }
+  currentUser: User;
+  
+  bulkfile: User[] = [];
+  constructor(private userService: UserService, private http: HttpClient) {this.currentUser = JSON.parse(localStorage.getItem('currentUser')); }
 
   ngOnInit() {
-    
+    // this.bulkupload();
     $(document).ready(function(){
       $("#pagi").hide();
       $('input[type=file]').change(function () {
@@ -57,5 +62,17 @@ export class AddbulksuppierComponent implements OnInit {
 
     
   }
+
+
+
+  // private bulkupload() {
+  //   this.userService.bulk().pipe(first()).subscribe(result => { 
+  //       // this.payments = result['data']; 
+       
+  //       this.listofpaymentsarr = result['data'];
+  //         console.log(result['data']);
+        
+  //   });
+  // }
 
 }
